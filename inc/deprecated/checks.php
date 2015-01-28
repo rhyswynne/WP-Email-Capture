@@ -1,17 +1,12 @@
 <?php 
 
 /**
-
-Validate an email address.
-
-Provide email address (raw input)
-
-Returns true if the email address has the email 
-
-address format and the domain exists.
-
+* Validate an email address.
+* Provide email address (raw input)
+* Returns true if the email address has the email 
+* address format and the domain exists.
 */
-
+/*
 if(!function_exists('checkdnsrr'))
 {
     function checkdnsrr($hostName, $recType = '')
@@ -31,8 +26,8 @@ if(!function_exists('checkdnsrr'))
      }
      return false;
     }
-}
-
+} */
+/*
 function addLastCharacter($url)
 {
 	$last = $url[strlen($url)-1]; 
@@ -42,7 +37,7 @@ function addLastCharacter($url)
 	}
 	return $url;
 }
-
+*/
 
 /* function validEmail($email)
 

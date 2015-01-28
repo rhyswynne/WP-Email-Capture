@@ -144,7 +144,7 @@ if (wp_email_capture_double_check_everything($name, $email))
 	$to=$email;
     $message = "";
 	$siteurl = get_option('home');
-	$siteurl = addLastCharacter($siteurl);
+	$siteurl = trailingslashit($siteurl);
 
 	// Your subject
     $subject = "";

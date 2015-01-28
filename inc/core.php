@@ -24,7 +24,7 @@ require_once(WP_EMAIL_CAPTURE_PATH . '/inc/security.php');
 
 require_once(WP_EMAIL_CAPTURE_PATH . '/inc/dashboard.php');
 
-require_once(WP_EMAIL_CAPTURE_PATH . '/inc/checks.php');
+//require_once(WP_EMAIL_CAPTURE_PATH . '/inc/checks.php');
 
 require_once(WP_EMAIL_CAPTURE_PATH . '/inc/functions.php');
 

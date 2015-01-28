@@ -7,7 +7,7 @@ function wp_email_capture_form($error = 0)
 {
 
 $url = get_option('home');
-$url = addLastCharacter($url);
+$url = trailingslashit($url);
 
  ?> <div id="wp_email_capture" class="wp-email-capture wp-email-capture-widget wp-email-capture-widget-worldwide"><form name="wp_email_capture" method="post" action="<?php echo $url; ?>">
 
@@ -46,7 +46,7 @@ function wp_email_capture_form_page($error = 0)
 {
 
 $url = get_option('home');
-$url = addLastCharacter($url);
+$url = trailingslashit($url);
 $display = "";
 $display .= "<div id='wp_email_capture_2' class='wp-email-capture wp-email-capture-display'><form name='wp_email_capture_display' method='post' action='" . $url ."'>\n";
 
