@@ -1,0 +1,197 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: WPEC\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2011-10-21 11:45+0100\n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-Language: French\n"
+"X-Poedit-Country: FRANCE\n"
+"X-Poedit-SourceCharset: utf-8\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-KeywordsList: __;_e\n"
+"X-Poedit-SearchPath-0: ..\n"
+
+#: ../inc/dashboard.php:13
+#: ../inc/options.php:151
+msgid "Export"
+msgstr "Exporter"
+
+#: ../inc/dashboard.php:17
+msgid "Use the button below to export your list as a CSV to use in software such as"
+msgstr "Utiliser le bouton ci-dessous pour exporter votre liste au format CSV pour l'utiliser dans un logiciel tel que"
+
+#: ../inc/dashboard.php:27
+#: ../inc/options.php:165
+msgid "Temporary e-mails"
+msgstr "Emails temporaires"
+
+#: ../inc/dashboard.php:31
+#: ../inc/options.php:169
+msgid "There are"
+msgstr "Il y a"
+
+#: ../inc/dashboard.php:31
+#: ../inc/options.php:169
+msgid "e-mail addresses that have been unconfirmed. Delete them to save space below."
+msgstr "adresses emails qui ne sont pas confirmées. Supprimer les pour sauvegarder de l'espace."
+
+#: ../inc/dashboard.php:47
+msgid "WP Email Capture - At A Glance"
+msgstr "WP Email Capture - En un clin d'oeil"
+
+#: ../inc/display.php:22
+msgid "Name:"
+msgstr "Nom:"
+
+#: ../inc/display.php:24
+msgid "Email:"
+msgstr "Email:"
+
+#: ../inc/display.php:36
+#: ../inc/display.php:71
+msgid "Powered by"
+msgstr "Propulsé par"
+
+#: ../inc/options.php:5
+#: ../inc/options.php:15
+msgid "WP Email Capture Options"
+msgstr "Options WP Email Capture"
+
+#: ../inc/options.php:19
+msgid "Recommendations"
+msgstr "Recommandations"
+
+#: ../inc/options.php:21
+msgid "We recommend"
+msgstr "Nous recommandons"
+
+#: ../inc/options.php:21
+msgid "to run your email campaigns. We have tested this plugin with it."
+msgstr "pour effectuer vos campagnes marketing. Nous avons testés ce plugin avec ce service."
+
+#: ../inc/options.php:46
+msgid "Options"
+msgstr "Options"
+
+#: ../inc/options.php:66
+msgid "Page to redirect to on sign up (full web address ie: http://www.domain.com/this-page/)"
+msgstr "Page de redirection suite à l'enregistrement (adresse compète ie: http://www.domain.com/this-page/)"
+
+#: ../inc/options.php:74
+msgid "Page to redirect to on confirmation of email address  (full web address ie: http://www.domain.com/this-other-page/)"
+msgstr "Page de redirection pour la confirmation de l'adresse email (adresse complète ie : http://www.domain.com/this-page/)"
+
+#: ../inc/options.php:82
+msgid "From Which Email Address"
+msgstr "Email source du message"
+
+#: ../inc/options.php:90
+msgid "From Which Name"
+msgstr "Nom source du message"
+
+#: ../inc/options.php:98
+msgid "Subject of Email"
+msgstr "Sujet du message"
+
+#: ../inc/options.php:106
+msgid "Body of Email"
+msgstr "Contenu du message"
+
+#: ../inc/options.php:107
+msgid "(use %NAME% to use the form's &quot;Name&quot; field in their welcome email)"
+msgstr "(utiliser %NAME% pour inclure le nom dans le message de bievenue)"
+
+#: ../inc/options.php:115
+msgid "Link to us (optional, but appreciated)"
+msgstr "Faire un lien vers nous (optionnel mais très apprécié)"
+
+#: ../inc/options.php:139
+msgid "Save Changes"
+msgstr "Sauvegarder les changements"
+
+#: ../inc/options.php:155
+msgid "Use the button below to export your list as a CSV to use in software such as <a href=\"http://www.gospelrhys.co.uk/go/aweber.php\" title=\"Email Marketing\">Aweber</a> or <a href=\"http://www.gospelrhys.co.uk/go/mailchimp.php\">Mailchimp</a>"
+msgstr "Utiliser le bouton ci-dessous pour exporter votre liste au format CSV dans un logiciel tel que <a href=\"http://www.gospelrhys.co.uk/go/aweber.php\" title=\"Email Marketing\">Aweber</a> ou <a href=\"http://www.gospelrhys.co.uk/go/mailchimp.php\">Mailchimp</a>"
+
+#: ../inc/options.php:177
+msgid "Delete Current List"
+msgstr "Supprimer la liste"
+
+#: ../inc/options.php:181
+msgid "Want to delete the entire list? Click the link below. <strong>WARNING: </strong> this will delete all confirmed emails, so make sure you have a backup."
+msgstr "Vous souhaitez supprimer la liste complète? Cliquez sur le lien ci-dessous. <strong>Attention: </strong> ceci supprimera tous les emails confirmés, donc assurez vous d'avoir une copie de sauvegarde."
+
+#: ../inc/options.php:191
+msgid "Donations"
+msgstr "Dons"
+
+#: ../inc/options.php:193
+msgid "If you like this plugin, please consider a small donation to help with future versions &amp; plugins. Donators are thanked on each specific plugin page!"
+msgstr "Si vous aimez cette extension, n'hésitez pas à faire un don afin d'aider au développement des futures versions. Les donateurs sont remerciés sur chaque page de l'extension."
+
+#: ../inc/pagedresults.php:141
+msgid "Prev"
+msgstr "Précédent"
+
+#: ../inc/pagedresults.php:169
+msgid "Next"
+msgstr "Suivant"
+
+#: ../inc/process.php:158
+msgid "This is an automated message that is generated because somebody with the IP address of"
+msgstr "Ceci est un message automatique qui est généré parce que quelqu'un avec l'adresse IP"
+
+#: ../inc/process.php:158
+msgid "(possibly you) on"
+msgstr "(peut être vous) le"
+
+#: ../inc/process.php:158
+msgid "filled out the form on the following page"
+msgstr "a remplit un formulaire sur la page suivante"
+
+#: ../inc/process.php:159
+msgid "If you are sure this isn't you, please ignore this message, you will not be sent another message."
+msgstr "Si vous êtes certain que ce n'est pas vous, veuillez ignorer ce message, aucun autre message ne vous sera adressé."
+
+#: ../inc/process.php:176
+msgid "Not found your email in our database"
+msgstr "Votre email n'a pas été trouvé dans la base"
+
+#: ../inc/tabledata.php:27
+msgid "Members"
+msgstr "Membres"
+
+#: ../inc/tabledata.php:37
+msgid "Name"
+msgstr "Nom"
+
+#: ../inc/tabledata.php:37
+msgid "Email"
+msgstr "Email"
+
+#: ../inc/widget.php:35
+msgid "Subscribe!"
+msgstr "Abonnez vous!"
+
+#: ../inc/widget.php:37
+msgid "Subscribe to my blog for updates"
+msgstr "Abonnez vous à mon blog pour recevoir les mises à jour"
+
+#: ../inc/widget.php:117
+msgid "Widget title:"
+msgstr "Titre du widget:"
+
+#: ../inc/widget.php:119
+msgid "Widget text:"
+msgstr "Texte du widget:"
+
+#: ../inc/widget.php:135
+#: ../inc/widget.php:141
+msgid "WP Email Capture"
+msgstr "WP Email Capture"
+

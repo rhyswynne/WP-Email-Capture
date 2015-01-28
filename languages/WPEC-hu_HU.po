@@ -1,0 +1,529 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: WP Email Capture v2.6\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: 2012-10-20 09:01:43+0000\n"
+"Last-Translator: surbma <peter@surbma.hu>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Poedit-Language: Hungarian\n"
+"X-Poedit-Country: HUNGARY\n"
+"X-Poedit-SourceCharset: utf-8\n"
+"X-Poedit-KeywordsList: __;_e;__ngettext:1,2;_n:1,2;__ngettext_noop:1,2;_n_noop:1,2;_c,_nc:4c,1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;_nx_noop:4c,1,2;\n"
+"X-Poedit-Basepath: ../\n"
+"X-Poedit-Bookmarks: \n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Textdomain-Support: yes"
+
+#: inc/dashboard.php:13
+#: inc/options.php:168
+#@ WPEC
+msgid "Export"
+msgstr "Export"
+
+#: inc/dashboard.php:15
+#@ WPEC
+msgid "Use the button below to export your list as a CSV to use in software such as"
+msgstr "A lenti gombra kattintva tudod a feliratkozókat CSV formátumban letölteni, amit olyan szoftverekben tudsz használni, mint pl."
+
+#: inc/dashboard.php:22
+#: inc/options.php:182
+#@ WPEC
+msgid "Temporary e-mails"
+msgstr "Visszaigazolatlan email címek"
+
+#: inc/dashboard.php:24
+#: inc/options.php:186
+#@ WPEC
+msgid "There are"
+msgstr "Jelenleg"
+
+#: inc/dashboard.php:24
+#: inc/options.php:186
+#@ WPEC
+msgid "e-mail addresses that have been unconfirmed. Delete them to save space below."
+msgstr "visszaigazolatlan email cím van. Törölheted a listát, hogy több helyed legyen."
+
+#: inc/dashboard.php:40
+#@ WPEC
+msgid "WP Email Capture - At A Glance"
+msgstr "WP Email Capture - Áttekintés"
+
+#: inc/display.php:22
+#: inc/display.php:65
+#@ WPEC
+msgid "Name:"
+msgstr "Név:"
+
+#: inc/display.php:24
+#: inc/display.php:67
+#@ WPEC
+msgid "Email:"
+msgstr "Email:"
+
+#: inc/display.php:36
+#: inc/display.php:75
+#@ WPEC
+msgid "Powered by"
+msgstr " "
+
+#: inc/admin-sidebar.php:103
+#: inc/options.php:5
+#: inc/options.php:18
+#@ WPEC
+msgid "WP Email Capture Options"
+msgstr "WP Email Capture beállítások"
+
+#: inc/options.php:22
+#@ WPEC
+msgid "Recommendations"
+msgstr "Ajánlások"
+
+#: inc/options.php:24
+#@ WPEC
+msgid "We recommend"
+msgstr "Mi az"
+
+#: inc/options.php:24
+#@ WPEC
+msgid "to run your email campaigns. We have tested this plugin with it."
+msgstr "alkalmazást ajánljuk az email kampányok kezeléséhez. A bővítményt leteszteltük ezzel az alkalmazással."
+
+#: inc/options.php:49
+#@ WPEC
+msgid "Options"
+msgstr "Opciók"
+
+#: inc/options.php:69
+#@ WPEC
+msgid "Page to redirect to on sign up (full web address ie: http://www.domain.com/this-page/)"
+msgstr "Az oldal, ahova feliratkozás után átirányítódik (teljes web cím kell, pl.: http://www.sajatoldalam.hu/koszonjuk-a-feliratkozast/)"
+
+#: inc/options.php:77
+#@ WPEC
+msgid "Page to redirect to on confirmation of email address  (full web address ie: http://www.domain.com/this-other-page/)"
+msgstr "Az oldal, ahova a visszaigazolás után átirányítódik (teljes web cím kell, pl.: http://www.sajatoldalam.hu/sikeres-feliratkozas/)"
+
+#: inc/options.php:85
+#@ WPEC
+msgid "From Which Email Address"
+msgstr "A kiküldött email feladójának az email címe"
+
+#: inc/options.php:93
+#@ WPEC
+msgid "From Which Name"
+msgstr "A kiküldött email feladójának a neve"
+
+#: inc/options.php:101
+#@ WPEC
+msgid "Subject of Email"
+msgstr "A kiküldött email tárgya"
+
+#: inc/options.php:109
+#@ WPEC
+msgid "Body of Email"
+msgstr "A kiküldött email szövege"
+
+#: inc/options.php:110
+#, php-format
+#@ WPEC
+msgid "(use %NAME% to use the form's &quot;Name&quot; field in their welcome email)"
+msgstr "(használd a %NAME% változót a szövegben, hogy megjelenítsd a feliratkozó &quot;Név&quot; mezőben megadott adatát a kiküldött emailben)"
+
+#: inc/options.php:118
+#@ WPEC
+msgid "Link to us (optional, but appreciated)"
+msgstr "Referencialink megjelenítése (nem kötelező, de méltányoljuk)"
+
+#: inc/options.php:156
+#@ WPEC
+msgid "Save Changes"
+msgstr "Változtatások mentése"
+
+#: inc/options.php:172
+#@ WPEC
+msgid "Use the button below to export your list as a CSV to use in software such as <a href=\"http://wpemailcapture.com/recommends/aweber\" title=\"Email Marketing\">Aweber</a> or <a href=\"http://wpemailcapture.com/recommends/mailchimp\">Mailchimp</a>"
+msgstr "A lenti gombra kattintva tudod a feliratkozókat CSV formátumban letölteni, amit olyan szoftverekben tudsz használni, mint pl. <a href=\"http://wpemailcapture.com/recommends/aweber\" title=\"Email Marketing\">Aweber</a> or <a href=\"http://wpemailcapture.com/recommends/mailchimp\">Mailchimp</a>"
+
+#: inc/options.php:194
+#@ WPEC
+msgid "Delete Current List"
+msgstr "Jelenlegi lista törlése"
+
+#: inc/options.php:198
+#@ WPEC
+msgid "Want to delete the entire list? Click the link below. <strong>WARNING: </strong> this will delete all confirmed emails, so make sure you have a backup."
+msgstr "A teljes listát akarod törölni? Kattints a lenti gombra. <strong>FIGYELEM: </strong> ez minden visszaigazolt email címet törölni fog, ezért ellenőrizd, hogy lementetted-e a listát előtte."
+
+#: inc/admin-sidebar.php:67
+#@ WPEC
+msgid "Donations"
+msgstr "Adományok"
+
+#: inc/pagedresults.php:141
+#@ WPEC
+msgid "Prev"
+msgstr "Előző"
+
+#: inc/pagedresults.php:169
+#@ WPEC
+msgid "Next"
+msgstr "Következő"
+
+#: inc/process.php:186
+#@ WPEC
+msgid "This is an automated message that is generated because somebody with the IP address of"
+msgstr "Ez egy automatikus üzenet, amit azért kapsz, mert valaki a"
+
+#: inc/process.php:186
+#@ WPEC
+msgid "(possibly you) on"
+msgstr "IP címen (valószínűleg te)"
+
+#: inc/process.php:186
+#@ WPEC
+msgid "filled out the form on the following page"
+msgstr "időpontban ezzel az email címmel feliratkozott a következő weboldalon:"
+
+#: inc/process.php:187
+#@ WPEC
+msgid "If you are sure this isn't you, please ignore this message, you will not be sent another message."
+msgstr "Ha biztos vagy benne, hogy nem te iratkoztál fel, akkor törölheted ezt az üzenetet. Ebben az esetben nem kapsz több üzenetet."
+
+#: inc/process.php:204
+#@ WPEC
+msgid "Not found your email in our database"
+msgstr "A megadott email cím nem található az adatbázisban"
+
+#: inc/tabledata.php:27
+#@ WPEC
+msgid "Members"
+msgstr "Feliratkozók"
+
+#: inc/exportcsv.php:15
+#: inc/tabledata.php:37
+#@ WPEC
+msgid "Name"
+msgstr "Név"
+
+#: inc/exportcsv.php:15
+#: inc/tabledata.php:37
+#@ WPEC
+msgid "Email"
+msgstr "Email"
+
+#: inc/widget.php:6
+#@ WPEC
+msgid "WP Email Capture"
+msgstr "WP Email Capture"
+
+#: inc/widget.php:6
+#@ WPEC
+msgid "Widget for WP Email Capture"
+msgstr "WP Email Capture widget"
+
+#: inc/widget.php:21
+#: inc/widget.php:48
+#@ WPEC
+msgid "Subscribe!"
+msgstr "Hírlevél feliratkozás"
+
+#: inc/widget.php:22
+#: inc/widget.php:48
+#@ WPEC
+msgid "Subscribe to my blog for updates"
+msgstr "A következő űrlap kitöltésével lehet feliratkozni a hírlevélre"
+
+#: inc/widget.php:55
+#@ WPEC
+msgid "Widget title:"
+msgstr "Cím:"
+
+#: inc/widget.php:56
+#@ WPEC
+msgid "Widget text:"
+msgstr "Szöveg:"
+
+#: inc/dashboard.php:9
+#@ WPEC
+msgid "Last Three Members To Join"
+msgstr "Utolsó három feliratkozó"
+
+#: inc/dashboard.php:17
+#: inc/options.php:176
+#@ WPEC
+msgid "Export List"
+msgstr "Lista exportálása"
+
+#: inc/dashboard.php:27
+#: inc/options.php:190
+#@ WPEC
+msgid "Delete Unconfirmed e-mail Addresses"
+msgstr "Visszaigazolatlan email címek törlése"
+
+#: inc/display.php:18
+#@ WPEC
+msgid "Error:"
+msgstr "Hiba:"
+
+#: inc/display.php:28
+#: inc/display.php:71
+#@ WPEC
+msgid "Submit"
+msgstr "Feliratkozás"
+
+#: inc/options.php:202
+#@ WPEC
+msgid "Delete Confirmed e-mail Addresses"
+msgstr "Visszaigazolt email címek törlése"
+
+#: inc/admin-sidebar.php:14
+#@ WPEC
+msgid "Need Help?"
+msgstr "Segítségre van szükséged?"
+
+#: inc/admin-sidebar.php:16
+#@ WPEC
+msgid "If you are having problems with this plugin, please read the"
+msgstr "Ha problémád van a bővítménnyel, akkor kérünk olvasd el a"
+
+#: inc/admin-sidebar.php:16
+#@ WPEC
+msgid "Frequently Asked Questions"
+msgstr "Gyakran Ismételt Kérdéseket"
+
+#: inc/admin-sidebar.php:16
+#@ WPEC
+msgid "or alternatively"
+msgstr "vagy"
+
+#: inc/admin-sidebar.php:16
+#@ WPEC
+msgid "submit a support request here"
+msgstr "kérj segítséget itt"
+
+#: inc/admin-sidebar.php:19
+#@ WPEC
+msgid "Recommended Services"
+msgstr "Ajánlott szolgáltatások"
+
+#: inc/admin-sidebar.php:21
+#@ WPEC
+msgid "We recommend the following services for sending out emails:-"
+msgstr "A következő szolgáltatásokat ajánljuk hírlevelek kezeléséhez:"
+
+#: inc/admin-sidebar.php:30
+#@ WPEC
+msgid "Global List Management"
+msgstr "Globális lista kezelés"
+
+#: inc/admin-sidebar.php:32
+#@ WPEC
+msgid "This page allows you to create lists, either"
+msgstr "Ezen az oldalon tudsz listákat létrehozni, akár"
+
+#: inc/admin-sidebar.php:32
+#@ WPEC
+msgid "external lists"
+msgstr "külső listákat"
+
+#: inc/admin-sidebar.php:32
+#@ WPEC
+msgid "(WP Email Capture is compatible with most major email marketing software packages), or a new"
+msgstr "(a WP Email Capture kompatibilis a legnépszerűbb hírlevélkezelő szoftverekkel), akár az új"
+
+#: inc/admin-sidebar.php:32
+#@ WPEC
+msgid "WP Email Capture List"
+msgstr "WP Email Capture listát"
+
+#: inc/admin-sidebar.php:32
+#@ WPEC
+msgid "You can create as many different lists as you wish"
+msgstr "Korlátlan számú lista létrehozható"
+
+#: inc/admin-sidebar.php:36
+#@ WPEC
+msgid "Add/Edit WP Email Capture List"
+msgstr "WP Email Capture lista hozzáadása/szerkesztése"
+
+#: inc/admin-sidebar.php:38
+#@ WPEC
+msgid "This is the page for managing WP Email Capture Lists. From this page you can:-"
+msgstr "Ezen az oldalon lehet a WP Email Capture listákat kezelni. A következő lehetőségek vannak:"
+
+#: inc/admin-sidebar.php:40
+#@ WPEC
+msgid "Make Changes To Your Lists"
+msgstr "Változtatások a létező listákon"
+
+#: inc/admin-sidebar.php:40
+#@ WPEC
+msgid "such as the name and the pages redirected to on form completion"
+msgstr "például a lista neve vagy az oldal, ahová feliratkozás után átirányítódik"
+
+#: inc/admin-sidebar.php:41
+#@ WPEC
+msgid "Email Options"
+msgstr "Email opciók"
+
+#: inc/admin-sidebar.php:41
+#@ WPEC
+msgid "such as where the email comes from and what emails sent to the subscriber contains"
+msgstr "például a feladó email cím vagy a feliratkozóknak küldött email tartalma"
+
+#: inc/admin-sidebar.php:42
+#@ WPEC
+msgid "Error Options"
+msgstr "Hiba opciók"
+
+#: inc/admin-sidebar.php:42
+#@ WPEC
+msgid "the errors that are displayed to subscribers who incorrectly fill in the form"
+msgstr "azok a hibaüzenetek, amiket rossz adatok megadása után ír ki a feliratkozónak"
+
+#: inc/admin-sidebar.php:43
+#@ WPEC
+msgid "Styling Options"
+msgstr "Stílus beállítások"
+
+#: inc/admin-sidebar.php:43
+#@ WPEC
+msgid "change the button image (or use an image), as well as what to ask the user for besides their name"
+msgstr "feliratkozó gomb módosítása és a feliratkozótól bekért további adatok megadása"
+
+#: inc/admin-sidebar.php:45
+#@ WPEC
+msgid "You can also on this page do the following"
+msgstr "További lehetőségek ezen az oldalon"
+
+#: inc/admin-sidebar.php:47
+#@ WPEC
+msgid "Manage List Subscribers"
+msgstr "Feliratkozottak listájának a kezelése"
+
+#: inc/admin-sidebar.php:48
+#@ WPEC
+msgid "Delete Temporary Emails"
+msgstr "Ideiglenes Emailek törlése"
+
+#: inc/admin-sidebar.php:49
+#@ WPEC
+msgid "Empty the entire list"
+msgstr "Teljes lista ürítése"
+
+#: inc/admin-sidebar.php:54
+#@ WPEC
+msgid "Get WP Email Capture Premium"
+msgstr "WP Email Capture Prémium"
+
+#: inc/admin-sidebar.php:56
+#@ WPEC
+msgid "Unlock the <strong>true</strong> power of WP Email Capture with the Premium version. With multiple lists, and stat tracking, WP Email Capture Premium is the missing link in your WordPress Email Marketing Puzzle"
+msgstr "Használd ki a WP Email Capture <strong>valódi</strong> erejét a Prémium verzióval. A több lista egyidejű kezelése és a statisztika követés funkciókkal a WP Email Capture Prémium a hiányzó láncszem a WordPress Email Marketing gépezetedben."
+
+#: inc/admin-sidebar.php:61
+#@ WPEC
+msgid "Add/Edit External List"
+msgstr "Külső lista hozzáadása/szerkesztése"
+
+#: inc/admin-sidebar.php:63
+#@ WPEC
+msgid "This is the page for managing External lists through WP Email Capture. Simply copy & paste the code from your Email Marketing software into the page below and you can embed your newsletter subscriptions into posts, pages or sidebars easily using WP Email Capture. If you do not have an Email Marketing Service, a few are recommended below"
+msgstr "Ezen az oldalon lehet a WP Email Capture bővítményben beállított külső listákat kezelni. Egyszerűen másold ki és illeszd be a hírlevélkezelő szoftver által megadott kódot alulra, így könnyedén tudod a feliratkozó űrlapot használni a bejegyzésekben, az oldalakon vagy az oldalsávokban a WP Email Capture segítségével. Ha még nem használsz hírlevélkezelő szoftvert, akkor a következőket ajánljuk:"
+
+#: inc/admin-sidebar.php:68
+#@ WPEC
+msgid "If you like this plugin, please consider a small donation to help with future versions and plugins."
+msgstr "Ha tetszik ez a bővítmény, akkor kérünk, hogy támogass minket egy kis összeggel, hogy hozzájárulj a bővítmény további fejlesztéséhez."
+
+#: inc/admin-sidebar.php:78
+#@ WPEC
+msgid "Latest News"
+msgstr "Legfrissebb hírek"
+
+#: inc/admin-sidebar.php:79
+#@ WPEC
+msgid "The latest news and tutorials from WP Email Capture"
+msgstr "A legfrissebb hírek és leírások a WP Email Capture bővítménnyel kapcsolatban"
+
+#: inc/admin-sidebar.php:90
+#@ WPEC
+msgid "Support Us!"
+msgstr "Támogass minket!"
+
+#: inc/admin-sidebar.php:91
+#@ WPEC
+msgid "We would like you if you would not mind, doing one of the following if you are a fan of WP Email Capture"
+msgstr "A következő tevékenységekkel támogathatsz minket, ha tetszik a WP Email Capture bővítményünk"
+
+#: inc/admin-sidebar.php:93
+#@ WPEC
+msgid "Rate the plugin 5* on WordPress.org"
+msgstr "Értékeld a bővítményt 5 csillaggal a WordPress.org oldalon"
+
+#: inc/admin-sidebar.php:94
+#@ WPEC
+msgid "Follow @WPEmailCapture on Twitter"
+msgstr "Kövesd a @WPEmailCapture-t a Twitteren"
+
+#: inc/admin-sidebar.php:95
+#@ WPEC
+msgid "Like us on Facebook"
+msgstr "Kövess minket a Facebookon"
+
+#: inc/admin-sidebar.php:99
+#@ WPEC
+msgid "Become An Affiliate!"
+msgstr "Legyél a partnerünk!"
+
+#: inc/admin-sidebar.php:100
+#@ WPEC
+msgid "Earn upto"
+msgstr "Keress"
+
+#: inc/admin-sidebar.php:100
+#@ WPEC
+msgid "per sale of WP Email Capture"
+msgstr "jutalékot minden egyes WP Email Capture eladása után"
+
+#: inc/admin-sidebar.php:100
+#@ WPEC
+msgid "Join our affilite programme today"
+msgstr "Csatlakozz a partner programunkhoz most"
+
+#: inc/admin-sidebar.php:104
+#@ WPEC
+msgid "On this page you can make changes that to the way in which WP Email Capture runs"
+msgstr "Ezen az oldalon tudod módosítani a WP Email Capture bővítmény működését"
+
+#: inc/functions.php:54
+#, php-format
+#@ default
+msgid "<strong>Please Note: </strong> You have not created a subscription page, confirmation page or both in WP Email Capture, please go to the WP Email Capture Settings Page to add them. | <a href=\"%1$s\">Hide Notice</a>"
+msgstr ""
+
+#: inc/options.php:132
+#@ WPEC
+msgid "Make The \"Name\" field a required field?"
+msgstr "Legyen a \"Név\" mező kötelező?"
+
+#: inc/process.php:155
+#@ WPEC
+msgid "Sign Up For Our Newsletter"
+msgstr "Iratkozz fel a hírlevelünkre"
+
+#: inc/process.php:181
+#@ WPEC
+msgid "Thank you for signing up for our newsletter, please click the link below to confirm your subscription"
+msgstr "Köszönjük, hogy feliratkoztál a hírlevelünkre, kérünk, hogy kattints a lenti linkre a feliratkozásod megerősítéséhez"
+
+#: inc/tabledata.php:63
+#@ WPEC
+msgid "Delete "
+msgstr "Törlés - "
+

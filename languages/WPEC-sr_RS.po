@@ -1,0 +1,603 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: WP Email Capture v2.6\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: 2014-05-26 17:10+0100\n"
+"Last-Translator: Borisa Djuraskovic <borisad@webhostinghub.com>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Poedit-SourceCharset: utf-8\n"
+"X-Poedit-KeywordsList: __;_e;__ngettext:1,2;_n:1,2;__ngettext_noop:1,2;"
+"_n_noop:1,2;_c,_nc:4c,1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;_nx_noop:4c,1,2\n"
+"X-Poedit-Basepath: ../\n"
+"X-Textdomain-Support: yes\n"
+"Language: hu_HU\n"
+"X-Generator: Poedit 1.5.7\n"
+"X-Poedit-SearchPath-0: .\n"
+
+# @ WPEC
+#: inc/dashboard.php:13 inc/options.php:168
+msgid "Export"
+msgstr "Export"
+
+# @ WPEC
+#: inc/dashboard.php:15
+msgid ""
+"Use the button below to export your list as a CSV to use in software such as"
+msgstr ""
+"Koristite dugme ispod da biste exporttovali vašu listu kao CSV da biste "
+"koristili softver kao što je"
+
+# @ WPEC
+#: inc/dashboard.php:22 inc/options.php:182
+msgid "Temporary e-mails"
+msgstr "Privremeni  mailovi"
+
+# @ WPEC
+#: inc/dashboard.php:24 inc/options.php:186
+msgid "There are"
+msgstr "Ima"
+
+# @ WPEC
+#: inc/dashboard.php:24 inc/options.php:186
+msgid ""
+"e-mail addresses that have been unconfirmed. Delete them to save space below."
+msgstr ""
+"e-mail adrese koje nisu potvrdjene. Obrisati da bi se sačuvao prazan prostor."
+
+# @ WPEC
+#: inc/dashboard.php:40
+msgid "WP Email Capture - At A Glance"
+msgstr "WP Email Capture - ukratko"
+
+# @ WPEC
+#: inc/display.php:22 inc/display.php:65
+msgid "Name:"
+msgstr "Ime:"
+
+# @ WPEC
+#: inc/display.php:24 inc/display.php:67
+msgid "Email:"
+msgstr "Email:"
+
+# @ WPEC
+#: inc/display.php:36 inc/display.php:75
+msgid "Powered by"
+msgstr " "
+
+# @ WPEC
+#: inc/admin-sidebar.php:103 inc/options.php:5 inc/options.php:18
+msgid "WP Email Capture Options"
+msgstr "WP Email Capture opcije"
+
+# @ WPEC
+#: inc/options.php:22
+msgid "Recommendations"
+msgstr "Preporuke"
+
+# @ WPEC
+#: inc/options.php:24
+msgid "We recommend"
+msgstr "Preporučujemo"
+
+# @ WPEC
+#: inc/options.php:24
+msgid "to run your email campaigns. We have tested this plugin with it."
+msgstr "da pokrenete vaše email kampanje. Testirali smo plugin sa tim."
+
+# @ WPEC
+#: inc/options.php:49
+msgid "Options"
+msgstr "Opcije"
+
+# @ WPEC
+#: inc/options.php:69
+msgid ""
+"Page to redirect to on sign up (full web address ie: http://www.domain.com/"
+"this-page/)"
+msgstr ""
+"Stranica da usmeri na sign up (cela web adresa pr: http://www.domain.com/"
+"this-page/)"
+
+# @ WPEC
+#: inc/options.php:77
+msgid ""
+"Page to redirect to on confirmation of email address  (full web address ie: "
+"http://www.domain.com/this-other-page/)"
+msgstr ""
+"Stranica da usmeri na konformacionu email adresu (cela web adresa pr: http://"
+"www.domain.com/this-other-page/)"
+
+# @ WPEC
+#: inc/options.php:85
+msgid "From Which Email Address"
+msgstr "Sa koje email adrese"
+
+# @ WPEC
+#: inc/options.php:93
+msgid "From Which Name"
+msgstr "Sa kog imena"
+
+# @ WPEC
+#: inc/options.php:101
+msgid "Subject of Email"
+msgstr "Predmet emaila"
+
+# @ WPEC
+#: inc/options.php:109
+msgid "Body of Email"
+msgstr "Telo email"
+
+# @ WPEC
+#: inc/options.php:110
+#, php-format
+msgid ""
+"(use %NAME% to use the form's &quot;Name&quot; field in their welcome email)"
+msgstr ""
+"(koristi %IME%da koristi formu &quot;Name&quot; polje u njihovom emailu za "
+"dobrodošlicu)"
+
+# @ WPEC
+#: inc/options.php:118
+msgid "Link to us (optional, but appreciated)"
+msgstr "Link za nas (opcionalno, ali očekivano)"
+
+# @ WPEC
+#: inc/options.php:156
+msgid "Save Changes"
+msgstr "Sačuvati promene"
+
+# @ WPEC
+#: inc/options.php:172
+msgid ""
+"Use the button below to export your list as a CSV to use in software such as "
+"<a href=\"http://wpemailcapture.com/recommends/aweber\" title=\"Email "
+"Marketing\">Aweber</a> or <a href=\"http://wpemailcapture.com/recommends/"
+"mailchimp\">Mailchimp</a>"
+msgstr ""
+"Koristiti dugme ispod da biste exportovali vašu listu kao CSV da biste "
+"koristili u softveru kao što je  <a href=\"http://wpemailcapture.com/"
+"recommends/aweber\" title=\"Email Marketing\">Aweber</a> or <a href=\"http://"
+"wpemailcapture.com/recommends/mailchimp\">Mailchimp</a>"
+
+# @ WPEC
+#: inc/options.php:194
+msgid "Delete Current List"
+msgstr "Obrisati trenutnu listu"
+
+# @ WPEC
+#: inc/options.php:198
+msgid ""
+"Want to delete the entire list? Click the link below. <strong>WARNING: </"
+"strong> this will delete all confirmed emails, so make sure you have a "
+"backup."
+msgstr ""
+"Želite da izbrišete celu listu? Klik na link ispod.<strong>UPOZORENJE: </"
+"strong> ovo će obrisati sve potvrdjene emailove, tako da bi trebalo da imate "
+"backup. "
+
+# @ WPEC
+#: inc/admin-sidebar.php:67
+msgid "Donations"
+msgstr "Donacije"
+
+# @ WPEC
+#: inc/pagedresults.php:141
+msgid "Prev"
+msgstr "Prethodno"
+
+# @ WPEC
+#: inc/pagedresults.php:169
+msgid "Next"
+msgstr "Sledeće"
+
+# @ WPEC
+#: inc/process.php:186
+msgid ""
+"This is an automated message that is generated because somebody with the IP "
+"address of"
+msgstr "Ovo je automatska poruka koja se generiše jer je neko sa IP adresom od"
+
+# @ WPEC
+#: inc/process.php:186
+msgid "(possibly you) on"
+msgstr "(verovatno ti) na"
+
+# @ WPEC
+#: inc/process.php:186
+msgid "filled out the form on the following page"
+msgstr "popuniti formu na sledećoj stranici"
+
+# @ WPEC
+#: inc/process.php:187
+msgid ""
+"If you are sure this isn't you, please ignore this message, you will not be "
+"sent another message."
+msgstr ""
+"Ako ste sigurni da ovo niste vi, ignorišite ovu poruku neće vam biti poslata "
+"druga."
+
+# @ WPEC
+#: inc/process.php:204
+msgid "Not found your email in our database"
+msgstr "Nije pronadjen mail u vašoj bazi podataka"
+
+# @ WPEC
+#: inc/tabledata.php:27
+msgid "Members"
+msgstr "Članovi"
+
+# @ WPEC
+#: inc/exportcsv.php:15 inc/tabledata.php:37
+msgid "Name"
+msgstr "Ime"
+
+# @ WPEC
+#: inc/exportcsv.php:15 inc/tabledata.php:37
+msgid "Email"
+msgstr "Email"
+
+# @ WPEC
+#: inc/widget.php:6
+msgid "WP Email Capture"
+msgstr "WP Email Capture"
+
+# @ WPEC
+#: inc/widget.php:6
+msgid "Widget for WP Email Capture"
+msgstr "Widget for WP Email Capture"
+
+# @ WPEC
+#: inc/widget.php:21 inc/widget.php:48
+msgid "Subscribe!"
+msgstr "Pretplati se!"
+
+# @ WPEC
+#: inc/widget.php:22 inc/widget.php:48
+msgid "Subscribe to my blog for updates"
+msgstr "Pretplati se na moj blog zbog updateova"
+
+# @ WPEC
+#: inc/widget.php:55
+msgid "Widget title:"
+msgstr "Naslov widgeta:"
+
+# @ WPEC
+#: inc/widget.php:56
+msgid "Widget text:"
+msgstr "Tekst widgeta:"
+
+# @ WPEC
+#: inc/dashboard.php:9
+msgid "Last Three Members To Join"
+msgstr "Posledna tri člana za priključivanje"
+
+# @ WPEC
+#: inc/dashboard.php:17 inc/options.php:176
+msgid "Export List"
+msgstr "Export List"
+
+# @ WPEC
+#: inc/dashboard.php:27 inc/options.php:190
+msgid "Delete Unconfirmed e-mail Addresses"
+msgstr "Obrisati"
+
+# @ WPEC
+#: inc/display.php:18
+msgid "Error:"
+msgstr "Greška:"
+
+# @ WPEC
+#: inc/display.php:28 inc/display.php:71
+msgid "Submit"
+msgstr "Podneti"
+
+# @ WPEC
+#: inc/options.php:202
+msgid "Delete Confirmed e-mail Addresses"
+msgstr "Obrisati potvrdjenu email adresu"
+
+# @ WPEC
+#: inc/admin-sidebar.php:14
+msgid "Need Help?"
+msgstr "Treba vam pomoć?"
+
+# @ WPEC
+#: inc/admin-sidebar.php:16
+msgid "If you are having problems with this plugin, please read the"
+msgstr "Ako imate problema sa ovim pluginom, pročitajte"
+
+# @ WPEC
+#: inc/admin-sidebar.php:16
+msgid "Frequently Asked Questions"
+msgstr "često postavljana pitanja"
+
+# @ WPEC
+#: inc/admin-sidebar.php:16
+msgid "or alternatively"
+msgstr "ili alternativno"
+
+# @ WPEC
+#: inc/admin-sidebar.php:16
+msgid "submit a support request here"
+msgstr "podneti zahtev za podršku ovde"
+
+# @ WPEC
+#: inc/admin-sidebar.php:19
+msgid "Recommended Services"
+msgstr "Preporučene usluge"
+
+# @ WPEC
+#: inc/admin-sidebar.php:21
+msgid "We recommend the following services for sending out emails:-"
+msgstr "Me preporučujemo sledeće usluge za slanje emailova:-"
+
+# @ WPEC
+#: inc/admin-sidebar.php:30
+msgid "Global List Management"
+msgstr "Global List Management"
+
+# @ WPEC
+#: inc/admin-sidebar.php:32
+msgid "This page allows you to create lists, either"
+msgstr "ova stranica vam dozvoljava da kreirate liste, ili"
+
+# @ WPEC
+#: inc/admin-sidebar.php:32
+msgid "external lists"
+msgstr "eksterne liste"
+
+# @ WPEC
+#: inc/admin-sidebar.php:32
+msgid ""
+"(WP Email Capture is compatible with most major email marketing software "
+"packages), or a new"
+msgstr ""
+"(WP Email Capture je kompatibilan sa većinom email marketing software "
+"paketa) ili noviji"
+
+# @ WPEC
+#: inc/admin-sidebar.php:32
+msgid "WP Email Capture List"
+msgstr "WP Email Capture Lista"
+
+# @ WPEC
+#: inc/admin-sidebar.php:32
+msgid "You can create as many different lists as you wish"
+msgstr "Možete da kreirate koliko želite različitih lista "
+
+# @ WPEC
+#: inc/admin-sidebar.php:36
+msgid "Add/Edit WP Email Capture List"
+msgstr "Dodati/Editovati WP Email Capture Listu"
+
+# @ WPEC
+#: inc/admin-sidebar.php:38
+msgid ""
+"This is the page for managing WP Email Capture Lists. From this page you "
+"can:-"
+msgstr ""
+"Ovo je stranica za upravljanje WP Email Capture Listi. Sa ove stranice "
+"možete:-"
+
+# @ WPEC
+#: inc/admin-sidebar.php:40
+msgid "Make Changes To Your Lists"
+msgstr "Napravite promene u vašim listama"
+
+# @ WPEC
+#: inc/admin-sidebar.php:40
+msgid "such as the name and the pages redirected to on form completion"
+msgstr "kao što su ime i stranice redirektovane u formu"
+
+# @ WPEC
+#: inc/admin-sidebar.php:41
+msgid "Email Options"
+msgstr "email opcije"
+
+# @ WPEC
+#: inc/admin-sidebar.php:41
+msgid ""
+"such as where the email comes from and what emails sent to the subscriber "
+"contains"
+msgstr ""
+"kao što je odakle ovaj email dolazi i koji emailovi su poslati sadržaju "
+"pretplatnika"
+
+# @ WPEC
+#: inc/admin-sidebar.php:42
+msgid "Error Options"
+msgstr "Opcije greške"
+
+# @ WPEC
+#: inc/admin-sidebar.php:42
+msgid ""
+"the errors that are displayed to subscribers who incorrectly fill in the form"
+msgstr ""
+"greške koje su prikazane pretplatnicima koji nisu pravilno popunili formu"
+
+# @ WPEC
+#: inc/admin-sidebar.php:43
+msgid "Styling Options"
+msgstr "Opcije stilizovanja"
+
+# @ WPEC
+#: inc/admin-sidebar.php:43
+msgid ""
+"change the button image (or use an image), as well as what to ask the user "
+"for besides their name"
+msgstr ""
+"promenite sliku dugmeta (ili koristite sliku), kao i šta da pitate korisnika "
+"osim za njihovo ime"
+
+# @ WPEC
+#: inc/admin-sidebar.php:45
+msgid "You can also on this page do the following"
+msgstr "Možete takodje na ovoj stranici da uradite sledeće"
+
+# @ WPEC
+#: inc/admin-sidebar.php:47
+msgid "Manage List Subscribers"
+msgstr "Upravljanje listom pretplatnika"
+
+# @ WPEC
+#: inc/admin-sidebar.php:48
+msgid "Delete Temporary Emails"
+msgstr "Obrisati privremene emailove"
+
+# @ WPEC
+#: inc/admin-sidebar.php:49
+msgid "Empty the entire list"
+msgstr "Ispazniti celu listu"
+
+# @ WPEC
+#: inc/admin-sidebar.php:54
+msgid "Get WP Email Capture Premium"
+msgstr "Nabavite WP Email Capture Premium"
+
+# @ WPEC
+#: inc/admin-sidebar.php:56
+msgid ""
+"Unlock the <strong>true</strong> power of WP Email Capture with the Premium "
+"version. With multiple lists, and stat tracking, WP Email Capture Premium is "
+"the missing link in your WordPress Email Marketing Puzzle"
+msgstr ""
+"Otključajte <strong>pravu</strong> moć  WP Email Capture sa Premium version. "
+"više lista i praćenjem statistike, WP Email Capture Premiumje veza koja vam "
+"nedostaje u vašoj    WordPress Email Marketing  puzli."
+
+# @ WPEC
+#: inc/admin-sidebar.php:61
+msgid "Add/Edit External List"
+msgstr "Dodati/Editovati eksternu listu"
+
+# @ WPEC
+#: inc/admin-sidebar.php:63
+msgid ""
+"This is the page for managing External lists through WP Email Capture. "
+"Simply copy & paste the code from your Email Marketing software into the "
+"page below and you can embed your newsletter subscriptions into posts, pages "
+"or sidebars easily using WP Email Capture. If you do not have an Email "
+"Marketing Service, a few are recommended below"
+msgstr ""
+"Ova stranica je za upravljanje eksternim listam preko WP Email Capture . "
+"Jednostavno kopirajte i nalepite kod iz vašeg E-mail marketing softvera u "
+"stranu ispod i možete da ugradite svoje prijave u postove , stranice ili "
+"sidebarove lako koristeći  WP Email Capture. Ako nemate e-mail marketing "
+"usluge ,nekolicina ispod se preporučuju"
+
+# @ WPEC
+#: inc/admin-sidebar.php:68
+msgid ""
+"If you like this plugin, please consider a small donation to help with "
+"future versions and plugins."
+msgstr "Ako vam se dopada plugin, razmislite o donacije zarad budućeg razvoja."
+
+# @ WPEC
+#: inc/admin-sidebar.php:78
+msgid "Latest News"
+msgstr "Posednje vesti"
+
+# @ WPEC
+#: inc/admin-sidebar.php:79
+msgid "The latest news and tutorials from WP Email Capture"
+msgstr "Poslednje vesti i tutorijali sa WP Email Capture"
+
+# @ WPEC
+#: inc/admin-sidebar.php:90
+msgid "Support Us!"
+msgstr "Podržite nas!"
+
+# @ WPEC
+#: inc/admin-sidebar.php:91
+msgid ""
+"We would like you if you would not mind, doing one of the following if you "
+"are a fan of WP Email Capture"
+msgstr ""
+"Voleli bismo kada biste uradili nešto od sledećeg ako ste fan WP Email "
+"Capture"
+
+# @ WPEC
+#: inc/admin-sidebar.php:93
+msgid "Rate the plugin 5* on WordPress.org"
+msgstr "Ocenite plugin sa  5* na WordPress.org"
+
+# @ WPEC
+#: inc/admin-sidebar.php:94
+msgid "Follow @WPEmailCapture on Twitter"
+msgstr "Pratite @WPEmailCapture na Twitter-u"
+
+# @ WPEC
+#: inc/admin-sidebar.php:95
+msgid "Like us on Facebook"
+msgstr "Lajkujte nas na Facebook"
+
+# @ WPEC
+#: inc/admin-sidebar.php:99
+msgid "Become An Affiliate!"
+msgstr "Postanite saradnik!"
+
+# @ WPEC
+#: inc/admin-sidebar.php:100
+msgid "Earn upto"
+msgstr "Zaradite do"
+
+# @ WPEC
+#: inc/admin-sidebar.php:100
+msgid "per sale of WP Email Capture"
+msgstr "po prodaji od  WP Email Capture "
+
+# @ WPEC
+#: inc/admin-sidebar.php:100
+msgid "Join our affilite programme today"
+msgstr "Pridružite se  programu saradnika danas"
+
+# @ WPEC
+#: inc/admin-sidebar.php:104
+msgid ""
+"On this page you can make changes that to the way in which WP Email Capture "
+"runs"
+msgstr ""
+"Na ovoj stranici možete da napravite te promene u kojima će  WP Email "
+"Capture  raditi"
+
+# @ default
+#: inc/functions.php:54
+#, php-format
+msgid ""
+"<strong>Please Note: </strong> You have not created a subscription page, "
+"confirmation page or both in WP Email Capture, please go to the WP Email "
+"Capture Settings Page to add them. | <a href=\"%1$s\">Hide Notice</a>"
+msgstr ""
+"<strong>Imajte na umu: </strong> Niste napravili stranicu za preplatu, "
+"stranicu za pretplatu ili oboje u WP Email Capture, idite na WP Email "
+"Capture postavke da biste ih dodali. | <a href=\"%1$s\">sakriti obaveštenje</"
+"a>"
+
+# @ WPEC
+#: inc/options.php:132
+msgid "Make The \"Name\" field a required field?"
+msgstr "Napraviti polje  \"Ime\"zahtevanim poljem?"
+
+# @ WPEC
+#: inc/process.php:155
+msgid "Sign Up For Our Newsletter"
+msgstr "Upišite se za novosti"
+
+# @ WPEC
+#: inc/process.php:181
+msgid ""
+"Thank you for signing up for our newsletter, please click the link below to "
+"confirm your subscription"
+msgstr ""
+"Hvala što ste sepijavili za novosti, kliknite ispod na link da biste "
+"potvrdili pretplatu"
+
+# @ WPEC
+#: inc/tabledata.php:63
+msgid "Delete "
+msgstr "Obrisati"

@@ -1,0 +1,213 @@
+# Copyright (C) 2012 WP Email Capture
+# This file is distributed under the same license as the WP Email Capture package.
+msgid ""
+msgstr ""
+"Project-Id-Version: WP Email Capture 2.1.1\n"
+"Report-Msgid-Bugs-To: http://wordpress.org/tag/wp-email-capture\n"
+"POT-Creation-Date: 2012-04-06 12:31:13+00:00\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2012-04-28 14:46+0100\n"
+"Last-Translator: Sander de Jong <sander@zanderz.net>\n"
+"Language-Team: \n"
+"X-Poedit-Language: Dutch\n"
+"X-Poedit-Country: NETHERLANDS\n"
+
+#: inc/dashboard.php:13
+#: inc/options.php:151
+msgid "Export"
+msgstr "Exporteren"
+
+#: inc/dashboard.php:15
+msgid "Use the button below to export your list as a CSV to use in software such as"
+msgstr "Gebruik onderstaande knop om je lijst als CSV te exporteren voor gebruik in programma's als"
+
+#: inc/dashboard.php:22
+#: inc/options.php:165
+msgid "Temporary e-mails"
+msgstr "Tijdelijke e-mails"
+
+#: inc/dashboard.php:24
+#: inc/options.php:169
+msgid "There are"
+msgstr "Er zijn"
+
+#: inc/dashboard.php:24
+#: inc/options.php:169
+msgid "e-mail addresses that have been unconfirmed. Delete them to save space below."
+msgstr "onbevestigde e-mailadressen. Om ruimte te besparen kun je ze hier verwijderen."
+
+#: inc/dashboard.php:40
+msgid "WP Email Capture - At A Glance"
+msgstr "WP Email Capture - In Een Oogopslag"
+
+#: inc/display.php:22
+msgid "Name:"
+msgstr "Naam:"
+
+#: inc/display.php:24
+msgid "Email:"
+msgstr "E-mail:"
+
+#: inc/display.php:36
+#: inc/display.php:71
+msgid "Powered by"
+msgstr "Mogelijk gemaakt door"
+
+#: inc/options.php:5
+#: inc/options.php:15
+msgid "WP Email Capture Options"
+msgstr "WP Email Capture-opties"
+
+#: inc/options.php:19
+msgid "Recommendations"
+msgstr "Aanbevelingen"
+
+#: inc/options.php:21
+msgid "We recommend"
+msgstr "We bevelen"
+
+#: inc/options.php:21
+msgid "to run your email campaigns. We have tested this plugin with it."
+msgstr "aan voor je e-mailcampagnes. We hebben deze plugin ermee getest."
+
+#: inc/options.php:46
+msgid "Options"
+msgstr "Opties"
+
+#: inc/options.php:66
+msgid "Page to redirect to on sign up (full web address ie: http://www.domain.com/this-page/)"
+msgstr "Pagina waar men naar doorgestuurd wordt na registratie (volledig adres, bijv. http://www.domein.nl/deze-pagina/)"
+
+#: inc/options.php:74
+msgid "Page to redirect to on confirmation of email address  (full web address ie: http://www.domain.com/this-other-page/)"
+msgstr "Pagina waar men naar doorgestuurd wordt na e-mailbevestiging (volledig adres, bijv. http://www.domein.nl/deze-andere-pagina/)"
+
+#: inc/options.php:82
+msgid "From Which Email Address"
+msgstr "Van welk e-mailadres"
+
+#: inc/options.php:90
+msgid "From Which Name"
+msgstr "Van welke naam"
+
+#: inc/options.php:98
+msgid "Subject of Email"
+msgstr "Onderwep van e-mail"
+
+#: inc/options.php:106
+msgid "Body of Email"
+msgstr "Inhoud van e-mail"
+
+#: inc/options.php:107
+msgid "(use %NAME% to use the form's &quot;Name&quot; field in their welcome email)"
+msgstr "(gebruik %NAAM% om het Naam-veld uit het formulier te gebruiken in de welkoms-mail)"
+
+#: inc/options.php:115
+msgid "Link to us (optional, but appreciated)"
+msgstr "Link naar ons (optioneel, maar wordt op prijs gesteld)"
+
+#: inc/options.php:139
+msgid "Save Changes"
+msgstr "Veranderingen opslaan"
+
+#: inc/options.php:155
+msgid "Use the button below to export your list as a CSV to use in software such as <a href=\"http://wpemailcapture.com/recommends/aweber\" title=\"Email Marketing\">Aweber</a> or <a href=\"http://wpemailcapture.com/recommends/mailchimp\">Mailchimp</a>"
+msgstr "Gebruik onderstaande knop om je lijst te exporteren als CSV, voor gebruik in programma's als <a href=\"http://wpemailcapture.com/recommends/aweber\" title=\"Email Marketing\">Aweber</a> of <a href=\"http://wpemailcapture.com/recommends/mailchimp\">Mailchimp</a>"
+
+#: inc/options.php:177
+msgid "Delete Current List"
+msgstr "Verwijder huidige lijst"
+
+#: inc/options.php:181
+msgid "Want to delete the entire list? Click the link below. <strong>WARNING: </strong> this will delete all confirmed emails, so make sure you have a backup."
+msgstr "Hele lijst verwijderen? Klik op onderstaande link. <strong>WAARSCHUWING: </strong> dit verwijdert alle bevestigde e-mails, dus zorg dat je een reservekopie hebt."
+
+#: inc/options.php:191
+msgid "Donations"
+msgstr "Donaties"
+
+#: inc/options.php:193
+msgid "If you like this plugin, please consider a small donation to help with future versions &amp; plugins. Donators are thanked on each specific plugin page!"
+msgstr "Als je deze plugin leuk vindt, overweeg dan om een kleine donatie te doen voor toekomstige versies &amp; plugins. Donateurs worden bedankt op iedere pluginpagina!"
+
+#: inc/pagedresults.php:141
+msgid "Prev"
+msgstr "Vorige"
+
+#: inc/pagedresults.php:169
+msgid "Next"
+msgstr "Volgende"
+
+#: inc/process.php:158
+msgid "This is an automated message that is generated because somebody with the IP address of"
+msgstr "Dit is een automatisch bericht omdat iemand met het IP-adres"
+
+#: inc/process.php:158
+msgid "(possibly you) on"
+msgstr "(mogelijk jij) op"
+
+#: inc/process.php:158
+msgid "filled out the form on the following page"
+msgstr "het formulier invulde op de volgende pagina"
+
+#: inc/process.php:159
+msgid "If you are sure this isn't you, please ignore this message, you will not be sent another message."
+msgstr "Als je zeker bent dat jij dit niet bent kun je dit bericht negeren, je ontvangt niet nog een bericht."
+
+#: inc/process.php:176
+msgid "Not found your email in our database"
+msgstr "Je e-mailadres is niet gevonden in de database"
+
+#: inc/tabledata.php:27
+msgid "Members"
+msgstr "Leden"
+
+#: inc/tabledata.php:37
+msgid "Name"
+msgstr "Naam"
+
+#: inc/tabledata.php:37
+msgid "Email"
+msgstr "E-mail"
+
+#: inc/widget.php:35
+msgid "Subscribe!"
+msgstr "Abonneren!"
+
+#: inc/widget.php:37
+msgid "Subscribe to my blog for updates"
+msgstr "Abonneer je op mijn blog voor nieuwe versies"
+
+#: inc/widget.php:117
+msgid "Widget title:"
+msgstr "Widget-titel"
+
+#: inc/widget.php:119
+msgid "Widget text:"
+msgstr "Widget-tekst"
+
+#. #-#-#-#-#  plugin.pot (WP Email Capture 2.1.1)  #-#-#-#-#
+#. Plugin Name of the plugin/theme
+#: inc/widget.php:135
+#: inc/widget.php:141
+msgid "WP Email Capture"
+msgstr ""
+
+#. Plugin URI of the plugin/theme
+msgid "http://www.wpemailcapture.com"
+msgstr ""
+
+#. Description of the plugin/theme
+msgid "Captures email addresses for insertion into software such as <a href=\"http://wpemailcapture.com/recommends/aweber\" title=\"Email Marketing\">Aweber</a> or <a href=\"http://wpemailcapture.com/recommends/mailchimp/\">Mailchimp</a>"
+msgstr "Vangt e-mailadressen af om te gebruiken in programma's als <a href=\"http://wpemailcapture.com/recommends/aweber\" title=\"Email Marketing\">Aweber</a> of <a href=\"http://wpemailcapture.com/recommends/mailchimp/\">Mailchimp</a>"
+
+#. Author of the plugin/theme
+msgid "Rhys Wynne"
+msgstr ""
+
+#. Author URI of the plugin/theme
+msgid "http://www.rhyswynne.co.uk/"
+msgstr ""
+

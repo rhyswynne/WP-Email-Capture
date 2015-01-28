@@ -1,0 +1,351 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: WPEC\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-03-11 13:00+0100\n"
+"PO-Revision-Date: \n"
+"Last-Translator: David Bravo <dbravo@dimensionmultimedia.com>\n"
+"Language-Team: Giuseppe Puccio Marino <puccio.marino@gmail.com>\n"
+"Language: it_IT\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-KeywordsList: __;_e\n"
+"X-Generator: Poedit 1.5.7\n"
+"X-Poedit-SearchPath-0: ..\n"
+
+#: ../inc/dashboard.php:9
+msgid "Last Three Members To Join"
+msgstr "Ultimi Tre membri che si sono iscritti"
+
+#: ../inc/dashboard.php:13 ../inc/options.php:176
+msgid "Export"
+msgstr "Esporta"
+
+#: ../inc/dashboard.php:15
+msgid ""
+"Use the button below to export your list as a CSV to use in software such as"
+msgstr "Utilizza il bottone sotto per esportare la tua lista come CSV"
+
+#: ../inc/dashboard.php:17 ../inc/options.php:184
+msgid "Export List"
+msgstr "Esporta Lista"
+
+#: ../inc/dashboard.php:22 ../inc/options.php:190
+msgid "Temporary e-mails"
+msgstr "Emails temporane"
+
+#: ../inc/dashboard.php:24 ../inc/options.php:194
+msgid "There are"
+msgstr "Ci sono"
+
+#: ../inc/dashboard.php:24 ../inc/options.php:194
+msgid ""
+"e-mail addresses that have been unconfirmed. Delete them to save space below."
+msgstr ""
+"Indirizzi di posta elettronica che sono stati confermati. Eliminarli per "
+"risparmiare spazio sottostante."
+
+#: ../inc/dashboard.php:27 ../inc/options.php:198
+msgid "Delete Unconfirmed e-mail Addresses"
+msgstr "Cancella indirizzi e-mail non confermati"
+
+#: ../inc/dashboard.php:40
+msgid "WP Email Capture - At A Glance"
+msgstr "Email Capture"
+
+#: ../inc/display.php:19
+msgid "Error:"
+msgstr "Errore: "
+
+#: ../inc/display.php:23 ../inc/display.php:69
+msgid "Name:"
+msgstr "Nome"
+
+#: ../inc/display.php:25 ../inc/display.php:71
+msgid "Email:"
+msgstr "E-mail:"
+
+#: ../inc/display.php:32 ../inc/display.php:75
+msgid "Submit"
+msgstr "Iscrivimi"
+
+#: ../inc/display.php:40 ../inc/display.php:79
+msgid "Powered by"
+msgstr "Utilizando"
+
+#: ../inc/exportcsv.php:19 ../inc/tabledata.php:37
+msgid "Name"
+msgstr "Nome"
+
+#: ../inc/exportcsv.php:19 ../inc/tabledata.php:37
+msgid "Email"
+msgstr "E-mail"
+
+#: ../inc/functions.php:54
+#, php-format
+msgid ""
+"<strong>Please Note: </strong> You have not created a subscription page, "
+"confirmation page or both in WP Email Capture, please go to the WP Email "
+"Capture Settings Page to add them. | <a href=\"%1$s\">Hide Notice</a>"
+msgstr ""
+"<strong> Nota Bene: </ strong> Non hai creato una pagina di sottoscrizione, "
+"pagina di conferma o sia in WP-mail Capture, si prega di andare alla WP-mail "
+"Capture Settings pagina per aggiungerli. | <a Href=\"%1$s\"> Nascondi avviso "
+"</ a>"
+
+#: ../inc/options.php:5 ../inc/options.php:18
+msgid "WP Email Capture Options"
+msgstr "Opzioni - Email Capture"
+
+#: ../inc/options.php:22
+msgid "Recommendations"
+msgstr "Raccomandazioni"
+
+#: ../inc/options.php:24
+msgid "We recommend"
+msgstr "Noi raccomandiamo"
+
+#: ../inc/options.php:24
+msgid "to run your email campaigns. We have tested this plugin with it."
+msgstr ""
+"per eseguire le vostre campagne e-mail. Abbiamo testato questo plugin con "
+"esso."
+
+#: ../inc/options.php:49
+msgid "Options"
+msgstr "Opzioni"
+
+#: ../inc/options.php:69
+msgid ""
+"Page to redirect to on sign up (full web address ie: http://www.domain.com/"
+"this-page/)"
+msgstr ""
+"Pagina redirect dopo iscrizionel (formato: http://www.dominio.it/tua-pagina/)"
+
+#: ../inc/options.php:77
+msgid ""
+"Page to redirect to on confirmation of email address  (full web address ie: "
+"http://www.domain.com/this-other-page/)"
+msgstr ""
+"Pagina redirect conferma indirizzo email (formato: http://www.dominio.it/tua-"
+"pagina/)"
+
+#: ../inc/options.php:85
+msgid "From Which Email Address"
+msgstr "Indirizzo mittente"
+
+#: ../inc/options.php:93
+msgid "From Which Name"
+msgstr "Nome Mittente"
+
+#: ../inc/options.php:101
+msgid "Subject of Email"
+msgstr "Oggetto Email"
+
+#: ../inc/options.php:109
+msgid "Body of Email"
+msgstr "<b>Contenuto del messaggio</b>"
+
+#: ../inc/options.php:110
+msgid ""
+"(use %NAME% to use the form's &quot;Name&quot; field in their welcome email)"
+msgstr ""
+"Utilizza %NAME% per includere il nome del destinatario e dare il benvenuto "
+"via email."
+
+#: ../inc/options.php:118
+msgid "Link to us (optional, but appreciated)"
+msgstr "Link al nostro sito (opzionale, ma apprezzato)"
+
+#: ../inc/options.php:132
+msgid "Make The \"Name\" field a required field?"
+msgstr "Fa si che il campo  \"Nome \" sia obligatorio"
+
+#: ../inc/options.php:146
+msgid "Delimeter (leave blank for a comma)"
+msgstr "Delimitatore (lasciare in bianco per una virgola)"
+
+#: ../inc/options.php:164
+msgid "Save Changes"
+msgstr "Salva Cambiamenti"
+
+#: ../inc/options.php:180
+msgid ""
+"Use the button below to export your list as a CSV to use in software such as "
+"<a href=\"http://wpemailcapture.com/recommends/aweber\" title=\"Email "
+"Marketing\">Aweber</a> or <a href=\"http://wpemailcapture.com/recommends/"
+"mailchimp\">Mailchimp</a>"
+msgstr "Utilizza il bottone per esportare la lista come archivio CSV"
+
+#: ../inc/options.php:202
+msgid "Delete Current List"
+msgstr "Cancella lista corrente"
+
+#: ../inc/options.php:206
+msgid ""
+"Want to delete the entire list? Click the link below. <strong>WARNING: </"
+"strong> this will delete all confirmed emails, so make sure you have a "
+"backup."
+msgstr ""
+"Vuoi cancellare tutta la lista? Clicca sul link qui sotto. <strong> "
+"ATTENZIONE: </ strong> questo cancellerà tutto anche le e-mail confermate, "
+"quindi assicuratevi di avere un backup."
+
+#: ../inc/options.php:210
+msgid "Delete Confirmed e-mail Addresses"
+msgstr "Eliminare Indirizzi e-mail confermati"
+
+#: ../inc/pagedresults.php:141
+msgid "Prev"
+msgstr "Precedente"
+
+#: ../inc/pagedresults.php:169
+msgid "Next"
+msgstr "Successivo"
+
+#: ../inc/process.php:57
+msgid "Please Provide A Name"
+msgstr "Si prega di fornire un nome"
+
+#: ../inc/process.php:70
+msgid "Not a valid email"
+msgstr "Non è un indirizzo email valido"
+
+#: ../inc/process.php:112
+msgid "User already present"
+msgstr "Utente già presente"
+
+#: ../inc/process.php:155
+msgid "Sign Up For Our Newsletter"
+msgstr "Iscriviti alla nostra Newsletter"
+
+#: ../inc/process.php:181
+msgid ""
+"Thank you for signing up for our newsletter, please click the link below to "
+"confirm your subscription"
+msgstr ""
+"Grazie per esserti iscritto alla nostra newsletter, clicca sul link qui "
+"sotto per confermare l'iscrizione"
+
+#: ../inc/process.php:186
+msgid ""
+"This is an automated message that is generated because somebody with the IP "
+"address of"
+msgstr ""
+"Questo messaggio è generato in automatico perché qualcuno con l'indirizzo IP"
+
+#: ../inc/process.php:186
+msgid "(possibly you) on"
+msgstr "(possibilmente tu) il"
+
+#: ../inc/process.php:186
+msgid "filled out the form on the following page"
+msgstr "ha compilato il modulo alla pagina seguente"
+
+#: ../inc/process.php:187
+msgid ""
+"If you are sure this isn't you, please ignore this message, you will not be "
+"sent another message."
+msgstr ""
+"Se siete sicuri di non essere voi, per favore ignorare questo messaggio, non "
+"verrà inviato un altro messaggio."
+
+#: ../inc/process.php:204
+msgid "Not found your email in our database"
+msgstr "La tua e-mail non &egrave; stata trovata nel nostro database"
+
+#: ../inc/process.php:226
+msgid "Email unable to be sent"
+msgstr "Email incapace di essere inviato"
+
+#: ../inc/process.php:285
+msgid "Wrong confirmation code"
+msgstr "Codice di conferma errato"
+
+#: ../inc/tabledata.php:27
+msgid "Members"
+msgstr "Iscritti"
+
+#: ../inc/tabledata.php:65
+msgid "Delete "
+msgstr "Cancella"
+
+#: ../inc/widget.php:6
+msgid "WP Email Capture"
+msgstr "Email Capture"
+
+#: ../inc/widget.php:6
+msgid "Widget for WP Email Capture"
+msgstr "Widget  per Email Capture"
+
+#: ../inc/widget.php:21 ../inc/widget.php:48 ../inc/widget.php:55
+msgid "Subscribe to the Newsletter"
+msgstr "Iscriviti alla Newsletter"
+
+#: ../inc/widget.php:56
+msgid "Widget text:"
+msgstr "Testo del widget:"
+
+#~ msgid "Subscribe!"
+#~ msgstr "Iscriviti"
+
+#~ msgid "Subscribe to my blog for updates"
+#~ msgstr "Iscriviti al sito per gli aggiornamenti"
+
+#~ msgid "Widget title:"
+#~ msgstr "Titolo Widget"
+
+#, fuzzy
+#~ msgid "Recommended Services"
+#~ msgstr "Raccomandazioni"
+
+#, fuzzy
+#~ msgid "WP Email Capture List"
+#~ msgstr "Email Capture"
+
+#, fuzzy
+#~ msgid "Add/Edit WP Email Capture List"
+#~ msgstr "Opzioni - Email Capture"
+
+#, fuzzy
+#~ msgid "Email Options"
+#~ msgstr "Opzioni - Email Capture"
+
+#, fuzzy
+#~ msgid "Error Options"
+#~ msgstr "Opzioni"
+
+#, fuzzy
+#~ msgid "Styling Options"
+#~ msgstr "Opzioni"
+
+#, fuzzy
+#~ msgid "Delete Temporary Emails"
+#~ msgstr "Emails temporanee"
+
+#, fuzzy
+#~ msgid "Get WP Email Capture Premium"
+#~ msgstr "Email Capture"
+
+#~ msgid "Add/Edit External List"
+#~ msgstr "Aggiungi/Modifica Lista Esterna"
+
+#~ msgid "Earn upto"
+#~ msgstr "Guadagna fino a"
+
+#, fuzzy
+#~ msgid "per sale of WP Email Capture"
+#~ msgstr "Email Capture"
+
+#~ msgid "Join our affilite programme today"
+#~ msgstr "Iscriviti al nostro programma di affiliazione"
+
+#~ msgid ""
+#~ "On this page you can make changes that to the way in which WP Email "
+#~ "Capture runs"
+#~ msgstr ""
+#~ "In questa pagina è possibile apportare modifiche al modo in cui WP-mail "
+#~ "Capture funziona"
