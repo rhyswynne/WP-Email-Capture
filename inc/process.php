@@ -286,7 +286,7 @@ function wp_capture_email_confirm()
 			$url = $url  . $extrastring . "wp_email_capture_error=" . $error;
 
 			wp_redirect($url);
-
+			
 	}
 
 		// if successfully moved data from table"temp_members_db" to table "registered_members" displays message "Your account has been activated" and don't forget to delete confirmation code from table "temp_members_db"
