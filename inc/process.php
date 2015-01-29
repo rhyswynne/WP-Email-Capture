@@ -84,9 +84,9 @@ if (wp_email_capture_double_check_everything($name, $email))
 
 	// values sent from form
 
-	$name = wp_email_capture_sanitize($name);
+	$name = esc_attr($name);
 
-	$email= wp_email_capture_sanitize($email);
+	$email= esc_attr($email);
 
 	$name = wp_email_injection_test($name);
 
@@ -96,9 +96,9 @@ if (wp_email_capture_double_check_everything($name, $email))
 
 	$email = wp_email_stripslashes($email);
 
-	$referrer = wp_email_capture_sanitize($_SERVER['HTTP_REFERER']);
+	$referrer = esc_attr($_SERVER['HTTP_REFERER']);
 
-	$ip = wp_email_capture_sanitize($_SERVER['REMOTE_ADDR']);
+	$ip = esc_attr($_SERVER['REMOTE_ADDR']);
 
 	$date = date("Y-m-d H-i");
 
@@ -248,7 +248,7 @@ function wp_capture_email_confirm()
 
 	// Passkey that got from link
 
-	$passkey=wp_email_capture_sanitize($_GET['wp_email_capture_passkey']);
+	$passkey=esc_attr($_GET['wp_email_capture_passkey']);
 
 	$table_name = $wpdb->prefix . "wp_email_capture_temp_members";
 

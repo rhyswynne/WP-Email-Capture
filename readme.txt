@@ -158,6 +158,10 @@ Please report any bugs, support and suggestions to the [WP Email Capture Support
 To donate to this plugin, please visit the [WP Email Capture Donations Page](http://www.wpemailcapture.com/pricing/)
 
 == Change Log ==
+= 3.0 =
+* Massive refactor of code, to help improve it.
+* Fixed a bug that the "Hide Notice" dismissive now works.
+
 = 2.11 =
 * German Translation Updated (thanks Ove3rfly)
 * Added the filter `wp_email_capture_dashboard_capability`, which means you can choose the capability you wish users to access the dashboard widget (thanks Ove3rfly).
