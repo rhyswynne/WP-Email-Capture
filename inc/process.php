@@ -55,7 +55,7 @@ function wp_email_capture_signup() {
 
 	}
 
-	$email = esc_attr( $_REQUEST['wp-email-capture-email'] );
+	$email = trim( esc_attr( $_REQUEST['wp-email-capture-email'] ) );
 
 	if ( !is_email( $email ) ) {
 
@@ -69,7 +69,7 @@ function wp_email_capture_signup() {
 	}
 
 	$name = esc_attr( $name );
-	$email= esc_attr( $email );
+	$email = esc_attr( $email );
 
 	$name = wp_email_injection_test( $name );
 	$email = wp_email_injection_test( $email );
