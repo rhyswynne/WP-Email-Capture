@@ -4,8 +4,6 @@ require_once(WP_EMAIL_CAPTURE_PATH . '/inc/functions.php');
 require_once(WP_EMAIL_CAPTURE_PATH . '/inc/admin-sidebar.php');
 require_once(WP_EMAIL_CAPTURE_PATH . '/inc/install.php');
 
-require_once(WP_EMAIL_CAPTURE_PATH . '/inc/pagedresults.php');
-
 require_once(WP_EMAIL_CAPTURE_PATH . '/inc/tabledata.php');
 
 require_once(WP_EMAIL_CAPTURE_PATH . '/inc/options.php');
