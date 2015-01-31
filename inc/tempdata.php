@@ -1,50 +1,54 @@
 <?php
 
-function wp_email_capture_truncate()
-
-{
+/**
+ * Delete the members in the tempoarary members table.
+ * @return void
+ */
+function wp_email_capture_truncate() {
 
 	global $wpdb;
 
-	$table_name = $wpdb->prefix . "wp_email_capture_temp_members";
+	$temp_members_table = $wpdb->prefix . "wp_email_capture_temp_members";
 
-   	$sql = "TRUNCATE " . $table_name;
+   	$truncate_temp_sql = "TRUNCATE " . $temp_members_table;
 
-	$result = $wpdb->query($sql);
+	$truncated_table = $wpdb->query($truncate_temp_sql);
 
 }
 
-function wp_email_capture_delete()
-
-{
+/**
+ * Delete the members of the registered members table.
+ * @return void
+ */
+function wp_email_capture_delete() {
 
 	global $wpdb;
 
-	$table_name = $wpdb->prefix . "wp_email_capture_registered_members";
+	$registered_members_table = $wpdb->prefix . "wp_email_capture_registered_members";
 
-   	$sql = "TRUNCATE " . $table_name;
+   	$truncate_registered_sql = "TRUNCATE " . $registered_members_table;
 
-	$result = $wpdb->query($sql);
+	$truncated_registered = $wpdb->query($truncate_registered_sql);
 
 }
 
-
-function wp_email_capture_count_temp()
-
-{
+/**
+ * Count the members in the temporary members table.
+ * @return int 	The number of members in the tempoarary members table.
+ */
+function wp_email_capture_count_temp() {
 
 	global $wpdb;
 
-	$table_name = $wpdb->prefix . "wp_email_capture_temp_members";
+	$temp_members_table = $wpdb->prefix . "wp_email_capture_temp_members";
 
-	$sql = 'SELECT COUNT(*)
+	$count_temp_sql = 'SELECT COUNT(*)
 
-	FROM '. $table_name;
+	FROM '. $temp_members_table;
 
+	$temp_members = $wpdb->get_var($count_temp_sql);
 
-	$result = $wpdb->get_var($sql);
-
-	return $result;
+	return $temp_members;
 
 }
 
