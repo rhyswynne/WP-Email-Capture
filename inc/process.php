@@ -233,6 +233,23 @@ function wp_capture_email_confirm() {
 
 			$add_to_registered_members_table = $wpdb->insert( $registered_members_table, array( 'name' => $name, 'email' => $email ), array( '%s', '%s' ) );
 
+			// if successfully moved data from table"temp_members_db" to table "registered_members" displays message "Your account has been activated" and don't forget to delete confirmation code from table "temp_members_db"
+			
+			$delete_from_temp_members_sql ="DELETE FROM $temp_members_table WHERE confirm_code = '%s'";
+
+			$delete_from_temp_members = $wpdb->query( $wpdb->prepare( $delete_from_temp_members_sql, $passkey ) );
+
+			$fullreg = "";
+			$fullreg = get_option( 'wp_email_capture_redirection' );
+
+			if ( $fullreg == "" ) {
+				$fullreg = get_bloginfo( 'url' );
+			}
+
+			wp_redirect( $fullreg );
+			echo "<meta http-equiv='refresh' content='0;". $fullreg ."'>";
+			die();
+
 		}
 
 	} else {
@@ -247,24 +264,11 @@ function wp_capture_email_confirm() {
 
 	}
 
-	// if successfully moved data from table"temp_members_db" to table "registered_members" displays message "Your account has been activated" and don't forget to delete confirmation code from table "temp_members_db"
+	
 
 	if ( $add_to_registered_members_table ) {
 
-		$delete_from_temp_members_sql ="DELETE FROM $temp_members_table WHERE confirm_code = '%s'";
-
-		$delete_from_temp_members = $wpdb->query( $wpdb->prepare( $delete_from_temp_members_sql, $passkey ) );
-
-		$fullreg = "";
-		$fullreg = get_option( 'wp_email_capture_redirection' );
-
-		if ( $fullreg == "" ) {
-			$fullreg = get_bloginfo( 'url' );
-		}
-
-		wp_redirect( $fullreg );
-		echo "<meta http-equiv='refresh' content='0;". $fullreg ."'>";
-		die();
+		
 
 	}
 
