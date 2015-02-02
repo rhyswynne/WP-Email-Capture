@@ -223,9 +223,9 @@ function wp_capture_email_confirm() {
 
 		$get_confirmation_row = "SELECT * FROM $temp_members_table WHERE confirm_code ='%s'";
 
-		$confirmation_rows = $wpdb->get_results( $wpdb->prepare( $get_confirmation_row, $passkey ) );
+		$confirmation_row = $wpdb->get_row( $wpdb->prepare( $get_confirmation_row, $passkey ) );
 
-		foreach ( $confirmation_rows as $confirmation_row ) {
+		/* foreach ( $confirmation_rows as $confirmation_row ) { */
 
 			$name = $confirmation_row->name;
 
@@ -250,7 +250,7 @@ function wp_capture_email_confirm() {
 			echo "<meta http-equiv='refresh' content='0;". $fullreg ."'>";
 			die();
 
-		}
+		/* } */
 
 	} else {
 
