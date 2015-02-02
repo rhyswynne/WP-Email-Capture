@@ -17,11 +17,14 @@ Author URI: http://www.rhyswynne.co.uk/
 */
 
 global $wp_email_capture_db_version;
+global $wpdb;
 
 $wp_email_capture_db_version = "1.0";
 
 define( 'WP_EMAIL_CAPTURE_PATH', dirname( __FILE__ ) );
 define( 'WP_EMAIL_CAPTURE_URL', plugins_url( '', __FILE__ ) );
+define( 'WP_EMAIL_CAPTURE_TEMP_MEMBERS_TABLE', $wpdb->prefix . 'wp_email_capture_temp_members');
+define( 'WP_EMAIL_CAPTURE_REGISTERED_MEMBERS_TABLE', $wpdb->prefix . 'wp_email_capture_registered_members');
 
 require_once WP_EMAIL_CAPTURE_PATH . '/inc/core.php';
 

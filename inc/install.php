@@ -8,7 +8,7 @@ function wp_email_capture_install() {
 
 	require_once ABSPATH . 'wp-admin/includes/upgrade.php';
 
-	$registered_members_table = $wpdb->prefix . "wp_email_capture_registered_members";
+	$registered_members_table = WP_EMAIL_CAPTURE_REGISTERED_MEMBERS_TABLE;
 
 	if ( $wpdb->get_var( "show tables like '$registered_members_table'" ) != $registered_members_table ) {
 
@@ -28,7 +28,7 @@ function wp_email_capture_install() {
 
 	}
 
-	$temp_members_table_name = $wpdb->prefix . "wp_email_capture_temp_members";
+	$temp_members_table_name = WP_EMAIL_CAPTURE_TEMP_MEMBERS_TABLE;
 
 	if ( $wpdb->get_var( "show tables like '$temp_members_table_name'" ) != $temp_members_table_name ) {
 

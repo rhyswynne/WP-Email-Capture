@@ -96,8 +96,7 @@ function wp_email_capture_signup() {
 
 	// Insert data into database
 
-	$temp_members_table = $wpdb->prefix . "wp_email_capture_temp_members";
-	$insert_into_temp=$wpdb->insert( $temp_members_table, array( 'confirm_code' => $confirm_code, 'name' => $name, 'email' => $email ), array( '%s', '%s', '%s' ) );
+	$insert_into_temp=$wpdb->insert( WP_EMAIL_CAPTURE_TEMP_MEMBERS_TABLE, array( 'confirm_code' => $confirm_code, 'name' => $name, 'email' => $email ), array( '%s', '%s', '%s' ) );
 
 	// if suceesfully inserted data into database, send confirmation link to email
 
@@ -211,17 +210,13 @@ function wp_capture_email_confirm() {
 
 	$passkey = esc_attr( $_GET['wp_email_capture_passkey'] );
 
-	$temp_members_table = $wpdb->prefix . "wp_email_capture_temp_members";
-
-	$get_confirmation_code = "SELECT id FROM $temp_members_table WHERE confirm_code ='%s'";
+	$get_confirmation_code = "SELECT id FROM ". WP_EMAIL_CAPTURE_TEMP_MEMBERS_TABLE ." WHERE confirm_code ='%s'";
 
 	$confirmation_code = $wpdb->get_var( $wpdb->prepare( $get_confirmation_code, $passkey ) );
 
 	if ( $confirmation_code != '' ) {
 
-		$registered_members_table = $wpdb->prefix . "wp_email_capture_registered_members";
-
-		$get_confirmation_row = "SELECT * FROM $temp_members_table WHERE confirm_code ='%s'";
+		$get_confirmation_row = "SELECT * FROM ". WP_EMAIL_CAPTURE_TEMP_MEMBERS_TABLE ." WHERE confirm_code ='%s'";
 
 		$confirmation_row = $wpdb->get_row( $wpdb->prepare( $get_confirmation_row, $passkey ) );
 
@@ -231,11 +226,11 @@ function wp_capture_email_confirm() {
 
 			$email = $confirmation_row->email;
 
-			$add_to_registered_members_table = $wpdb->insert( $registered_members_table, array( 'name' => $name, 'email' => $email ), array( '%s', '%s' ) );
+			$add_to_registered_members_table = $wpdb->insert( WP_EMAIL_CAPTURE_REGISTERED_MEMBERS_TABLE, array( 'name' => $name, 'email' => $email ), array( '%s', '%s' ) );
 
 			// if successfully moved data from table"temp_members_db" to table "registered_members" displays message "Your account has been activated" and don't forget to delete confirmation code from table "temp_members_db"
 			
-			$delete_from_temp_members_sql ="DELETE FROM $temp_members_table WHERE confirm_code = '%s'";
+			$delete_from_temp_members_sql = "DELETE FROM ". WP_EMAIL_CAPTURE_TEMP_MEMBERS_TABLE . " WHERE confirm_code = '%s'";
 
 			$delete_from_temp_members = $wpdb->query( $wpdb->prepare( $delete_from_temp_members_sql, $passkey ) );
 

@@ -11,7 +11,7 @@ function wp_email_capture_writetable( $limit = 0, $header = '' ) {
 
 	global $wpdb;
 
-	$registered_members_table = $wpdb->prefix . "wp_email_capture_registered_members";
+	$registered_members_table = WP_EMAIL_CAPTURE_REGISTERED_MEMBERS_TABLE;
 
 	$get_registered_members_sql = "SELECT id, name, email FROM " . $registered_members_table;
 
@@ -89,9 +89,7 @@ function wp_email_capture_formdelete( $id, $email ) {
 function wp_email_capture_deleteid( $id ) {
 	global $wpdb;
 
-	$registered_members = $wpdb->prefix . "wp_email_capture_registered_members";
-
-	$delete_member_sql = "DELETE FROM " . $registered_members . " WHERE id = '%d'";
+	$delete_member_sql = "DELETE FROM " . WP_EMAIL_CAPTURE_REGISTERED_MEMBERS_TABLE . " WHERE id = '%d'";
 
 	$delete_member = $wpdb->query( $wpdb->prepare( $delete_member_sql, $id ) );
 

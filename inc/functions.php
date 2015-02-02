@@ -17,11 +17,9 @@ function wp_email_capture_checkIfPresent( $email ) {
 
     global $wpdb;
 
-    $registered_members = $wpdb->prefix . "wp_email_capture_registered_members";
-
     $get_email = 'SELECT COUNT(*)
 
-    FROM '. $registered_members . ' WHERE email = "%s"';
+    FROM '. WP_EMAIL_CAPTURE_REGISTERED_MEMBERS_TABLE . ' WHERE email = "%s"';
 
     $prepared_get_email = $wpdb->prepare( $get_email, $email );
 

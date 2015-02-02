@@ -8,9 +8,7 @@ function wp_email_capture_truncate() {
 
 	global $wpdb;
 
-	$temp_members_table = $wpdb->prefix . "wp_email_capture_temp_members";
-
-   	$truncate_temp_sql = "TRUNCATE " . $temp_members_table;
+   	$truncate_temp_sql = "TRUNCATE " . WP_EMAIL_CAPTURE_TEMP_MEMBERS_TABLE;
 
 	$truncated_table = $wpdb->query($truncate_temp_sql);
 
@@ -24,9 +22,7 @@ function wp_email_capture_delete() {
 
 	global $wpdb;
 
-	$registered_members_table = $wpdb->prefix . "wp_email_capture_registered_members";
-
-   	$truncate_registered_sql = "TRUNCATE " . $registered_members_table;
+   	$truncate_registered_sql = "TRUNCATE " . WP_EMAIL_CAPTURE_REGISTERED_MEMBERS_TABLE;
 
 	$truncated_registered = $wpdb->query($truncate_registered_sql);
 
@@ -40,11 +36,9 @@ function wp_email_capture_count_temp() {
 
 	global $wpdb;
 
-	$temp_members_table = $wpdb->prefix . "wp_email_capture_temp_members";
-
 	$count_temp_sql = 'SELECT COUNT(*)
 
-	FROM '. $temp_members_table;
+	FROM '. WP_EMAIL_CAPTURE_TEMP_MEMBERS_TABLE;
 
 	$temp_members = $wpdb->get_var($count_temp_sql);
 

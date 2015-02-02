@@ -14,9 +14,7 @@ function wp_email_capture_export() {
 	$csv_output .= __( 'Name', 'WPEC' ). $delimeter .__( 'Email', 'WPEC' );
 	$csv_output .= "\n";
 
-	$registered_members_table = $wpdb->prefix . "wp_email_capture_registered_members";
-
-	$registered_members_sql = "SELECT name, email FROM " . $registered_members_table;
+	$registered_members_sql = "SELECT name, email FROM " . WP_EMAIL_CAPTURE_REGISTERED_MEMBERS_TABLE;
 
 	$registered_members = $wpdb->get_results( $registered_members_sql );
 
