@@ -258,13 +258,4 @@ function wp_capture_email_confirm() {
 		die();
 
 	}
-
-	
-
-	if ( $add_to_registered_members_table ) {
-
-		
-
-	}
-
 }
