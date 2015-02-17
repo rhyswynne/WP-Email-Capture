@@ -58,7 +58,7 @@ function wp_email_capture_form_page($error = 0)
 
 		$error = esc_attr($_GET['wp_email_capture_error']);
 
-		$display .= "<div class='wp-email-capture-error'>Error: ". " " . $error ."</div>\n";
+		$display .= "<div class='wp-email-capture-error'>" . __('Error:','WPEC'). " " . $error ."</div>\n";
 
 	} 
 
