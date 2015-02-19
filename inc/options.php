@@ -1,9 +1,9 @@
 <?php
 
 function wp_email_capture_menus() {
-
-    add_options_page( __( 'WP Email Capture Options', 'WPEC' ), 'WP Email Capture', 'activate_plugins', 'wpemailcaptureoptions', 'wp_email_capture_options' );
-
+    $avatar = WP_EMAIL_CAPTURE_URL . '/images/wpemailcapture-dashicon.png';
+    //add_options_page( __( 'WP Email Capture Options', 'WPEC' ), 'WP Email Capture', 'activate_plugins', 'wpemailcaptureoptions', 'wp_email_capture_options' );
+    add_menu_page(__('WP Email Capture'),__('WP Email Capture','WPEC'), 'activate_plugins', 'wpemailcapture', 'wp_email_capture_options',$avatar,85);
 }
 
 
