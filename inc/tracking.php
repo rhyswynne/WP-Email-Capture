@@ -1,6 +1,6 @@
 <?php
 /**
- * @package    WPSEO
+ * @package WP Email Capture   
  * @subpackage Admin
  */
 if ( ! defined( 'WP_EMAIL_CAPTURE_VERSION' ) ) {
@@ -9,14 +9,7 @@ if ( ! defined( 'WP_EMAIL_CAPTURE_VERSION' ) ) {
 	exit();
 }
 /**
- * Class that creates the tracking functionality for WP SEO, as the core class might be used in more plugins,
- * it's checked for existence first.
- *
- * NOTE: this functionality is opt-in. Disabling the tracking in the settings or saying no when asked will cause
- * this file to not even be loaded.
- *
- * @todo [JRF => testers] check if tracking still works if an old version of the Yoast Tracking class was loaded
- * (i.e. another plugin loaded their version first)
+ * WPEC Tracking Class, taken from the Yoast SEO Tracking class. Props Yoast & team. :)
  */
 class WPEC_Tracking {
 	/**
