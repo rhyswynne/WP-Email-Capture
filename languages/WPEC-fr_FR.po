@@ -57,6 +57,10 @@ msgstr "Email:"
 msgid "Powered by"
 msgstr "Propulsé par"
 
+#: ../inc/display.php:71
+msgid "Submit"
+msgstr "Envoyer"
+
 #: ../inc/options.php:5
 #: ../inc/options.php:15
 msgid "WP Email Capture Options"
@@ -194,4 +198,3 @@ msgstr "Texte du widget:"
 #: ../inc/widget.php:141
 msgid "WP Email Capture"
 msgstr "WP Email Capture"
-
