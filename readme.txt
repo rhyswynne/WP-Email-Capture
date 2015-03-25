@@ -45,7 +45,7 @@ Translation Credits:-
 
 Translations have been done by the following parties. Thank you!
 
-* French Translation: Olivier - http://www.ticket-system.net/
+* French Translation: Olivier - http://www.ticket-system.net/ & Andrew Patton (@andpatton) - http://www.acusti.ca/
 * German Translation: Stephan - http://www.computersniffer.com/, Marc Nilius (@libertello) - http://www.libertello.de/ and Ov3rFly
 * Brazilian Portugese Translation: Nick Lima (@nick_linux) - http://www.nicklima.com.br
 * Dutch Translation: Sander - http://www.zanderz.net/
@@ -161,6 +161,7 @@ To donate to this plugin, please visit the [WP Email Capture Donations Page](htt
 = 3.0 =
 * Massive refactor of code, to help improve it.
 * Fixed a bug that the "Hide Notice" dismissive now works.
+* Updated French Translation (thanks [Andrew](http://www.acusti.ca/))
 
 = 2.11 =
 * German Translation Updated (thanks Ove3rfly)
