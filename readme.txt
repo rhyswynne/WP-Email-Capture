@@ -53,6 +53,7 @@ Translations have been done by the following parties. Thank you!
 * Spanish Translation: David Bravo - http://dimensionmultimedia.com
 * Italian Translation: Giuseppe Marino - http://it.gravatar.com/gpmarino
 * Serbian Translation: Borisa Djuraskovic - http://www.webhostinghub.com/
+* Croatian Translation: Lem Treursić - http://grafika-dizajn.com/
 
 == Installation ==
 1. Upload the plugin (unzipped) into `/wp-content/plugins/`.
@@ -162,6 +163,7 @@ To donate to this plugin, please visit the [WP Email Capture Donations Page](htt
 * Massive refactor of code, to help improve it.
 * Fixed a bug that the "Hide Notice" dismissive now works.
 * Updated French Translation (thanks [Andrew](http://www.acusti.ca/))
+* Added Croatian Translation (thanks [Lem Treursić](http://grafika-dizajn.com/))
 
 = 2.11 =
 * German Translation Updated (thanks Ove3rfly)
