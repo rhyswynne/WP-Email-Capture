@@ -93,10 +93,27 @@ function wp_email_capture_signup() {
 
 	}
 
+	$member_data = array( 'confirm_code' => $confirm_code, 'name' => $name, 'email' => $email );
+
+	/**
+	 * Filter whether we handle a new subscription.
+	 *
+	 * This allows other plugins to do subscriptions if desired.
+	 *
+	 * @param bool True for WP Email Capture subscription handling.
+	 * @param array {
+	 *      @type string $confirm_code
+	 *      @type string $name
+	 *      @type string $email
+	 * }
+	 */
+	$do_subscription = apply_filters( 'wp_email_capture_do_subscription', true, $member_data );
+
+	if ( !$do_subscription )
+		return;
 
 	// Insert data into database
-
-	$insert_into_temp=$wpdb->insert( WP_EMAIL_CAPTURE_TEMP_MEMBERS_TABLE, array( 'confirm_code' => $confirm_code, 'name' => $name, 'email' => $email ), array( '%s', '%s', '%s' ) );
+	$insert_into_temp=$wpdb->insert( WP_EMAIL_CAPTURE_TEMP_MEMBERS_TABLE, $member_data, array( '%s', '%s', '%s' ) );
 
 	// if suceesfully inserted data into database, send confirmation link to email
 
