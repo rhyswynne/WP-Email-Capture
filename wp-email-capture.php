@@ -56,6 +56,9 @@ function wp_email_capture_plugins_loaded() {
 
 	add_shortcode( 'wp_email_capture_form', 'wp_email_capture_form_process_atts' );
 
+	add_action( 'wp_email_capture_signup_actions', 'wp_email_capture_signup', 10 );
+	add_action( 'wp_email_capture_confirm_actions', 'wp_capture_email_confirm', 10 );
+
 }
 
 register_activation_hook( __FILE__, 'wp_email_capture_install' );

@@ -23,7 +23,7 @@ function wp_email_capture_writetable( $limit = 0, $header = '' ) {
 
 	$registered_members = $wpdb->get_results( $get_registered_members_sql );
 
-
+	$tabletoshow = "";
 
 	if ( $header == '' ) {
 
@@ -31,39 +31,37 @@ function wp_email_capture_writetable( $limit = 0, $header = '' ) {
 
 	}
 
-	echo $header;
+	echo $tabletoshow .= $header;
 
-	?>
+	$tabletoshow .= '
 
 	<table border="0">
 
-		<tr><td><strong><?php _e( 'Name', 'WPEC' ); ?></strong></td><td colspan="2"><strong><?php _e( 'Email', 'WPEC' ); ?></strong></td></tr>
+	<tr><td><strong>' . __( 'Name', 'WPEC' ) . '</strong></td><td colspan="2"><strong>' . __( 'Email', 'WPEC' ) . '</strong></td></tr>';
 
-		<?php 
-		foreach ( $registered_members as $member ) {
 
-			if ( $limit == 0 ) {
-		
-				$delid = wp_email_capture_formdelete( $member->id, $member->email );
-		
-			} else {
-		
-				$delid = '';
-		
-			}
+	foreach ( $registered_members as $member ) {
 
-			echo "<tr><td style='width: 300px;'>" . $member->name ."</td><td style='width: 300px;'>" . $member->email ."</td><td style='width: 300px;'>
-			". $delid ."</td>
+		if ( $limit == 0 ) {
 
-			</tr>";
+			$delid = wp_email_capture_formdelete( $member->id, $member->email );
+
+		} else {
+
+			$delid = '';
 
 		}
 
-		?>
+		$tabletoshow .= '<tr><td style="width: 300px;">' . $member->name . '</td><td style="width: 300px;">' . $member->email . '</td><td style="width: 300px;">'
+		. $delid . '</td></tr>';
 
-	</table>
+	}
 
-	<?php
+	$tabletoshow .= '</table>';
+
+	$tabletoshow = apply_filters( 'wp_email_capture_display_table', $tabletoshow );
+
+	echo $tabletoshow;
 
 }
 

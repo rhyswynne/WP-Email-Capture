@@ -5,10 +5,15 @@
 function wp_email_capture_process() {
 
 	if ( isset( $_REQUEST['wp_capture_action'] ) ) {
-		wp_email_capture_signup();
+		
+		do_action( 'wp_email_capture_signup_actions' );
+		
 	}
 
 	if ( isset( $_GET['wp_email_confirm'] ) || isset( $_REQUEST['wp_email_confirm'] ) ) {
+		
+		do_action( 'wp_email_capture_confirm_actions' );
+
 		wp_capture_email_confirm();
 	}
 
