@@ -45,9 +45,7 @@ function wp_email_capture_form( $error = 0 ) {
 
 
 
-function wp_email_capture_form_page($error = 0)
-
-{
+function wp_email_capture_form_page( $atts, $error = 0) {
 
 	$url = get_option('home');
 	$url = trailingslashit($url);
@@ -79,8 +77,19 @@ function wp_email_capture_form_page($error = 0)
 		$display .= "<p style='font-size:10px;'>".__('Powered by','WPEC')." <a href='http://wpemailcapture.com/' target='_blank'>WP Email Capture</a></p>\n";
 	} 
 
+	$display = apply_filters( 'wp_email_capture_display_form', $display, $atts );
+
 	return $display;
 
+}
+
+
+/**
+ * Process the WP Email Capture Form, including any attributes
+ * @return void
+ */
+function wp_email_capture_form_process_atts( $atts ) {
+	return wp_email_capture_form_page( $atts );
 }
 
 ?>
