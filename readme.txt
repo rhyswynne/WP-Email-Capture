@@ -22,7 +22,7 @@ Features:-
 * Double opt in, so compatible with CAN-SPAM act.
 * And completely free!
 
-For more details please visit the official site of [WP Email Capture](http://www.wpemailcapture.com/)
+For more details please visit the official site of [WP Email Capture](http://wpemailcapture.com/)
 
 **Now Released is WP Email Capture Premium!** You get all the above features plus the following:-
 

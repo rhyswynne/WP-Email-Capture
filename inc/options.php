@@ -4,7 +4,8 @@ function wp_email_capture_menus() {
     $avatar = WP_EMAIL_CAPTURE_URL . '/images/wpemailcapture-dashicon.png';
     //add_options_page( __( 'WP Email Capture Options', 'WPEC' ), 'WP Email Capture', 'activate_plugins', 'wpemailcaptureoptions', 'wp_email_capture_options' );
     add_menu_page(__('WP Email Capture'),__('WP Email Capture','WPEC'), 'activate_plugins', 'wpemailcapture', 'wp_email_capture_dashboard',$avatar,85);
-    add_submenu_page('wpemailcapture',__('WP Email Capture Settings'), __('WP Email Capture Settings','WPEC'), 'activate_plugins', 'wpemailcapturefreesettings', 'wp_email_capture_free_options');
+    add_submenu_page('wpemailcapture',__('Settings'), __('Settings','WPEC'), 'activate_plugins', 'wpemailcapturefreesettings', 'wp_email_capture_free_options');
+    add_submenu_page('wpemailcapture',__('Help'), __('Help','WPEC'), 'activate_plugins', 'wpemailcapturefreehelp', 'wp_email_capture_free_help');
 }
 
 
