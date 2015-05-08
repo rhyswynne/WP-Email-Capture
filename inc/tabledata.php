@@ -91,5 +91,10 @@ function wp_email_capture_deleteid( $id ) {
 
 	$delete_member = $wpdb->query( $wpdb->prepare( $delete_member_sql, $id ) );
 
+	/**
+	 * Action to add on extra things on deleted ID.
+	 */
+	do_action( 'wp_email_capture_after_delete_email_address', $id );
+
 }
 ?>
