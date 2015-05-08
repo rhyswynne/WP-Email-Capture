@@ -44,6 +44,7 @@ function wp_email_capture_plugins_loaded() {
 	add_action( 'admin_notices', 'wp_email_capture_admin_notice' );
 	add_action( 'admin_notices', 'wp_email_capture_admin_upsell' );
 	add_action( 'admin_init', 'wp_email_capture_nag_ignore' );
+	add_action( 'widgets_init', 'wp_email_capture_widget_init', 10);
 
 	if ( 1 == get_option( 'wpec_set_tracking' ) ) {
 

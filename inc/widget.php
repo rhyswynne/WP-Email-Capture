@@ -57,7 +57,7 @@ class wp_email_capture_widget_class extends WP_Widget {
 
 }
 
-add_action('widgets_init', 'wp_email_capture_widget_init');
+
 
 function wp_email_capture_widget_init(){
 	// curl need to be installed
