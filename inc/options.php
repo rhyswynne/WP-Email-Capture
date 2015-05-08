@@ -213,8 +213,6 @@ function wp_email_capture_options_process() { // whitelist options
 
     if ( isset( $_REQUEST['wp_email_capture_truncate'] ) ) {
 
-
-
         wp_email_capture_truncate();
 
     }
@@ -226,6 +224,11 @@ function wp_email_capture_options_process() { // whitelist options
         wp_email_capture_delete();
 
     }
+
+    /**
+     * Action to hook into to register any other options.
+     */
+    do_action( 'wp_email_capture_added_option_process' );
 
 }
 

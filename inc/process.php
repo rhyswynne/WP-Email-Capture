@@ -17,6 +17,8 @@ function wp_email_capture_process() {
 		wp_capture_email_confirm();
 	}
 
+
+
 }
 
 
