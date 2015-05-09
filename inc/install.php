@@ -1,5 +1,10 @@
 <?php
 
+/**
+ * Set up the WP Email Capture Database Tables.
+ * 
+ * @return void
+ */
 function wp_email_capture_install() {
 
 	global $wpdb;
@@ -12,7 +17,9 @@ function wp_email_capture_install() {
 
 	if ( $wpdb->get_var( "show tables like '$registered_members_table'" ) != $registered_members_table ) {
 
-		$create_registered_members_table_sql = "CREATE TABLE " . $registered_members_table . " (
+		$create_registered_members_table_sql = "
+
+		CREATE TABLE " . $registered_members_table . " (
 
 			id INT( 255 ) NOT NULL AUTO_INCREMENT ,
 
@@ -32,17 +39,19 @@ function wp_email_capture_install() {
 
 	if ( $wpdb->get_var( "show tables like '$temp_members_table_name'" ) != $temp_members_table_name ) {
 
-		$create_temp_members_table_sql = "CREATE TABLE " . $temp_members_table_name . " (
+		$create_temp_members_table_sql = "
 
-		id INT( 255 ) NOT NULL AUTO_INCREMENT ,
+		CREATE TABLE " . $temp_members_table_name . " (
 
-		name TINYTEXT NOT NULL ,
+			id INT( 255 ) NOT NULL AUTO_INCREMENT ,
 
-		email TEXT NOT NULL ,
+			name TINYTEXT NOT NULL ,
 
-		confirm_code TEXT NOT NULL,
+			email TEXT NOT NULL ,
 
-		PRIMARY KEY (id)
+			confirm_code TEXT NOT NULL,
+
+			PRIMARY KEY (id)
 
 		);";
 

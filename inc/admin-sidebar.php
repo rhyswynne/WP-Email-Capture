@@ -1,5 +1,11 @@
 <?php
 
+/**
+ * Function to generate the sidebar on admin pages.
+ *
+ * @param  string   $sidestring     Comma separated string with all admin boxes.
+ * @return void
+ */
 function wp_email_capture_admin_sidebar( $sidestring ) {
     $sidebararray = explode( ',', $sidestring );
 

@@ -1,5 +1,8 @@
 <?php
 
+/**
+ * Class to display the WP Email Capture Widget.
+ */
 class wp_email_capture_widget_class extends WP_Widget {
 	
 	function wp_email_capture_widget_class() {

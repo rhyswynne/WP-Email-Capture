@@ -1,7 +1,13 @@
 <?php
 
 
-
+/**
+ * Wrapper function after the user submits an email address.
+ *
+ * Runs two actions, that can be overwritten if need be.
+ * 
+ * @return void
+ */
 function wp_email_capture_process() {
 
 	if ( isset( $_REQUEST['wp_capture_action'] ) ) {
@@ -39,7 +45,12 @@ function wp_email_capture_double_check_everything($name, $email) {
 } */
 
 
-
+/**
+ * Get the email submission form entry, validates it, adds it to the tempoaray database, 
+ * and redirects user to the "Please check your email" page.
+ * 
+ * @return void
+ */
 function wp_email_capture_signup() {
 
 	global $wpdb;
@@ -225,7 +236,12 @@ function wp_email_capture_signup() {
 } */
 
 
-
+/**
+ * Confirm the email address has been validated by the user and register the user, allowing the site owner to
+ * see/export their email address. Redirects user to final destination page.
+ *
+ * @return void
+ */
 function wp_capture_email_confirm() {
 
 	global $wpdb;

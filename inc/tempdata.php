@@ -1,5 +1,6 @@
 <?php
 
+
 /**
  * Delete the members in the tempoarary members table.
  * @return void
@@ -14,6 +15,7 @@ function wp_email_capture_truncate() {
 
 }
 
+
 /**
  * Delete the members of the registered members table.
  * @return void
@@ -27,6 +29,7 @@ function wp_email_capture_delete() {
 	$truncated_registered = $wpdb->query($truncate_registered_sql);
 
 }
+
 
 /**
  * Count the members in the temporary members table.

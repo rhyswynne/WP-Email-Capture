@@ -1,4 +1,5 @@
 <?php
+
 /**
  * @package WP Email Capture   
  * @subpackage Admin
@@ -8,6 +9,8 @@ if ( ! defined( 'WP_EMAIL_CAPTURE_VERSION' ) ) {
 	header( 'HTTP/1.1 403 Forbidden' );
 	exit();
 }
+
+
 /**
  * WPEC Tracking Class, taken from the Yoast SEO Tracking class. Props Yoast & team. :)
  */
@@ -139,6 +142,7 @@ class WPEC_Tracking {
 		else {
 			$curl = null;
 		}
+		
 		$options['wpemailcapture'] = array( 
 			'listsize'	=> wp_email_capture_get_number_of_registered_users(),
 			'tempsize'	=> wp_email_capture_count_temp(),
@@ -148,13 +152,18 @@ class WPEC_Tracking {
 	}
 } /* End of class */
 
-
+/**
+ * Start tracking
+ * @return void
+ */
 function wpec_start_tracking() {
 	$tracking = new WPEC_Tracking;
 } 
 
-
-
+/**
+ * Action tracking wrapper.
+ * @return void
+ */
 function wpec_do_tracking() {
 	do_action('wpec_tracking');
 }

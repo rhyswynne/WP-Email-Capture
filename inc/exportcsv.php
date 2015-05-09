@@ -1,5 +1,10 @@
 <?php
 
+/**
+ * Function that exports the captured lists in a CSV format.
+ * 
+ * @return void
+ */
 function wp_email_capture_export() {
 
 

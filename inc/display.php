@@ -1,8 +1,13 @@
 <?php 
 
 
-
-function wp_email_capture_form( $error = 0 ) {
+/**
+ * Displays the WP Email Capture Form 
+ * 
+ * @param  string 	$error 		The error message
+ * @return void
+ */
+function wp_email_capture_form( $error = "" ) {
 
 	$url = get_option('home');
 	$url = trailingslashit($url);
@@ -44,8 +49,14 @@ function wp_email_capture_form( $error = 0 ) {
 }
 
 
-
-function wp_email_capture_form_page( $atts, $error = 0) {
+/**
+ * Build the WP Email Capture Form - used for shortcodes.
+ * 
+ * @param  array  	$atts 	Any attributes included in the shrotcode.
+ * @param  string 	$error 	The error message
+ * @return string         	The built form.
+ */
+function wp_email_capture_form_page( $atts, $error = "") {
 
 	$url = get_option('home');
 	$url = trailingslashit($url);

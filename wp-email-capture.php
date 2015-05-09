@@ -19,6 +19,7 @@ Author URI: http://winwar.co.uk/
 global $wp_email_capture_db_version;
 global $wpdb;
 
+// Definitions
 $wp_email_capture_db_version = "1.0";
 
 define( 'WP_EMAIL_CAPTURE_PATH', dirname( __FILE__ ) );
@@ -29,15 +30,22 @@ define( 'WP_EMAIL_CAPTURE_VERSION', '3.0' );
 
 require_once WP_EMAIL_CAPTURE_PATH . '/inc/core.php';
 
-add_action( 'plugins_loaded', 'wp_email_capture_plugins_loaded', 10 );
-
+/**
+ * Function to initialise all WordPress Functionality.
+ *
+ * Loads textdomain, then loads admin functions, then front end functionality.
+ *  
+ * @return void
+ */
 function wp_email_capture_plugins_loaded() {
 
+	// Textdomain
 	if ( function_exists( 'load_plugin_textdomain' ) ) {
 		$plugin_dir = basename( dirname( __FILE__ ) );
 		load_plugin_textdomain( 'WPEC', false , dirname( plugin_basename( __FILE__ ) ) . '/languages' );
 	}
 
+	// Admin Functions
 	add_action( 'admin_init', 'wp_email_capture_options_process' );
 	add_action( 'wp_dashboard_setup', 'wp_email_capture_add_dashboard_widgets' );
 	add_action( 'admin_menu', 'wp_email_capture_menus', 10 );
@@ -53,15 +61,17 @@ function wp_email_capture_plugins_loaded() {
 
 	}
 	
+	// Front End Functions
 	add_action( 'init', 'wp_email_capture_process' );
-
-	add_shortcode( 'wp_email_capture_form', 'wp_email_capture_form_process_atts' );
-
 	add_action( 'wp_email_capture_signup_actions', 'wp_email_capture_signup', 10 );
 	add_action( 'wp_email_capture_confirm_actions', 'wp_capture_email_confirm', 10 );
+	add_action( 'wp_enqueue_scripts', 'wp_email_capture_scripts' );
+	add_shortcode( 'wp_email_capture_form', 'wp_email_capture_form_process_atts' );
 
 }
 
+// Activation functionality
+add_action( 'plugins_loaded', 'wp_email_capture_plugins_loaded', 10 );
 register_activation_hook( __FILE__, 'wp_email_capture_install' );
 
 
