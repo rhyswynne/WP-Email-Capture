@@ -1,0 +1,7 @@
+.wpemailcapture-tab {
+	display: none;
+}
+
+.wpemailcapture-tab.active {
+	display: block;
+}

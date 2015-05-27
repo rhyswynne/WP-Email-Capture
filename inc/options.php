@@ -21,7 +21,73 @@ function wp_email_capture_menus() {
  */
 function wp_email_capture_dashboard() {
 
-}
+    ?>
+    <div class="wrap about-wrap">
+
+        <h1><?php _e( 'Welcome to WP Email Capture!', 'WPEC' ); ?></h1>
+
+        <div class="about-text">
+            <?php _e( 'Start collecting email subscribers today!', 'WPEC' ); ?><br/>
+        </div>
+
+        <h2 class="nav-tab-wrapper" id="wpemailcapture-tabs">
+            <a class="nav-tab" href="#dashboard" id="dashboard-tab"><?php _e( 'Dashboard', 'WPEC' ); ?></a>
+            <a class="nav-tab" href="#changelog" id="changelog-tab"><?php _e( 'Changelog', 'WPEC' ); ?></a>
+            <a class="nav-tab" href="#credits" id="credits-tab"><?php _e( 'Credits', 'WPEC' ); ?></a>
+        </h2>
+
+        <div id="dashboard" class="wpemailcapture-tab <?php if ( !esc_attr( $_GET['wpecupgrade'] ) ) { echo " active "; } ?>">
+            <h2><?php _e( 'Welcome to WP Email Capture', 'WPEC' ); ?></h2>
+
+            <h3><?php _e( 'New in 3.0 - Complete Rewrite', 'WPEC' ); ?></h3>
+
+            <p><?php _e( 'Version 3.0 introduces a completely rewritten back end, making it faster for the average user, and allowing extensions to be added to the plugin. We also introduced two new translations and fixed a bug.', 'WPEC'); ?></p>
+
+            <p><a class="non-nav-tab" href="#changelog" id="changelog-tab"><?php _e( 'Read the changelog', 'WPEC'); ?></a></p>
+
+            <?php
+
+            do_action( 'wp_email_capture_dashboard_premium_upsell' );
+
+            ?>
+
+            <h2><?php _e( 'Extensions', 'WPEC' ); ?></h2>
+        </div>
+
+        <div id="changelog" class="wpemailcapture-tab <?php if ( esc_attr( $_GET['wpecupgrade'] ) ) { echo " active "; } ?>">
+            <h2><?php _e( 'Changelog', 'WPEC' ); ?></h2>
+            <h3><?php _e( 'Code Refactorisation', 'WPEC' ); ?></h3>
+            <p><?php _e( 'Version 3.0 introduces a completely rewritten back end, making it faster for the average user, and allowing extensions to be added to the plugin.', 'WPEC'); ?></p>
+            <h3><?php _e( 'Other Changes', 'WPEC' ); ?></h3>
+            <ul>
+                <li><?php _e( 'Fixed a bug that the "Hide Notice" dismissive now works.', 'WPEC' ); ?></li>
+                <li><?php echo sprintf( __( 'Updated French Translation (thanks <a href="%s" target="_blank">Andrew</a>).', 'WPEC' ), 'http://www.acusti.ca/' ); ?></li>
+                <li><?php echo sprintf( __( 'Added Croatian Translation (thanks <a href="%s" target="_blank">Lem Treursić</a>).', 'WPEC'), 'http://grafika-dizajn.com/' ); ?></li>
+            </ul>
+        </div>
+
+        <div id="credits" class="wpemailcapture-tab">
+            <h2><?php _e( 'Credits', 'WPEC' ); ?></h2>
+            <p><?php _e( 'This plugin has been helped and improved by the following people', 'WPEC' ); ?></p>
+            <h3><?php _e('Translations', 'WPEC' ); ?></h3>
+            <ul>
+                <li><?php echo sprintf( __( '<strong>French Translation:</strong> <a href="%s" target="_blank">Olivier</a> & <a href="%s" target="_blank">Andrew Patton</a> <a href="%s" target="_blank">(@andpatton)</a>.','WPEC' ), 'http://www.ticket-system.net/', 'http://www.acusti.ca/', 'http://twitter.com/andpatton' ); ?><li> 
+                <li><?php echo sprintf( __( '<strong>German Translation:</strong> <a href="%s" target="_blank">Stephan</a>, <a href="%s" target="_blank">Marc Nilius</a> <a href="%s" target="_blank">(@libertello)</a> &amp; Ov3rFly', 'WPEC' ), 'http://www.computersniffer.com/', 'http://www.libertello.de/', 'http://twitter.com/libertello' ); ?></li> 
+                <li><?php echo sprintf( __( '<strong>Brazilian Portugese Translation:</strong> <a href="%s" target="_blank">Nick Lima</a> <a href="%s" target="_blank">(@nick_linux)</a>', 'WPEC' ), 'http://www.nicklima.com.br', 'http://twitter.com/nick_linux' ); ?></li> 
+                <li><?php echo sprintf( __( '<strong>Dutch Translation:</strong> <a href="%s" target="_blank">Sander</a>', 'WPEC' ), 'http://www.zanderz.net/' ); ?></li>
+                <li><?php echo sprintf( __( '<strong>Hungarian Translation:</strong> <a href="%s" target="_blank">Surbma</a>', 'WPEC' ), 'http://surbma.hu/' ); ?></li>
+                <li><?php echo sprintf( __( '<strong>Spanish Translation:</strong> <a href="%s" target="_blank">David Bravo</a>' , 'WPEC' ), 'http://dimensionmultimedia.com' ); ?></li>
+                <li><?php echo sprintf( __( '<strong>Italian Translation:</strong> <a href="%s" target="_blank">Giuseppe Marino</a>' , 'WPEC' ), 'http://it.gravatar.com/gpmarino' ); ?></li>
+                <li><?php echo sprintf( __( '<strong>Serbian Translation:</strong> <a href="%s" target="_blank">Borisa Djuraskovic</a>' , 'WPEC' ), 'http://www.webhostinghub.com/' ); ?></li>
+                <li><?php echo sprintf( __( '<strong>Croatian Translation:</strong> <a href="%s" target="_blank">Lem Treursić</a>' , 'WPEC' ), 'http://grafika-dizajn.com/' ); ?></li>
+            </ul>
+            <h3><?php _e( 'Contribute?', 'WPEC' ); ?></h3>
+            <h4><?php echo sprintf( __( 'If you want to help, you can contribute a fix or report a bug on our <a href="%s" target="_blank">Github</a>', 'WPEC' ), 'https://github.com/rhyswynne/wp-email-capture' ); ?></h4>
+            </div>
+        </div>
+        <?php
+
+    }
 
 
 /**
@@ -249,5 +315,26 @@ function wp_email_capture_options_process() { // whitelist options
     do_action( 'wp_email_capture_added_option_process' );
 
 }
+
+
+/**
+ * [wp_email_capture_dashboard_premium_upsell description]
+ * @return [type] [description]
+ */
+function wp_email_capture_premium_upsell() {
+    ?>
+    <h3><?php _e( 'Upgrade To WP Email Capture Premium', 'WPEC' ); ?></h3>
+    <p><?php _e( 'Thanks for using the free version of WP Email Capture. We\'re incredibly greatful in you using it. Should you wish to upgrade to WP Email Capture Premium, you get a bunch of new features.', 'WPEC' ); ?></p>
+    <ul>
+        <li><?php _e( '<strong>Stat tracking</strong> - track the visitors to your site and where your sign ups come from.', 'WPEC' ); ?></li>
+        <li><?php _e( '<strong>Autoresponders</strong> - Create an autoresponder email, an email sent to the user when they sign up to your site.', 'WPEC' ); ?></li>
+        <li><?php _e( '<strong>Multiple lists</strong> - Create multiple lists for your site.', 'WPEC' ); ?></li>
+        <li><?php _e( '<strong>Build External Lists</strong> - If you have a Mailchimp or Aweber account, you can use WP Email Capture to build to these services directly.', 'WPEC' ); ?></li>
+        <li><?php _e( '<strong>Custom Fields</strong> - You can capture more than just visitors name & email, add your own custom fields to capture (such as phone number or Address).', 'WPEC' ); ?></li>
+    </ul>
+    <p><?php _e( 'You also get premium support for a whole year!', 'WPEC' ); ?></p>
+    <button><?php _e( 'Click here to buy', 'WPEC' ); ?></button>
+    <?php
+} add_action( 'wp_email_capture_dashboard_premium_upsell', 'wp_email_capture_premium_upsell' );
 
 ?>

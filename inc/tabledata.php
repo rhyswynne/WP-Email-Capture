@@ -65,6 +65,7 @@ function wp_email_capture_writetable( $limit = 0, $header = '' ) {
 
 }
 
+
 /**
  * The form to delete members from the database
  * @param  int 		$id    the email address ID in the database the database.
