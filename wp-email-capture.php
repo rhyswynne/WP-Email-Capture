@@ -57,7 +57,7 @@ function wp_email_capture_plugins_loaded() {
 	if ( 1 == get_option( 'wpec_set_tracking' ) ) {
 
 		add_action( 'plugins_loaded', 'wpec_start_tracking', 15 );
-		add_action('admin_init','wpec_do_tracking');
+		add_action( 'admin_init', 'wpec_do_tracking');
 
 	}
 	
@@ -68,7 +68,7 @@ function wp_email_capture_plugins_loaded() {
 	add_action( 'wp_enqueue_scripts', 'wp_email_capture_scripts' );
 	add_action( 'admin_enqueue_scripts', 'wp_email_capture_admin_scripts' );
 	add_shortcode( 'wp_email_capture_form', 'wp_email_capture_form_process_atts' );
-
+	
 }
 
 // Activation functionality

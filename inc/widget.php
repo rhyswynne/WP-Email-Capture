@@ -26,7 +26,7 @@ class wp_email_capture_widget_class extends WP_Widget {
 
 		echo $before_title . $title . $after_title;
 
-		echo '<div class="textwidget">'.$text.'</div>';
+		echo '<div class="textwidget"><p>'.$text.'</p></div>';
 
         wp_email_capture_form();
 
