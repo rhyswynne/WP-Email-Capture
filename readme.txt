@@ -164,6 +164,13 @@ To donate to this plugin, please visit the [WP Email Capture Donations Page](htt
 * Fixed a bug that the "Hide Notice" dismissive now works.
 * Updated French Translation (thanks [Andrew](http://www.acusti.ca/))
 * Added Croatian Translation (thanks [Lem Treursić](http://grafika-dizajn.com/))
+* Added Welcome Screen
+* Added P tag around text widget introduction.
+* Added better help documentation within the plugin.
+* Added signup & confirm actions, to allow users to remove/add their own actions.
+* Added a filter to the display form, so it can be changed.
+* Add a filter for other subscription plugins (props [Dylan Kuhn](http://www.cyberhobo.net/))
+* Changed menu structure
 
 = 2.11 =
 * German Translation Updated (thanks Ove3rfly)
