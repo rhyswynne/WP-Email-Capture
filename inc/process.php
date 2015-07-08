@@ -20,7 +20,7 @@ function wp_email_capture_process() {
 		
 		do_action( 'wp_email_capture_confirm_actions' );
 
-		wp_capture_email_confirm();
+		//wp_capture_email_confirm();
 	}
 
 
