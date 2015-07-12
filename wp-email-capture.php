@@ -68,7 +68,7 @@ function wp_email_capture_plugins_loaded() {
 	add_action( 'wp_enqueue_scripts', 'wp_email_capture_scripts' );
 	add_action( 'admin_enqueue_scripts', 'wp_email_capture_admin_scripts' );
 	add_shortcode( 'wp_email_capture_form', 'wp_email_capture_form_process_atts' );
-	
+	add_filter( 'wp_email_capture_send_email', 'wp_email_capture_send_email_default', 10, 6 );
 }
 
 // Activation functionality

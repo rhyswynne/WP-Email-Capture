@@ -188,8 +188,9 @@ function wp_email_capture_signup() {
 
 		// send email
 
-		$sentmail = wp_mail( $to, $subject, $message, $header );
+		$sentmail = apply_filters( 'wp_email_capture_send_email', $to, $subject, $message, $header );
 
+		//wp_die( $header );
 		// if your email succesfully sent
 
 		if ( $sentmail ) {
@@ -298,4 +299,23 @@ function wp_capture_email_confirm() {
 		die();
 
 	}
+}
+
+
+
+/**
+ * Default function to send emails. Can be overwritten using filters.
+ * @param  string $to      where the email is going
+ * @param  string $subject the email subject
+ * @param  string $message the message of the email
+ * @param  string $header  the header of the email
+ * @return boolean         whether the email was successful in sending.
+ */
+function wp_email_capture_send_email_default( $to, $subject, $message, $header, $var1 ) {
+
+    $sendmail = wp_mail( $to, $subject, $message, $header);
+
+    if ( $sendmail ) { $addedfield = "Email Sent!"; } else { $addedfield = "Email Not Sent"; }
+    
+    return $sendmail;
 }
