@@ -318,8 +318,9 @@ function wp_email_capture_options_process() { // whitelist options
 
 
 /**
- * [wp_email_capture_dashboard_premium_upsell description]
- * @return [type] [description]
+ * Box to upsell WP Email Capture Premium
+ * 
+ * @return void
  */
 function wp_email_capture_premium_upsell() {
     ?>
