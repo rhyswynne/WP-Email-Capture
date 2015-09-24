@@ -46,14 +46,14 @@ function wp_email_capture_plugins_loaded() {
 	}
 
 	// Admin Functions
-	add_action( 'admin_init', 'wp_email_capture_options_process' );
+	add_action( 'admin_init', 'wp_email_capture_options_process' ); 
 	add_action( 'wp_dashboard_setup', 'wp_email_capture_add_dashboard_widgets' );
 	add_action( 'admin_menu', 'wp_email_capture_menus', 10 );
 	add_action( 'admin_notices', 'wp_email_capture_admin_notice' );
 	add_action( 'admin_notices', 'wp_email_capture_admin_upsell' );
 	add_action( 'admin_init', 'wp_email_capture_nag_ignore' );
 	add_action( 'widgets_init', 'wp_email_capture_widget_init', 10);
-
+	
 	if ( 1 == get_option( 'wpec_set_tracking' ) ) {
 
 		add_action( 'plugins_loaded', 'wpec_start_tracking', 15 );
@@ -68,7 +68,7 @@ function wp_email_capture_plugins_loaded() {
 	add_action( 'wp_enqueue_scripts', 'wp_email_capture_scripts' );
 	add_action( 'admin_enqueue_scripts', 'wp_email_capture_admin_scripts' );
 	add_shortcode( 'wp_email_capture_form', 'wp_email_capture_form_process_atts' );
-	add_filter( 'wp_email_capture_send_email', 'wp_email_capture_send_email_default', 10, 6 );
+	add_filter( 'wp_email_capture_send_email', 'wp_email_capture_send_email_default', 10, 4 );
 }
 
 // Activation functionality

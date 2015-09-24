@@ -311,11 +311,11 @@ function wp_capture_email_confirm() {
  * @param  string $header  the header of the email
  * @return boolean         whether the email was successful in sending.
  */
-function wp_email_capture_send_email_default( $to, $subject, $message, $header, $var1 ) {
+function wp_email_capture_send_email_default( $to, $subject, $message, $header ) {
 
     $sendmail = wp_mail( $to, $subject, $message, $header);
 
     if ( $sendmail ) { $addedfield = "Email Sent!"; } else { $addedfield = "Email Not Sent"; }
-    
+
     return $sendmail;
 }

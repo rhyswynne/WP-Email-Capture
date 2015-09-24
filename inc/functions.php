@@ -120,11 +120,11 @@ function wp_email_capture_nag_ignore() {
 
 	/* If user clicks to ignore the notice, add that to their user meta */
 	if ( isset( $_GET['wp_email_capture_setup_ignore'] ) && '0' == $_GET['wp_email_capture_setup_ignore'] ) {
-		add_user_meta( $user_id, 'wp_email_capture_setup_ignore', 'true', true );
+		update_user_meta( $user_id, 'wp_email_capture_setup_ignore', 'true', true );
 	}
 
 	if ( isset( $_GET['wp_email_capture_upsell_ignore'] ) && '0' == $_GET['wp_email_capture_upsell_ignore'] ) {
-		add_user_meta( $user_id, 'wp_email_capture_upsell_ignore', 'true', true );
+		update_user_meta( $user_id, 'wp_email_capture_upsell_ignore', 'true', true );
 	}
 
 	if ( isset( $_GET[ 'wp_email_capture_tracking' ] ) ) {
