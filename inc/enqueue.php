@@ -9,6 +9,7 @@ function wp_email_capture_scripts() {
        wp_enqueue_style( 'wpemailcapturestyles', WP_EMAIL_CAPTURE_URL . '/inc/css/wp-email-capture-styles.css', array(), '1.0' );     
 }
 
+
 /**
  * Enqueue stylesheets associated with the plugin.
  * @return void

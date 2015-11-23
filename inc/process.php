@@ -66,7 +66,7 @@ function wp_email_capture_signup() {
 
 	if ( get_option( "wp_email_capture_name_required" ) == 1 && $name == "" ) {
 		
-		$error = urlencode( __( 'Please Provide A Name', 'WPEC' ) );
+		$error = urlencode( __( 'Please Provide A Name', 'wp-email-capture' ) );
 		$url =  $starturl . $extrastring . "wp_email_capture_error=" . $error;
 		wp_redirect( $url );
 		die();
@@ -77,7 +77,7 @@ function wp_email_capture_signup() {
 
 	if ( !is_email( $email ) ) {
 
-		$error = urlencode( __( 'Not a valid email', 'WPEC' ) );
+		$error = urlencode( __( 'Not a valid email', 'wp-email-capture' ) );
 		$url = $starturl . $extrastring . "wp_email_capture_error=" . $error;
 
 		wp_redirect( $url );
@@ -102,7 +102,7 @@ function wp_email_capture_signup() {
 
 	if ( wp_email_capture_checkIfPresent( $email ) ) {
 
-		$error = urlencode( __( 'User already present', 'WPEC' ) );
+		$error = urlencode( __( 'User already present', 'wp-email-capture' ) );
 		$url = $starturl . $extrastring . "wp_email_capture_error=" . $error;
 
 		wp_redirect( $url );
@@ -182,8 +182,8 @@ function wp_email_capture_signup() {
 
 		$message .= $siteurl ."?wp_email_confirm=1&wp_email_capture_passkey=$confirm_code";
 		$message .= "\n\n----\n";
-		$message .= __( "This is an automated message that is generated because somebody with the IP address of", 'WPEC' )." " . $ip ." ".__( '(possibly you) on', 'WPEC' )." ". $date ." ".__( 'filled out the form on the following page', 'WPEC' )." " . $referrer . "\n";
-		$message .= __( "If you are sure this isn't you, please ignore this message, you will not be sent another message.", 'WPEC' );
+		$message .= __( "This is an automated message that is generated because somebody with the IP address of", 'wp-email-capture' )." " . $ip ." ".__( '(possibly you) on', 'wp-email-capture' )." ". $date ." ".__( 'filled out the form on the following page', 'wp-email-capture' )." " . $referrer . "\n";
+		$message .= __( "If you are sure this isn't you, please ignore this message, you will not be sent another message.", 'wp-email-capture' );
 		$message = str_replace( "%NAME%", $name, $message );
 
 		// send email
@@ -205,7 +205,7 @@ function wp_email_capture_signup() {
 
 		} else {
 
-			$error = urlencode( __( 'Email unable to be sent', 'WPEC' ) );
+			$error = urlencode( __( 'Email unable to be sent', 'wp-email-capture' ) );
 			$url = $starturl . $extrastring . "wp_email_capture_error=" . $error;
 
 			wp_redirect( $url );
@@ -226,7 +226,7 @@ function wp_email_capture_signup() {
 
 /* else {
 
-	echo __( "Not found your email in our database", 'WPEC' );
+	echo __( "Not found your email in our database", 'wp-email-capture' );
 
 }
 
@@ -292,7 +292,7 @@ function wp_capture_email_confirm() {
 
 		if ( strpos( $url, "?" ) === false ) { $extrastring = "?"; } else { $extrastring = "&"; }
 		
-		$error = urlencode( __( 'Wrong confirmation code', 'WPEC' ) );
+		$error = urlencode( __( 'Wrong confirmation code', 'wp-email-capture' ) );
 		$url = $url  . $extrastring . "wp_email_capture_error=" . $error;
 
 		wp_redirect( $url );

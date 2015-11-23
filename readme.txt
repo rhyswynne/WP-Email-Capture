@@ -171,6 +171,8 @@ To donate to this plugin, please visit the [WP Email Capture Donations Page](htt
 * Added a filter to the display form, so it can be changed.
 * Add a filter for other subscription plugins (props [Dylan Kuhn](http://www.cyberhobo.net/))
 * Changed menu structure
+* Made compatible with WordPress 4.3, with new widget structure.
+* Made compatible with new language packs.
 
 = 2.11 =
 * German Translation Updated (thanks Ove3rfly)

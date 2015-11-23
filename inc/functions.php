@@ -59,12 +59,12 @@ function wp_email_capture_admin_notice() {
 	if ( !get_option( 'wpec_set_tracking' ) && current_user_can('activate_plugins') ) {
 		echo '<div class="updated">';
 		echo '<h4>';
-		_e( 'Allow Tracking?', 'WPEC' );
+		_e( 'Allow Tracking?', 'wp-email-capture' );
 		echo '</h4>';
 		echo '<p>';
 		_e( 'Thank you for installing WP Email Capture. Please help us improve by allowing us to gather anonymous usage stats such as themes and plugins used on your site, to help us test.','WPEC');
 		echo '</p>';
-		printf ( __('<p><a href="%1$s" class="button-primary">Allow Tracking</a> <a href="%2$s" class="button-secondary">Do Not Allow Tracking</a></p>', 'WPEC' ), '?wp_email_capture_tracking=1', '?wp_email_capture_tracking=2' );
+		printf ( __('<p><a href="%1$s" class="button-primary">Allow Tracking</a> <a href="%2$s" class="button-secondary">Do Not Allow Tracking</a></p>', 'wp-email-capture' ), '?wp_email_capture_tracking=1', '?wp_email_capture_tracking=2' );
 		echo '</div>';
 	} else {
 		global $current_user ;

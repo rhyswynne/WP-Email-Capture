@@ -42,7 +42,7 @@ function wp_email_capture_plugins_loaded() {
 	// Textdomain
 	if ( function_exists( 'load_plugin_textdomain' ) ) {
 		$plugin_dir = basename( dirname( __FILE__ ) );
-		load_plugin_textdomain( 'WPEC', false , dirname( plugin_basename( __FILE__ ) ) . '/languages' );
+		load_plugin_textdomain( 'wp-email-capture', false , dirname( plugin_basename( __FILE__ ) ) . '/languages' );
 	}
 
 	// Admin Functions

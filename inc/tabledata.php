@@ -27,7 +27,7 @@ function wp_email_capture_writetable( $limit = 0, $header = '' ) {
 
 	if ( $header == '' ) {
 
-		$header = "<h3>".__( 'Members', 'WPEC' )."</h3>";
+		$header = "<h3>".__( 'Members', 'wp-email-capture' )."</h3>";
 
 	}
 
@@ -37,7 +37,7 @@ function wp_email_capture_writetable( $limit = 0, $header = '' ) {
 
 	<table border="0">
 
-	<tr><td><strong>' . __( 'Name', 'WPEC' ) . '</strong></td><td colspan="2"><strong>' . __( 'Email', 'WPEC' ) . '</strong></td></tr>';
+	<tr><td><strong>' . __( 'Name', 'wp-email-capture' ) . '</strong></td><td colspan="2"><strong>' . __( 'Email', 'wp-email-capture' ) . '</strong></td></tr>';
 
 
 	foreach ( $registered_members as $member ) {
@@ -75,7 +75,7 @@ function wp_email_capture_writetable( $limit = 0, $header = '' ) {
 function wp_email_capture_formdelete( $id, $email ) {
 	return "<form action='" . esc_url( $_SERVER['REQUEST_URI'] ) . "#list' method='post'>
 	<input type='hidden' name='wp_email_capture_deleteid' value='". $id."' />
-	<input type='submit' value='".__( 'Delete ', 'WPEC' ). $email ."' style='width: 300px;' class='button' />
+	<input type='submit' value='".__( 'Delete ', 'wp-email-capture' ). $email ."' style='width: 300px;' class='button' />
 	</form>";
 }
 
