@@ -8,7 +8,7 @@ Plugin URI: http://wpemailcapture.com/?utm_source=plugin-link&utm_medium=plugin&
 
 Description: Captures email addresses for insertion into software such as <a href="http://wpemailcapture.com/recommends/aweber" title="Email Marketing">Aweber</a> or <a href="http://wpemailcapture.com/recommends/mailchimp/">Mailchimp</a>
 
-Version: 3.0
+Version: 3.0.1
 
 Author: Winwar Media
 
@@ -49,7 +49,7 @@ function wp_email_capture_plugins_loaded() {
 	add_action( 'admin_init', 'wp_email_capture_options_process' ); 
 	add_action( 'wp_dashboard_setup', 'wp_email_capture_add_dashboard_widgets' );
 	add_action( 'admin_menu', 'wp_email_capture_menus', 10 );
-	add_action( 'admin_notices', 'wp_email_capture_admin_notice' );
+	//add_action( 'admin_notices', 'wp_email_capture_admin_notice' );
 	add_action( 'admin_notices', 'wp_email_capture_admin_upsell' );
 	add_action( 'admin_init', 'wp_email_capture_nag_ignore' );
 	add_action( 'widgets_init', 'wp_email_capture_widget_init', 10);

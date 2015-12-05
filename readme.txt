@@ -159,6 +159,10 @@ Please report any bugs, support and suggestions to the [WP Email Capture Support
 To donate to this plugin, please visit the [WP Email Capture Donations Page](http://wpemailcapture.com/premium/?utm_source=donate&utm_medium=wordpressorgreadme&utm_campaign=wpemailcapture)
 
 == Change Log ==
+= 3.0.1 =
+* Fixed a minor security issue in the display.php
+* Removed Tracking (for now)
+
 = 3.0 =
 * Massive refactor of code, to help improve it.
 * Fixed a bug that the "Hide Notice" dismissive now works.
