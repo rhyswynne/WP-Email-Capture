@@ -147,7 +147,7 @@ function wp_email_capture_display_help() {
 function wp_email_capture_list_help() {
 
 	$settingspageurl = apply_filters( 'wp_email_capture_change_settings_url', admin_url( 'admin.php?page=wpemailcapturefreesettings' ) );
-	$purchasepageurl = apply_filters( 'wp_email_capture_change_purchase_url', "http://wpemailcapture.com/pricing/?utm_source=plugin&utm_medium=help&utm_campaign=premium" );
+	$purchasepageurl = apply_filters( 'wp_email_capture_change_purchase_url', "http://wpemailcapture.com/premium/?utm_source=help-page&utm_medium=plugin&utm_campaign=wpemailcapture" );
 ?>
 
 	<h3><?php echo __( 'List Operations', 'wp-email-capture' ); ?></h3>

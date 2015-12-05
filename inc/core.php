@@ -26,7 +26,7 @@ require_once(WP_EMAIL_CAPTURE_PATH . '/inc/functions.php');
 
 require_once(WP_EMAIL_CAPTURE_PATH . '/inc/enqueue.php');
 
-require_once(WP_EMAIL_CAPTURE_PATH . '/inc/tracking.php');
+//require_once(WP_EMAIL_CAPTURE_PATH . '/inc/tracking.php');
 
 require_once(WP_EMAIL_CAPTURE_PATH . '/inc/help.php');
 ?>

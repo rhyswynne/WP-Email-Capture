@@ -18,7 +18,7 @@ function wp_email_capture_form( $error = "" ) {
 
 			<?php 
 
-			if (isset($_GET['wp_email_capture_error'])) {
+			if ( isset( esc_attr( $_GET['wp_email_capture_error'] ) ) ) {
 
 				$error = esc_attr($_GET['wp_email_capture_error']);
 

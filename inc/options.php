@@ -51,7 +51,7 @@ function wp_email_capture_dashboard() {
 
             ?>
 
-            <h2><?php _e( 'Extensions', 'wp-email-capture' ); ?></h2>
+            <?php /* <h2><?php _e( 'Extensions', 'wp-email-capture' ); ?></h2> */ ?>
         </div>
 
         <div id="changelog" class="wpemailcapture-tab <?php if ( esc_attr( $_GET['wpecupgrade'] ) ) { echo " active "; } ?>">
@@ -62,7 +62,16 @@ function wp_email_capture_dashboard() {
             <ul>
                 <li><?php _e( 'Fixed a bug that the "Hide Notice" dismissive now works.', 'wp-email-capture' ); ?></li>
                 <li><?php echo sprintf( __( 'Updated French Translation (thanks <a href="%s" target="_blank">Andrew</a>).', 'wp-email-capture' ), 'http://www.acusti.ca/' ); ?></li>
-                <li><?php echo sprintf( __( 'Added Croatian Translation (thanks <a href="%s" target="_blank">Lem Treursić</a>).', 'WPEC'), 'http://grafika-dizajn.com/' ); ?></li>
+                <li><?php echo sprintf( __( 'Added Croatian Translation (thanks <a href="%s" target="_blank">Lem Treursić</a>).', 'wp-email-capture'), 'http://grafika-dizajn.com/' ); ?></li>
+                <li><?php _e( 'Added Welcome Screen', 'wp-email-capture' ); ?></li>
+                <li><?php _e( 'Added P tag around text widget introduction.', 'wp-email-capture' ); ?></li>
+                <li><?php _e( 'Added better help documentation within the plugin.', 'wp-email-capture' ); ?></li>
+                <li><?php _e( 'Added signup & confirm actions, to allow users to remove/add their own actions.', 'wp-email-capture' ); ?></li>
+                <li><?php _e( 'Added a filter to the display form, so it can be changed.', 'wp-email-capture' ); ?></li>
+                <li><?php echo sprintf( __( 'Add a filter for other subscription plugins (props  <a href="%s" target="_blank">Dylan Kuhn</a>', 'wp-email-capture' ) , 'http://www.cyberhobo.net/' ); ?></li>
+                <li><?php _e( 'Changed menu structure', 'wp-email-capture' ); ?></li>
+                <li><?php _e( 'Made compatible with WordPress 4.3, with new widget structure.', 'wp-email-capture' ); ?></li>
+                <li><?php _e( 'Made compatible with new language packs.', 'wp-email-capture' ); ?></li>
             </ul>
         </div>
 
@@ -72,17 +81,17 @@ function wp_email_capture_dashboard() {
             <h3><?php _e('Translations', 'wp-email-capture' ); ?></h3>
             <ul>
                 <li><?php echo sprintf( __( '<strong>French Translation:</strong> <a href="%s" target="_blank">Olivier</a> & <a href="%s" target="_blank">Andrew Patton</a> <a href="%s" target="_blank">(@andpatton)</a>.','WPEC' ), 'http://www.ticket-system.net/', 'http://www.acusti.ca/', 'http://twitter.com/andpatton' ); ?><li> 
-                <li><?php echo sprintf( __( '<strong>German Translation:</strong> <a href="%s" target="_blank">Stephan</a>, <a href="%s" target="_blank">Marc Nilius</a> <a href="%s" target="_blank">(@libertello)</a> &amp; Ov3rFly', 'wp-email-capture' ), 'http://www.computersniffer.com/', 'http://www.libertello.de/', 'http://twitter.com/libertello' ); ?></li> 
-                <li><?php echo sprintf( __( '<strong>Brazilian Portugese Translation:</strong> <a href="%s" target="_blank">Nick Lima</a> <a href="%s" target="_blank">(@nick_linux)</a>', 'wp-email-capture' ), 'http://www.nicklima.com.br', 'http://twitter.com/nick_linux' ); ?></li> 
-                <li><?php echo sprintf( __( '<strong>Dutch Translation:</strong> <a href="%s" target="_blank">Sander</a>', 'wp-email-capture' ), 'http://www.zanderz.net/' ); ?></li>
-                <li><?php echo sprintf( __( '<strong>Hungarian Translation:</strong> <a href="%s" target="_blank">Surbma</a>', 'wp-email-capture' ), 'http://surbma.hu/' ); ?></li>
-                <li><?php echo sprintf( __( '<strong>Spanish Translation:</strong> <a href="%s" target="_blank">David Bravo</a>' , 'wp-email-capture' ), 'http://dimensionmultimedia.com' ); ?></li>
-                <li><?php echo sprintf( __( '<strong>Italian Translation:</strong> <a href="%s" target="_blank">Giuseppe Marino</a>' , 'wp-email-capture' ), 'http://it.gravatar.com/gpmarino' ); ?></li>
-                <li><?php echo sprintf( __( '<strong>Serbian Translation:</strong> <a href="%s" target="_blank">Borisa Djuraskovic</a>' , 'wp-email-capture' ), 'http://www.webhostinghub.com/' ); ?></li>
-                <li><?php echo sprintf( __( '<strong>Croatian Translation:</strong> <a href="%s" target="_blank">Lem Treursić</a>' , 'wp-email-capture' ), 'http://grafika-dizajn.com/' ); ?></li>
-            </ul>
-            <h3><?php _e( 'Contribute?', 'wp-email-capture' ); ?></h3>
-            <h4><?php echo sprintf( __( 'If you want to help, you can contribute a fix or report a bug on our <a href="%s" target="_blank">Github</a>', 'wp-email-capture' ), 'https://github.com/rhyswynne/wp-email-capture' ); ?></h4>
+                    <li><?php echo sprintf( __( '<strong>German Translation:</strong> <a href="%s" target="_blank">Stephan</a>, <a href="%s" target="_blank">Marc Nilius</a> <a href="%s" target="_blank">(@libertello)</a> &amp; Ov3rFly', 'wp-email-capture' ), 'http://www.computersniffer.com/', 'http://www.libertello.de/', 'http://twitter.com/libertello' ); ?></li> 
+                    <li><?php echo sprintf( __( '<strong>Brazilian Portugese Translation:</strong> <a href="%s" target="_blank">Nick Lima</a> <a href="%s" target="_blank">(@nick_linux)</a>', 'wp-email-capture' ), 'http://www.nicklima.com.br', 'http://twitter.com/nick_linux' ); ?></li> 
+                    <li><?php echo sprintf( __( '<strong>Dutch Translation:</strong> <a href="%s" target="_blank">Sander</a>', 'wp-email-capture' ), 'http://www.zanderz.net/' ); ?></li>
+                    <li><?php echo sprintf( __( '<strong>Hungarian Translation:</strong> <a href="%s" target="_blank">Surbma</a>', 'wp-email-capture' ), 'http://surbma.hu/' ); ?></li>
+                    <li><?php echo sprintf( __( '<strong>Spanish Translation:</strong> <a href="%s" target="_blank">David Bravo</a>' , 'wp-email-capture' ), 'http://dimensionmultimedia.com' ); ?></li>
+                    <li><?php echo sprintf( __( '<strong>Italian Translation:</strong> <a href="%s" target="_blank">Giuseppe Marino</a>' , 'wp-email-capture' ), 'http://it.gravatar.com/gpmarino' ); ?></li>
+                    <li><?php echo sprintf( __( '<strong>Serbian Translation:</strong> <a href="%s" target="_blank">Borisa Djuraskovic</a>' , 'wp-email-capture' ), 'http://www.webhostinghub.com/' ); ?></li>
+                    <li><?php echo sprintf( __( '<strong>Croatian Translation:</strong> <a href="%s" target="_blank">Lem Treursić</a>' , 'wp-email-capture' ), 'http://grafika-dizajn.com/' ); ?></li>
+                </ul>
+                <h3><?php _e( 'Contribute?', 'wp-email-capture' ); ?></h3>
+                <h4><?php echo sprintf( __( 'If you want to help, you can contribute a fix or report a bug on our <a href="%s" target="_blank">Github</a>', 'wp-email-capture' ), 'https://github.com/rhyswynne/wp-email-capture' ); ?></h4>
             </div>
         </div>
         <?php
@@ -334,7 +343,7 @@ function wp_email_capture_premium_upsell() {
         <li><?php _e( '<strong>Custom Fields</strong> - You can capture more than just visitors name & email, add your own custom fields to capture (such as phone number or Address).', 'wp-email-capture' ); ?></li>
     </ul>
     <p><?php _e( 'You also get premium support for a whole year!', 'wp-email-capture' ); ?></p>
-    <button><?php _e( 'Click here to buy', 'wp-email-capture' ); ?></button>
+    <a href="http://wpemailcapture.com/premium/?utm_source=plugin-dashboard&utm_medium=plugin&utm_campaign=wpemailcapture" target="_blank"><button><?php _e( 'Click here to buy', 'wp-email-capture' ); ?></button></a>
     <?php
 } add_action( 'wp_email_capture_dashboard_premium_upsell', 'wp_email_capture_premium_upsell' );
 

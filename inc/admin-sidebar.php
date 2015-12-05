@@ -18,7 +18,7 @@ function wp_email_capture_admin_sidebar( $sidestring ) {
             case 'support':
                 echo '<h3 class="hndle"><span>'.__( 'Need Help?', 'wp-email-capture' ).'</span></h3>
                     <div class="inside">
-                    <p>'.__( 'If you are having problems with this plugin, please read the', 'wp-email-capture' ).' <a href="http://wpemailcapture.com/free-plugin/frequently-asked-questions/">'.__( 'Frequently Asked Questions', 'wp-email-capture' ).'</a>, '.__( 'or alternatively', 'wp-email-capture' ).' <a href="http://wpemailcapture.com/support/">'.__( 'submit a support request here', 'wp-email-capture' ).'</a>.</p>
+                    <p>'.__( 'If you are having problems with this plugin, please read the', 'wp-email-capture' ).' <a href="http://wpemailcapture.com/free-plugin/frequently-asked-questions/?utm_source=admin-sidebar&utm_medium=plugin&utm_campaign=wpemailcapture">'.__( 'Frequently Asked Questions', 'wp-email-capture' ).'</a>, '.__( 'or alternatively', 'wp-email-capture' ).' <a href="http://wpemailcapture.com/support/?utm_source=admin-sidebar&utm_medium=plugin&utm_campaign=wpemailcapture">'.__( 'submit a support request here', 'wp-email-capture' ).'</a>.</p>
                     </div>';
                 break;
 
@@ -66,7 +66,7 @@ function wp_email_capture_admin_sidebar( $sidestring ) {
 
                 if ( !$link ) {
 
-                    $link = "http://wpemailcapture.com/pricing/?utm_source=plugin&utm_medium=banner&utm_term=2point5&utm_campaign=internalbanner";
+                    $link = "http://wpemailcapture.com/premium/?utm_source=plugin&utm_medium=banner&utm_term=2point5&utm_campaign=internalbanner";
 
                 }
                 echo '<h3 class="hndle"><span>'.__( 'Get WP Email Capture Premium', 'wp-email-capture' ).'</span></h3>
@@ -126,7 +126,7 @@ function wp_email_capture_admin_sidebar( $sidestring ) {
 
             case 'becomeanaffiliate':
                 echo '<h3 class="hndle"><span>'.__( 'Become An Affiliate!', 'wp-email-capture' ).'</span></h3><div class="inside">
-                <p>'.__( 'Earn upto', 'wp-email-capture' ). ' <strong>$30</strong> '.__( 'per sale of WP Email Capture', 'wp-email-capture' ). '! <a href="http://wpemailcapture.com/affiliates"><strong>'.__( 'Join our affilite programme today', 'wp-email-capture' ).'</strong></a>.</p></div>';
+                <p>'.__( 'Earn upto', 'wp-email-capture' ). ' <strong>$30</strong> '.__( 'per sale of WP Email Capture', 'wp-email-capture' ). '! <a href="http://wpemailcapture.com/affiliates/?utm_source=admin-sidebar&utm_medium=plugin&utm_campaign=wpemailcapture"><strong>'.__( 'Join our affilite programme today', 'wp-email-capture' ).'</strong></a>.</p></div>';
                 break;
 
             case 'supportpage':

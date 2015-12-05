@@ -1,11 +1,11 @@
 === WP Email Capture ===
 Tags: email, marketing, capture, form, affiliates, mailing lists, email marketing, widget ready
 Requires at least: 3.0
-Tested up to: 4.0
-Version: 2.11
-Stable tag: 2.11
+Tested up to: 4.4
+Version: 3.0
+Stable tag: 3.0
 Contributors: rhyswynne
-Donate link: http://wpemailcapture.com/pricing/
+Donate link: http://wpemailcapture.com/premium/
 
 Double opt-in form for building your email list. Define landing pages to distribute your ebooks & software.
 
@@ -22,7 +22,7 @@ Features:-
 * Double opt in, so compatible with CAN-SPAM act.
 * And completely free!
 
-For more details please visit the official site of [WP Email Capture](http://wpemailcapture.com/)
+For more details please visit the official site of [WP Email Capture](http://wpemailcapture.com/?utm_source=description&utm_medium=wordpressorgreadme&utm_campaign=wpemailcapture)
 
 **Now Released is WP Email Capture Premium!** You get all the above features plus the following:-
 
@@ -32,14 +32,14 @@ For more details please visit the official site of [WP Email Capture](http://wpe
 * Build External Lists - If you have a Mailchimp or Aweber account, you can use WP Email Capture to build to these services directly.
 * Custom Fields - You can capture more than just visitors name & email, add your own custom fields to capture (such as phone number or Address).
 
-You also get premium support and further documentation. For more information, and to purchase, [visit the plans and pricing page](http://wpemailcapture.com/pricing/).
+You also get premium support and further documentation. For more information, and to purchase, [visit the plans and pricing page](http://wpemailcapture.com/premium/?utm_source=wpemailcapturepremium&utm_medium=wordpressorgreadme&utm_campaign=wpemailcapture).
 
 Keep in Contact:-
 
 * [WP Email Capture on Facebook](http://www.facebook.com/wpemailcapture)
 * [@WPEmailCapture](http://www.twitter.com/wpemailcapture) on Twitter
-* For support requests please visit the [FAQ's](http://wpemailcapture.com/free-plugin/frequently-asked-questions/), or leave a message in the [Wordpress Support Forum](http://wordpress.org/support/plugin/wp-email-capture). 
-* For general feature requests or bug notices [please contact me directly](http://wpemailcapture.com/contact/), however any support requests sent via the contact form, Facebook Page or Twitter Feed will be ignored - please use the WordPress Support Forum - please note I'm unable to support CSS or styling queries, please read the "Stylings" area on [other notes](http://wordpress.org/plugins/wp-email-capture/other_notes/).
+* For support requests please visit the [FAQ's](http://wpemailcapture.com/free-plugin/frequently-asked-questions/?utm_source=contact&utm_medium=wordpressorgreadme&utm_campaign=wpemailcapture), or leave a message in the [Wordpress Support Forum](http://wordpress.org/support/plugin/wp-email-capture). 
+* For general feature requests or bug notices [please contact me directly](http://wpemailcapture.com/contact/?utm_source=contact&utm_medium=wordpressorgreadme&utm_campaign=wpemailcapture), however any support requests sent via the contact form, Facebook Page or Twitter Feed will be ignored - please use the WordPress Support Forum - please note I'm unable to support CSS or styling queries, please read the "Stylings" area on [other notes](http://wordpress.org/plugins/wp-email-capture/other_notes/?utm_source=contact&utm_medium=wordpressorgreadme&utm_campaign=wpemailcapture).
 
 Translation Credits:-
 
@@ -70,7 +70,7 @@ If you want to insert the form within a page, insert into any post or page the s
 
 You can also add a widget to any widget enabled area by going to Appearance > Widgets in the WordPress Administration.
 
-If you need more help, please read this guide on [how to set up WP Email Capture](http://wpemailcapture.com/2012/10/how-to-set-up-wp-email-capture-free/)
+If you need more help, please read this guide on [how to set up WP Email Capture](http://wpemailcapture.com/2012/10/how-to-set-up-wp-email-capture-free/?utm_source=installation&utm_medium=wordpressorgreadme&utm_campaign=wpemailcapture)
 
 == Stylings ==
 To style your form, you need to add to your CSS file the following ID declarations. `wp_email_capture` is for sidebar & template widgets, `wp_email_capture_2` is for on page forms.
@@ -129,7 +129,7 @@ No.
 In accordance with the CANSPAM act, I have hidden Unverified emails from view. They can not be seen. Sorry, but the temptation is too big to spam unverified emails. Hence the removal.
 
 = Can Registered Users access the "thank you" page after signup? They try signing up again and get a 'user has already been registered' error =
-Yes they can, however they can't go through the registration process. If you are using [WP Email Capture Premium](http://www.wpemailcapture.com/pricing/), you can send an autoresponder after signing up (which can contain a link to the "thank you" page). Alternatively, add a notice on your landing page to encourage users to bookmark the page.
+Yes they can, however they can't go through the registration process. If you are using [WP Email Capture Premium](http://wpemailcapture.com/premium/?utm_source=faq&utm_medium=wordpressorgreadme&utm_campaign=wpemailcapture), you can send an autoresponder after signing up (which can contain a link to the "thank you" page). Alternatively, add a notice on your landing page to encourage users to bookmark the page.
 
 = I am Upgrading to WP Email Capture 2.3+, why has my WP Email Capture Sidebar Widget disappeared? =
 The WP Email Capture version 2.3 saw the introduction of multiple sidebar widgets. This was coded differently to the pre 2.3 WP Email Capture sidebar widget. As such you will have to recreate the sidebar widget. It's easy to do, but apologies for this - I am working on a fix!
@@ -153,10 +153,10 @@ This plugin does use widgets, so probably yes :)
 Wherever you put in %NAME% (spelt exactly like that, uppercase as well), it will be replaced with the name given by the user.
 
 == Bugs/Suggestions/Support == 
-Please report any bugs, support and suggestions to the [WP Email Capture Support Page](http://www.wpemailcapture.com/support/)
+Please report any bugs, support and suggestions to the [WP Email Capture Support Page](http://www.wpemailcapture.com/support/?utm_source=support&utm_medium=wordpressorgreadme&utm_campaign=wpemailcapture)
 
 == Donate ==
-To donate to this plugin, please visit the [WP Email Capture Donations Page](http://www.wpemailcapture.com/pricing/)
+To donate to this plugin, please visit the [WP Email Capture Donations Page](http://wpemailcapture.com/premium/?utm_source=donate&utm_medium=wordpressorgreadme&utm_campaign=wpemailcapture)
 
 == Change Log ==
 = 3.0 =
