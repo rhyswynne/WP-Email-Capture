@@ -18,9 +18,9 @@ function wp_email_capture_form( $error = "" ) {
 
 			<?php 
 
-			if ( isset( esc_attr( $_GET['wp_email_capture_error'] ) ) ) {
+			if ( isset( $_GET['wp_email_capture_error'] ) ) {
 
-				$error = esc_attr($_GET['wp_email_capture_error']);
+				$error = esc_attr( $_GET['wp_email_capture_error'] );
 
 				echo "<div class='wp-email-capture-error'>".__('Error:','WPEC'). " " .$error ."</div>";
 
@@ -63,7 +63,7 @@ function wp_email_capture_form_page( $atts, $error = "") {
 	$display = "";
 	$display .= "<div id='wp_email_capture_2' class='wp-email-capture wp-email-capture-display'><form name='wp_email_capture_display' method='post' action='" . $url ."'>\n";
 
-	if (isset($_GET['wp_email_capture_error'])) {
+	if ( isset( $_GET['wp_email_capture_error'] ) ) {
 
 		$error = esc_attr($_GET['wp_email_capture_error']);
 
