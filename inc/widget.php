@@ -19,14 +19,14 @@ class wp_email_capture_widget_class extends WP_Widget {
 		extract($args);
 		extract($args, EXTR_SKIP);
 
-		$title = empty($instance['widget_title']) ? __('Subscribe!','WPEC') : apply_filters('widget_title', $instance['widget_title']);
-		$text = empty($instance['widget_text']) ? __('Subscribe to my blog for updates','WPEC') : $instance['widget_text'];
+		$title = apply_filters('widget_title', $instance['widget_title']);
+		$text = $instance['widget_text'];
 		
 		echo $before_widget;
 
-		echo $before_title . $title . $after_title;
+		echo !empty($title) ? $before_title . $title . $after_title : '';
 
-		echo '<div class="textwidget"><p>'.$text.'</p></div>';
+		echo !empty($text) ? '<div class="textwidget"><p>'.$text.'</p></div>' : '';
 
 		wp_email_capture_form();
 
@@ -46,7 +46,11 @@ class wp_email_capture_widget_class extends WP_Widget {
 	 *	admin control form
 	 */	 	
 	function form($instance) {
-		$default = array( 'widget_title' =>  __('Subscribe!','WPEC'), 'widget_text' =>  __('Subscribe to my blog for updates','WPEC')  );
+		$default = array(
+			'widget_title' =>  __('Subscribe!','WPEC'),
+			'widget_text' =>  __('Subscribe to my blog for updates','WPEC')
+		);
+
 		$instance = wp_parse_args( (array) $instance, $default );
 		
 		$title_id = $this->get_field_id('widget_title');
