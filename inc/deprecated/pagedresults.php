@@ -138,7 +138,7 @@ class MySQLPagedResultSet
 
 			$nav .= "<a href=\"?resultpage=".
 
-			($this->getPageNum()-1).'&'.$queryvars.'">'.__('Prev','WPEC').'</a> ';
+			($this->getPageNum()-1).'&'.$queryvars.'">'.__('Prev','wp-email-capture').'</a> ';
 
 		}
 
@@ -166,7 +166,7 @@ class MySQLPagedResultSet
 
 				$nav .= "<a href=\"?resultpage=".
 
-				($this->getPageNum()+1).'&'.$queryvars.'">'.__('Next','WPEC').'</a> ';
+				($this->getPageNum()+1).'&'.$queryvars.'">'.__('Next','wp-email-capture').'</a> ';
 
 			}
 

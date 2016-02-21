@@ -2,8 +2,8 @@
 Tags: email, marketing, capture, form, affiliates, mailing lists, email marketing, widget ready
 Requires at least: 3.0
 Tested up to: 4.4
-Version: 3.0.2
-Stable tag: 3.0.2
+Version: 3.1
+Stable tag: 3.1
 Contributors: rhyswynne
 Donate link: http://wpemailcapture.com/premium/
 
@@ -159,6 +159,10 @@ Please report any bugs, support and suggestions to the [WP Email Capture Support
 To donate to this plugin, please visit the [WP Email Capture Donations Page](http://wpemailcapture.com/premium/?utm_source=donate&utm_medium=wordpressorgreadme&utm_campaign=wpemailcapture)
 
 == Change Log ==
+= 3.1 =
+* Changed word from "Update" to "Upgrade" for large lists as it was confusing people.
+* Changed to new Text Domain as per WordPress' new internationalisation integration (wp-email-capture).
+
 = 3.0.2 =
 * Fixed an error with "Error: " displaying on the free version.
 

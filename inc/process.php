@@ -151,7 +151,7 @@ function wp_email_capture_signup() {
 		$subject = get_option( 'wp_email_capture_subject' );
 
 		if ( $subject == "" ) {
-			$subject = __( "Sign Up For Our Newsletter", "WPEC" );
+			$subject = __( "Sign Up For Our Newsletter", "wp-email-capture" );
 		}
 
 		// From
@@ -177,7 +177,7 @@ function wp_email_capture_signup() {
 		$message.= get_option( 'wp_email_capture_body' ) . "\n\n";
 
 		if ( $message == "\n\n" ) {
-			$message .= __( "Thank you for signing up for our newsletter, please click the link below to confirm your subscription", "WPEC" ) . "\n\n";
+			$message .= __( "Thank you for signing up for our newsletter, please click the link below to confirm your subscription", "wp-email-capture" ) . "\n\n";
 		}
 
 		$message .= $siteurl ."?wp_email_confirm=1&wp_email_capture_passkey=$confirm_code";

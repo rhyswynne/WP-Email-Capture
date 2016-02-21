@@ -7,9 +7,9 @@
 function wp_email_capture_menus() {
     $avatar = WP_EMAIL_CAPTURE_URL . '/images/wpemailcapture-dashicon.png';
     //add_options_page( __( 'WP Email Capture Options', 'wp-email-capture' ), 'WP Email Capture', 'activate_plugins', 'wpemailcaptureoptions', 'wp_email_capture_options' );
-    add_menu_page(__('WP Email Capture'),__('WP Email Capture','WPEC'), 'activate_plugins', 'wpemailcapture', 'wp_email_capture_dashboard',$avatar,85);
-    add_submenu_page('wpemailcapture',__('Settings'), __('Settings','WPEC'), 'activate_plugins', 'wpemailcapturefreesettings', 'wp_email_capture_free_options');
-    add_submenu_page('wpemailcapture',__('Help'), __('Help','WPEC'), 'activate_plugins', 'wpemailcapturefreehelp', 'wp_email_capture_free_help');
+    add_menu_page(__('WP Email Capture'),__('WP Email Capture','wp-email-capture'), 'activate_plugins', 'wpemailcapture', 'wp_email_capture_dashboard',$avatar,85);
+    add_submenu_page('wpemailcapture',__('Settings'), __('Settings','wp-email-capture'), 'activate_plugins', 'wpemailcapturefreesettings', 'wp_email_capture_free_options');
+    add_submenu_page('wpemailcapture',__('Help'), __('Help','wp-email-capture'), 'activate_plugins', 'wpemailcapturefreehelp', 'wp_email_capture_free_help');
 }
 
 
@@ -41,9 +41,9 @@ function wp_email_capture_dashboard() {
 
             <h3><?php _e( 'New in 3.0 - Complete Rewrite', 'wp-email-capture' ); ?></h3>
 
-            <p><?php _e( 'Version 3.0 introduces a completely rewritten back end, making it faster for the average user, and allowing extensions to be added to the plugin. We also introduced two new translations and fixed a bug.', 'WPEC'); ?></p>
+            <p><?php _e( 'Version 3.0 introduces a completely rewritten back end, making it faster for the average user, and allowing extensions to be added to the plugin. We also introduced two new translations and fixed a bug.', 'wp-email-capture'); ?></p>
 
-            <p><a class="non-nav-tab" href="#changelog" id="changelog-tab"><?php _e( 'Read the changelog', 'WPEC'); ?></a></p>
+            <p><a class="non-nav-tab" href="#changelog" id="changelog-tab"><?php _e( 'Read the changelog', 'wp-email-capture'); ?></a></p>
 
             <?php
 
@@ -57,7 +57,7 @@ function wp_email_capture_dashboard() {
         <div id="changelog" class="wpemailcapture-tab <?php if ( esc_attr( $_GET['wpecupgrade'] ) ) { echo " active "; } ?>">
             <h2><?php _e( 'Changelog', 'wp-email-capture' ); ?></h2>
             <h3><?php _e( 'Code Refactorisation', 'wp-email-capture' ); ?></h3>
-            <p><?php _e( 'Version 3.0 introduces a completely rewritten back end, making it faster for the average user, and allowing extensions to be added to the plugin.', 'WPEC'); ?></p>
+            <p><?php _e( 'Version 3.0 introduces a completely rewritten back end, making it faster for the average user, and allowing extensions to be added to the plugin.', 'wp-email-capture'); ?></p>
             <h3><?php _e( 'Other Changes', 'wp-email-capture' ); ?></h3>
             <ul>
                 <li><?php _e( 'Fixed a bug that the "Hide Notice" dismissive now works.', 'wp-email-capture' ); ?></li>
@@ -80,7 +80,7 @@ function wp_email_capture_dashboard() {
             <p><?php _e( 'This plugin has been helped and improved by the following people', 'wp-email-capture' ); ?></p>
             <h3><?php _e('Translations', 'wp-email-capture' ); ?></h3>
             <ul>
-                <li><?php echo sprintf( __( '<strong>French Translation:</strong> <a href="%s" target="_blank">Olivier</a> & <a href="%s" target="_blank">Andrew Patton</a> <a href="%s" target="_blank">(@andpatton)</a>.','WPEC' ), 'http://www.ticket-system.net/', 'http://www.acusti.ca/', 'http://twitter.com/andpatton' ); ?><li> 
+                <li><?php echo sprintf( __( '<strong>French Translation:</strong> <a href="%s" target="_blank">Olivier</a> & <a href="%s" target="_blank">Andrew Patton</a> <a href="%s" target="_blank">(@andpatton)</a>.','wp-email-capture' ), 'http://www.ticket-system.net/', 'http://www.acusti.ca/', 'http://twitter.com/andpatton' ); ?><li> 
                     <li><?php echo sprintf( __( '<strong>German Translation:</strong> <a href="%s" target="_blank">Stephan</a>, <a href="%s" target="_blank">Marc Nilius</a> <a href="%s" target="_blank">(@libertello)</a> &amp; Ov3rFly', 'wp-email-capture' ), 'http://www.computersniffer.com/', 'http://www.libertello.de/', 'http://twitter.com/libertello' ); ?></li> 
                     <li><?php echo sprintf( __( '<strong>Brazilian Portugese Translation:</strong> <a href="%s" target="_blank">Nick Lima</a> <a href="%s" target="_blank">(@nick_linux)</a>', 'wp-email-capture' ), 'http://www.nicklima.com.br', 'http://twitter.com/nick_linux' ); ?></li> 
                     <li><?php echo sprintf( __( '<strong>Dutch Translation:</strong> <a href="%s" target="_blank">Sander</a>', 'wp-email-capture' ), 'http://www.zanderz.net/' ); ?></li>

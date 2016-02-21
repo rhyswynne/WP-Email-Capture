@@ -62,7 +62,7 @@ function wp_email_capture_admin_notice() {
 		_e( 'Allow Tracking?', 'wp-email-capture' );
 		echo '</h4>';
 		echo '<p>';
-		_e( 'Thank you for installing WP Email Capture. Please help us improve by allowing us to gather anonymous usage stats such as themes and plugins used on your site, to help us test.','WPEC');
+		_e( 'Thank you for installing WP Email Capture. Please help us improve by allowing us to gather anonymous usage stats such as themes and plugins used on your site, to help us test.','wp-email-capture');
 		echo '</p>';
 		printf ( __('<p><a href="%1$s" class="button-primary">Allow Tracking</a> <a href="%2$s" class="button-secondary">Do Not Allow Tracking</a></p>', 'wp-email-capture' ), '?wp_email_capture_tracking=1', '?wp_email_capture_tracking=2' );
 		echo '</div>';
@@ -102,7 +102,7 @@ function wp_email_capture_admin_upsell() {
 				<h3>WP Email Capture - Over 500 Emails</h3>
 				<p>WP Email Capture has over 500 entries. Whilst the plugin is free for use forever, it does struggle a bit with very large lists.</p>
 				<p>WP Email Caputre Premium is better suited to large lists, so please consider upgrading. As a thank you for using us for so long, use discount code <strong>%3$s</strong> for <strong>%4$s</strong> off.</p>
-				<p><a href="%2$s" class="button button-primary button-hero"><strong>Update WP Email Capture</strong></a></p></div>' ), '?wp_email_capture_upsell_ignore=0', $upgradeurl, $discountcode, $discountamount );
+				<p><a href="%2$s" class="button button-primary button-hero"><strong>Upgrade WP Email Capture</strong></a></p></div>' ), '?wp_email_capture_upsell_ignore=0', $upgradeurl, $discountcode, $discountamount );
 			echo "</div>";
 		}
 	}

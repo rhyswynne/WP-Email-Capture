@@ -167,7 +167,7 @@ function wp_email_capture_list_help() {
 					<?php 
 
 						if ( $purchasepageurl ) {
-							printf( __( '<p>WP Email Capture is only designed to be used for small (under 500 entries) lists. You can use it for more, but please consider <a href="%s" target="_blank">purchasing the premium version</a> if your list gets too big.</p>','WPEC' ), $purchasepageurl ); 
+							printf( __( '<p>WP Email Capture is only designed to be used for small (under 500 entries) lists. You can use it for more, but please consider <a href="%s" target="_blank">purchasing the premium version</a> if your list gets too big.</p>','wp-email-capture' ), $purchasepageurl ); 
 						}
 					?>
 
