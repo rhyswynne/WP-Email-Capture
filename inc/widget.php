@@ -6,7 +6,7 @@
 class wp_email_capture_widget_class extends WP_Widget {
 	
 	public function __construct() {
-		parent::__construct('wp_email_capture_widget_class', __('WP Email Capture','wp-email-capture'), array('description' =>__('Widget for WP Email Capture','wp-email-capture')));	
+		parent::__construct('wp_email_capture_widget_class', __('WP Email Capture','WPEC'), array('description' =>__('Widget for WP Email Capture','WPEC')));	
 	}
 
 	
@@ -19,14 +19,14 @@ class wp_email_capture_widget_class extends WP_Widget {
 		extract($args);
 		extract($args, EXTR_SKIP);
 
-		$title = empty($instance['widget_title']) ? __('Subscribe!','wp-email-capture') : apply_filters('widget_title', $instance['widget_title']);
-		$text = empty($instance['widget_text']) ? __('Subscribe to my blog for updates','wp-email-capture') : $instance['widget_text'];
+		$title = apply_filters('widget_title', $instance['widget_title']);
+		$text = $instance['widget_text'];
 		
 		echo $before_widget;
 
-		echo $before_title . $title . $after_title;
+		echo !empty($title) ? $before_title . $title . $after_title : '';
 
-		echo '<div class="textwidget"><p>'.$text.'</p></div>';
+		echo !empty($text) ? '<div class="textwidget"><p>'.$text.'</p></div>' : '';
 
 		wp_email_capture_form();
 
@@ -46,15 +46,19 @@ class wp_email_capture_widget_class extends WP_Widget {
 	 *	admin control form
 	 */	 	
 	function form($instance) {
-		$default = array( 'widget_title' =>  __('Subscribe!','wp-email-capture'), 'widget_text' =>  __('Subscribe to my blog for updates','wp-email-capture')  );
+		$default = array(
+			'widget_title' =>  __('Subscribe!','WPEC'),
+			'widget_text' =>  __('Subscribe to my blog for updates','WPEC')
+		);
+
 		$instance = wp_parse_args( (array) $instance, $default );
 		
 		$title_id = $this->get_field_id('widget_title');
 		$title_name = $this->get_field_name('widget_title');
 		$text_id = $this->get_field_id('widget_text');
 		$text_name = $this->get_field_name('widget_text');
-		echo "\r\n".'<p><label for="'.$title_id.'">'.__('Widget title:','wp-email-capture').': <input type="text" class="widefat" id="'.$title_id.'" name="'.$title_name.'" value="'.esc_attr( $instance['widget_title'] ).'" /><label></p>';
-		echo "\r\n".'<p><label for="'.$text_id.'">'.__('Widget text:','wp-email-capture').': <input type="text" class="widefat" id="'.$text_id.'" name="'.$text_name .'" value="'.esc_attr( $instance['widget_text'] ).'" /><label></p>';
+		echo "\r\n".'<p><label for="'.$title_id.'">'.__('Widget title:','WPEC').': <input type="text" class="widefat" id="'.$title_id.'" name="'.$title_name.'" value="'.esc_attr( $instance['widget_title'] ).'" /><label></p>';
+		echo "\r\n".'<p><label for="'.$text_id.'">'.__('Widget text:','WPEC').': <input type="text" class="widefat" id="'.$text_id.'" name="'.$text_name .'" value="'.esc_attr( $instance['widget_text'] ).'" /><label></p>';
 		
 	}
 
