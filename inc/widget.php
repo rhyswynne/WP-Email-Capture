@@ -6,7 +6,7 @@
 class wp_email_capture_widget_class extends WP_Widget {
 	
 	public function __construct() {
-		parent::__construct('wp_email_capture_widget_class', __('WP Email Capture','WPEC'), array('description' =>__('Widget for WP Email Capture','WPEC')));	
+		parent::__construct('wp_email_capture_widget_class', __('WP Email Capture','wp-email-capture'), array('description' =>__('Widget for WP Email Capture','WPEC')));	
 	}
 
 	
