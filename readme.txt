@@ -160,6 +160,7 @@ To donate to this plugin, please visit the [WP Email Capture Donations Page](htt
 
 == Change Log ==
 = 3.1 =
+* Removed the default widget title should widget text be blank (props [Hassan Raza](http://hassan-raza.com/)).
 * Changed word from "Update" to "Upgrade" for large lists as it was confusing people.
 * Changed to new Text Domain as per WordPress' new internationalisation integration (wp-email-capture).
 
