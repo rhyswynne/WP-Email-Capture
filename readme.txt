@@ -161,7 +161,8 @@ To donate to this plugin, please visit the [WP Email Capture Donations Page](htt
 == Change Log ==
 = 3.1.1 =
 * Fixed a bug which saw a notice appear of a missing option on the upgrade and dashboard page.
-* 
+* Removed a double header in Dashboard widget (props Ove3rfly).
+
 
 = 3.1 =
 * Removed the default widget title should widget text be blank (props [Hassan Raza](http://hassan-raza.com/)).

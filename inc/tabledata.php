@@ -31,7 +31,7 @@ function wp_email_capture_writetable( $limit = 0, $header = '' ) {
 
 	}
 
-	echo $tabletoshow .= $header;
+	$tabletoshow .= $header;
 
 	$tabletoshow .= '
 
