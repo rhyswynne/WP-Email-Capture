@@ -159,6 +159,10 @@ Please report any bugs, support and suggestions to the [WP Email Capture Support
 To donate to this plugin, please visit the [WP Email Capture Donations Page](http://wpemailcapture.com/premium/?utm_source=donate&utm_medium=wordpressorgreadme&utm_campaign=wpemailcapture)
 
 == Change Log ==
+= 3.1.1 =
+* Fixed a bug which saw a notice appear of a missing option on the upgrade and dashboard page.
+* 
+
 = 3.1 =
 * Removed the default widget title should widget text be blank (props [Hassan Raza](http://hassan-raza.com/)).
 * Changed word from "Update" to "Upgrade" for large lists as it was confusing people.

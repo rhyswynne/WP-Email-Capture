@@ -36,7 +36,18 @@ function wp_email_capture_dashboard() {
             <a class="nav-tab" href="#credits" id="credits-tab"><?php _e( 'Credits', 'wp-email-capture' ); ?></a>
         </h2>
 
-        <div id="dashboard" class="wpemailcapture-tab <?php if ( !esc_attr( $_GET['wpecupgrade'] ) ) { echo " active "; } ?>">
+        <?php 
+
+            if ( array_key_exists( 'wpecupgrade', $_GET ) ) {
+                $activedashboard    = "";
+                $activeupgrade      = " active"; 
+            } else {
+                $activedashboard    = " active";
+                $activeupgrade      = "";
+            }
+
+        ?>
+        <div id="dashboard" class="wpemailcapture-tab <?php echo $activedashboard; ?>">
             <h2><?php _e( 'Welcome to WP Email Capture', 'wp-email-capture' ); ?></h2>
 
             <h3><?php _e( 'New in 3.0 - Complete Rewrite', 'wp-email-capture' ); ?></h3>
@@ -54,7 +65,7 @@ function wp_email_capture_dashboard() {
             <?php /* <h2><?php _e( 'Extensions', 'wp-email-capture' ); ?></h2> */ ?>
         </div>
 
-        <div id="changelog" class="wpemailcapture-tab <?php if ( esc_attr( $_GET['wpecupgrade'] ) ) { echo " active "; } ?>">
+        <div id="changelog" class="wpemailcapture-tab <?php echo $activeupgrade; ?>">
             <h2><?php _e( 'Changelog', 'wp-email-capture' ); ?></h2>
             <h3><?php _e( 'Code Refactorisation', 'wp-email-capture' ); ?></h3>
             <p><?php _e( 'Version 3.0 introduces a completely rewritten back end, making it faster for the average user, and allowing extensions to be added to the plugin.', 'wp-email-capture'); ?></p>
