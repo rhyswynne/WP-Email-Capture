@@ -139,4 +139,3 @@ function wp_email_capture_admin_sidebar( $sidestring ) {
     echo '</div></div></div>';
 
 }
-?>

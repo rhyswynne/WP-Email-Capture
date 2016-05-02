@@ -65,7 +65,3 @@ function wp_email_capture_install() {
 	add_option( "wp_email_capture_db_version", $wp_email_capture_db_version );
 
 }
-
-
-
-?>

@@ -57,8 +57,4 @@ function wp_email_injection_test($str = "") {
 
 	return preg_replace($tests, "", $str); 
 
-} 
-
-
-
-?>
+}

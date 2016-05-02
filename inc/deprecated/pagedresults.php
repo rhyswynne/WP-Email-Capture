@@ -24,7 +24,7 @@ class MySQLPagedResultSet
 
 		
 
-		$resultpage = $_GET['resultpage'];
+		$resultpage = esc_attr( $_GET['resultpage'] );
 
 		
 

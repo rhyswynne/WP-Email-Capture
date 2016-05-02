@@ -44,7 +44,3 @@ function wp_email_capture_export() {
 	exit;
 
 }
-
-
-
-?>

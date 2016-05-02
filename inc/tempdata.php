@@ -48,5 +48,3 @@ function wp_email_capture_count_temp() {
 	return $temp_members;
 
 }
-
-?>

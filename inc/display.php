@@ -102,5 +102,3 @@ function wp_email_capture_form_page( $atts, $error = "") {
 function wp_email_capture_form_process_atts( $atts ) {
 	return wp_email_capture_form_page( $atts );
 }
-
-?>

@@ -98,4 +98,3 @@ function wp_email_capture_deleteid( $id ) {
 	do_action( 'wp_email_capture_after_delete_email_address', $id );
 
 }
-?>

@@ -45,6 +45,4 @@ function wp_email_capture_add_dashboard_widgets() {
 		wp_add_dashboard_widget('wp_email_capture_dashboard_widget', __('WP Email Capture - At A Glance','wp-email-capture'), 'wp_email_capture_dashboard_widget');	
 	}
 
-} 
-
-?>
+}

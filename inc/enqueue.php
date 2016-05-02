@@ -19,5 +19,3 @@ function wp_email_capture_admin_scripts() {
        wp_enqueue_script( 'wpemailcaptureadminjs', WP_EMAIL_CAPTURE_URL . '/inc/js/admin-custom.js', array( 'jquery' ), '3.0' );
        wp_enqueue_style( 'wpemailcapturestyles', WP_EMAIL_CAPTURE_URL . '/inc/css/wp-email-capture-admin-styles.css', array(), '1.0' );     
 }
-
-?>

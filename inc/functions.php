@@ -169,5 +169,3 @@ function wp_email_capture_get_number_of_registered_users() {
 	return $get_number_of_regs;
 
 }
-
-?>

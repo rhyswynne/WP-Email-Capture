@@ -351,5 +351,3 @@ function wp_email_capture_premium_upsell() {
     <a href="http://wpemailcapture.com/premium/?utm_source=plugin-dashboard&utm_medium=plugin&utm_campaign=wpemailcapture" target="_blank"><button><?php _e( 'Click here to buy', 'wp-email-capture' ); ?></button></a>
     <?php
 } add_action( 'wp_email_capture_dashboard_premium_upsell', 'wp_email_capture_premium_upsell' );
-
-?>

@@ -2,8 +2,8 @@
 Tags: email, marketing, capture, form, affiliates, mailing lists, email marketing, widget ready
 Requires at least: 3.0
 Tested up to: 4.4
-Version: 3.1
-Stable tag: 3.1
+Version: 3.1.1
+Stable tag: 3.1.1
 Contributors: rhyswynne
 Donate link: http://wpemailcapture.com/premium/
 
@@ -160,9 +160,11 @@ To donate to this plugin, please visit the [WP Email Capture Donations Page](htt
 
 == Change Log ==
 = 3.1.1 =
+* Removed a redundant file that, if hacked in, could lead to an injection of content. This file was *not* called normally but in order to remove it upgrade to this version. ** Update strongly required **
 * Fixed a bug which saw a notice appear of a missing option on the upgrade and dashboard page.
 * Removed a double header in Dashboard widget (props Ove3rfly).
-
+* Correct textdomain used in some files (props Ov3rfly).
+* Removed all PHP closing tags through the site (props Ov3rfly).
 
 = 3.1 =
 * Removed the default widget title should widget text be blank (props [Hassan Raza](http://hassan-raza.com/)).
