@@ -2,10 +2,10 @@
 Tags: email, marketing, capture, form, affiliates, mailing lists, email marketing, widget ready
 Requires at least: 3.0
 Tested up to: 4.4
-Version: 3.1.1
-Stable tag: 3.1.1
+Version: 3.1.2
+Stable tag: 3.1.2
 Contributors: rhyswynne
-Donate link: http://wpemailcapture.com/premium/
+Donate link: https://www.wpemailcapture.com/premium/?utm_source=donatelink&utm_medium=wordpressorgreadme&utm_campaign=wpemailcapture
 
 Double opt-in form for building your email list. Define landing pages to distribute your ebooks & software.
 
@@ -22,7 +22,7 @@ Features:-
 * Double opt in, so compatible with CAN-SPAM act.
 * And completely free!
 
-For more details please visit the official site of [WP Email Capture](http://wpemailcapture.com/?utm_source=description&utm_medium=wordpressorgreadme&utm_campaign=wpemailcapture)
+For more details please visit the official site of [WP Email Capture](https://www.wpemailcapture.com/?utm_source=description&utm_medium=wordpressorgreadme&utm_campaign=wpemailcapture)
 
 **Now Released is WP Email Capture Premium!** You get all the above features plus the following:-
 
@@ -32,13 +32,13 @@ For more details please visit the official site of [WP Email Capture](http://wpe
 * Build External Lists - If you have a Mailchimp or Aweber account, you can use WP Email Capture to build to these services directly.
 * Custom Fields - You can capture more than just visitors name & email, add your own custom fields to capture (such as phone number or Address).
 
-You also get premium support and further documentation. For more information, and to purchase, [visit the plans and pricing page](http://wpemailcapture.com/premium/?utm_source=wpemailcapturepremium&utm_medium=wordpressorgreadme&utm_campaign=wpemailcapture).
+You also get premium support and further documentation. For more information, and to purchase, [visit the plans and pricing page](https://www.wpemailcapture.com/premium/?utm_source=wpemailcapturepremium&utm_medium=wordpressorgreadme&utm_campaign=wpemailcapture).
 
 Keep in Contact:-
 
 * [WP Email Capture on Facebook](http://www.facebook.com/wpemailcapture)
 * [@WPEmailCapture](http://www.twitter.com/wpemailcapture) on Twitter
-* For support requests please visit the [FAQ's](http://wpemailcapture.com/free-plugin/frequently-asked-questions/?utm_source=contact&utm_medium=wordpressorgreadme&utm_campaign=wpemailcapture), or leave a message in the [Wordpress Support Forum](http://wordpress.org/support/plugin/wp-email-capture). 
+* For support requests please visit the [FAQ's](https://www.wpemailcapture.com/free-plugin/frequently-asked-questions/?utm_source=contact&utm_medium=wordpressorgreadme&utm_campaign=wpemailcapture), or leave a message in the [Wordpress Support Forum](http://wordpress.org/support/plugin/wp-email-capture). 
 * For general feature requests or bug notices [please contact me directly](http://wpemailcapture.com/contact/?utm_source=contact&utm_medium=wordpressorgreadme&utm_campaign=wpemailcapture), however any support requests sent via the contact form, Facebook Page or Twitter Feed will be ignored - please use the WordPress Support Forum - please note I'm unable to support CSS or styling queries, please read the "Stylings" area on [other notes](http://wordpress.org/plugins/wp-email-capture/other_notes/?utm_source=contact&utm_medium=wordpressorgreadme&utm_campaign=wpemailcapture).
 
 Translation Credits:-
@@ -159,6 +159,9 @@ Please report any bugs, support and suggestions to the [WP Email Capture Support
 To donate to this plugin, please visit the [WP Email Capture Donations Page](http://wpemailcapture.com/premium/?utm_source=donate&utm_medium=wordpressorgreadme&utm_campaign=wpemailcapture)
 
 == Change Log ==
+= 3.1.2 =
+* Reward linkers with a voucher code.
+
 = 3.1.1 =
 * Removed a redundant file that, if hacked in, could lead to an injection of content. This file was *not* called normally but in order to remove it upgrade to this version. ** Update strongly required **
 * Fixed a bug which saw a notice appear of a missing option on the upgrade and dashboard page.

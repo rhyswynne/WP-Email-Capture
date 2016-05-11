@@ -44,3 +44,11 @@
     background-color: #449d44;
     border-color: #398439;
 }
+
+.wp_email_capture_admin_discount {
+	display: none;
+}
+
+.wp_email_capture_admin_discount.wp_email_capture_admin_discount_active {
+	display: block;
+}

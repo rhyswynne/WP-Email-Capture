@@ -183,13 +183,24 @@ function wp_email_capture_free_options() {
 
                     <th scope="row" style="width:400px"><label><?php _e( 'Link to us (optional, but appreciated)', 'wp-email-capture' ); ?></label></th>
 
-                    <td><input type="checkbox" name="wp_email_capture_link" value="1" <?php checked( get_option( 'wp_email_capture_link' ), 1 ); ?> /></td>
+                    <td>
+                        <input type="checkbox" name="wp_email_capture_link" value="1" <?php checked( get_option( 'wp_email_capture_link' ), 1 ); ?> id="wp_email_capture_link_checkbox" />
+                        <?php $prechecked = get_option( 'wp_email_capture_link' ) == 1 ? "wp_email_capture_admin_discount_active" : ""; ?>
+                    </td>
 
+                </tr>
+
+                <tr class="wp_email_capture_admin_discount <?php echo $prechecked; ?>">
+                    <td colspan="2">
+                        <?php printf( __( 'Thanks for linking to us! As a thank you, use code <strong>LINK20</strong> to get 20&#37; off <a href="%s">WP Email Capture Premium</a>, or any extension from the <a href="%s">WP Email Capture Shop</a>.', 'wp-email-capture' ), 'https://www.wpemailcapture.com/premium/?utm_source=plugin-dashboard&utm_medium=plugin&utm_term=checkedlink&utm_campaign=wpemailcapture', 'https://www.wpemailcapture.com/downloads/?utm_source=plugin-dashboard&utm_medium=plugin&utm_term=checkedlink&utm_campaign=wpemailcapture' ); ?>
+                    </td>
                 </tr>
 
                 <tr valign="top">
 
                     <th scope="row" style="width:400px"><label><?php _e( 'Make The "Name" field a required field?', 'wp-email-capture' ); ?></label></th>
+
+                    
 
                     <td><input type="checkbox" name="wp_email_capture_name_required" value="1" <?php checked( get_option( 'wp_email_capture_name_required' ), 1 ); ?> /></td>
 
@@ -348,6 +359,6 @@ function wp_email_capture_premium_upsell() {
         <li><?php _e( '<strong>Custom Fields</strong> - You can capture more than just visitors name & email, add your own custom fields to capture (such as phone number or Address).', 'wp-email-capture' ); ?></li>
     </ul>
     <p><?php _e( 'You also get premium support for a whole year!', 'wp-email-capture' ); ?></p>
-    <a href="http://wpemailcapture.com/premium/?utm_source=plugin-dashboard&utm_medium=plugin&utm_campaign=wpemailcapture" target="_blank"><button><?php _e( 'Click here to buy', 'wp-email-capture' ); ?></button></a>
+    <a href="https://www.wpemailcapture.com/premium/?utm_source=plugin-dashboard&utm_medium=plugin&utm_campaign=wpemailcapture" target="_blank"><button><?php _e( 'Click here to buy', 'wp-email-capture' ); ?></button></a>
     <?php
 } add_action( 'wp_email_capture_dashboard_premium_upsell', 'wp_email_capture_premium_upsell' );
