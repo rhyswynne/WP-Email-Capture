@@ -1,11 +1,17 @@
 WP Email Capture
 ================
 Tags: email, marketing, capture, form, affiliates, mailing lists, email marketing, widget ready
+
 Requires at least: 3.0
-Tested up to: 4.4
+
+Tested up to: 4.5
+
 Version: 3.1.2
+
 Stable tag: 3.1.2
+
 Contributors: rhyswynne
+
 Donate link: https://www.wpemailcapture.com/premium/?utm_source=donatelink&utm_medium=wordpressorgreadme&utm_campaign=wpemailcapture
 
 Double opt-in form for building your email list. Define landing pages to distribute your ebooks & software.
@@ -79,7 +85,8 @@ Stylings
 ========
 To style your form, you need to add to your CSS file the following ID declarations. `wp_email_capture` is for sidebar & template widgets, `wp_email_capture_2` is for on page forms.
 
-`#wp_email_capture
+```
+#wp_email_capture
 {
 
 }
@@ -118,7 +125,8 @@ To style your form, you need to add to your CSS file the following ID declaratio
 #wp_email_capture_2 input.wp-email-capture-email
 {
 
-}`
+}
+```
 
 Screenshots
 ===========
