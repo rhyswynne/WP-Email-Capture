@@ -89,7 +89,7 @@ function wp_email_capture_admin_notice() {
 function wp_email_capture_admin_upsell() {
 	global $current_user;
 	$user_id = $current_user->ID;
-	$upgradeurl = "http://wpemailcapture.com/premium/?utm_source=upsell&utm_medium=plugin&utm_campaign=wpemailcapture";
+	$upgradeurl = "https://wpemailcapture.com/premium/?utm_source=upsell&utm_medium=plugin&utm_campaign=wpemailcapture";
 	$discountcode = "BIGLISTUPGRADE";
 	$discountamount = "15%";
 	/* Check that the user hasn't already clicked to ignore the message */

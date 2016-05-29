@@ -66,7 +66,7 @@ function wp_email_capture_admin_sidebar( $sidestring ) {
 
                 if ( !$link ) {
 
-                    $link = "http://wpemailcapture.com/premium/?utm_source=plugin&utm_medium=banner&utm_term=2point5&utm_campaign=internalbanner";
+                    $link = "https://www.wpemailcapture.com/premium/?utm_source=admin-sidebar&utm_medium=banner&utm_term=2point5&utm_campaign=internalbanner";
 
                 }
                 echo '<h3 class="hndle"><span>'.__( 'Get WP Email Capture Premium', 'wp-email-capture' ).'</span></h3>
@@ -106,7 +106,7 @@ function wp_email_capture_admin_sidebar( $sidestring ) {
                     foreach ( $wpemailcapturefeed as $item ) {
                         $url = preg_replace( '/#.*/', '', esc_url( $item->get_permalink(), $protocolls=null, 'display' ) );
                         echo '<li>
-                            <a href="'.$url.'#utm_source=wpadmin&utm_medium=sidebarwidget&utm_term=newsitem&utm_campaign=wpemailcapture">'. esc_html( $item->get_title() ) .'</a>
+                            <a href="'.$url.'?utm_source=admin-sidebar&utm_medium=sidebarwidget&utm_term=newsitem&utm_campaign=wpemailcapture">'. esc_html( $item->get_title() ) .'</a>
                             </li>';
                     }
                 }
