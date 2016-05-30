@@ -247,13 +247,21 @@ function wp_email_capture_free_options() {
 
     </form>';
 
-    $tempemails = wp_email_capture_count_temp();
+    $tempemails             = wp_email_capture_count_temp();
+    $lastsignupdatestring   = wp_email_capture_get_last_singup_date();
+
+    if ( $lastsignupdatestring ) {
+        $lastsignupdate         = date(  "jS F, Y g:ia", strtotime( $lastsignupdatestring ) );
+        $lastsignupdatesentance = __( ' The last attempted signup was on ' . $lastsignupdate . '.',  'wp-email-capture' );
+    } else {
+        $lastsignupdatesentance = "";
+    }
 
     echo "<a name='truncate'></a><h3>".__( 'Temporary e-mails', 'wp-email-capture' )."</h3>\n";
 
     echo '<form name="wp_email_capture_truncate" action="'. esc_url( $_SERVER['REQUEST_URI'] ) . '#truncate" method="post">';
 
-    echo '<label>'.__( 'There are', 'wp-email-capture' ).' '. $tempemails . ' '.__( 'e-mail addresses that have been unconfirmed. Delete them to save space below.', 'wp-email-capture' ).'</label>';
+    echo '<label>'.__( 'There are', 'wp-email-capture' ).' '. $tempemails .__( ' e-mail addresses that have been unconfirmed.' . $lastsignupdatesentance . ' Delete them to save space below.', 'wp-email-capture' ).'</label>';
 
     echo '<input type="hidden" name="wp_email_capture_truncate"/>';
 

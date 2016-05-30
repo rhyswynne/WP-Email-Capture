@@ -141,7 +141,7 @@ function wp_email_capture_nag_ignore() {
 function wp_email_capture_fetch_rss_feed() {
 
 	include_once ABSPATH . WPINC . '/feed.php';
-	$rss = fetch_feed( "http://wpemailcapture.com/feed?cat=-4" );
+	$rss = fetch_feed( "https://www.wpemailcapture.com/feed?cat=-4" );
 
 	if ( is_wp_error( $rss ) ) { return false; }
 
@@ -167,5 +167,30 @@ function wp_email_capture_get_number_of_registered_users() {
 	$get_number_of_regs = $wpdb->get_var( $get_number_of_regs_sql );
 
 	return $get_number_of_regs;
+
+}
+
+
+/**
+ * Get the last date of temporary emails.
+ * 
+ * @return mixed 		the last date of signup if known. False if not.
+ */ 
+function wp_email_capture_get_last_singup_date() {
+
+	global $wpdb;
+	$get_last_date_sql = '
+		SELECT 		`date` 
+		FROM 	' . WP_EMAIL_CAPTURE_TEMP_MEMBERS_TABLE . '
+		ORDER BY 	`date` DESC
+		LIMIT 		1';
+
+	$get_last_date = $wpdb->get_var( $get_last_date_sql );
+
+	if ( $get_last_date != '0000-00-00 00:00:00') {
+		return $get_last_date;
+	} else {
+		return false;
+	}
 
 }

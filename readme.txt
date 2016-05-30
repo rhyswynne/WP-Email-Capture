@@ -1,7 +1,7 @@
 === WP Email Capture ===
 Tags: email, marketing, capture, form, affiliates, mailing lists, email marketing, widget ready
 Requires at least: 3.0
-Tested up to: 4.4
+Tested up to: 4.5
 Version: 3.1.2
 Stable tag: 3.1.2
 Contributors: rhyswynne
@@ -161,6 +161,8 @@ To donate to this plugin, please visit the [WP Email Capture Donations Page](htt
 == Change Log ==
 = 3.1.2 =
 * Reward linkers with a voucher code.
+* Included the "Last Known Update" box.
+* Tested up to 4.5
 
 = 3.1.1 =
 * Removed a redundant file that, if hacked in, could lead to an injection of content. This file was *not* called normally but in order to remove it upgrade to this version. ** Update strongly required **

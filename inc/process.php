@@ -111,7 +111,7 @@ function wp_email_capture_signup() {
 
 	}
 
-	$member_data = array( 'confirm_code' => $confirm_code, 'name' => $name, 'email' => $email );
+	$member_data = array( 'confirm_code' => $confirm_code, 'name' => $name, 'email' => $email, 'date' => $date );
 
 	/**
 	 * Filter whether we handle a new subscription.
@@ -131,7 +131,7 @@ function wp_email_capture_signup() {
 		return;
 
 	// Insert data into database
-	$insert_into_temp=$wpdb->insert( WP_EMAIL_CAPTURE_TEMP_MEMBERS_TABLE, $member_data, array( '%s', '%s', '%s' ) );
+	$insert_into_temp=$wpdb->insert( WP_EMAIL_CAPTURE_TEMP_MEMBERS_TABLE, $member_data, array( '%s', '%s', '%s', '%s' ) );
 
 	// if suceesfully inserted data into database, send confirmation link to email
 

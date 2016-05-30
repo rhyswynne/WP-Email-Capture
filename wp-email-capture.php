@@ -4,7 +4,7 @@
 
 Plugin Name: WP Email Capture
 
-Plugin URI: http://wpemailcapture.com/?utm_source=plugin-link&utm_medium=plugin&utm_campaign=wpemailcapture
+Plugin URI: https://www.wpemailcapture.com/?utm_source=plugin-link&utm_medium=plugin&utm_campaign=wpemailcapture
 
 Description: Captures email addresses for insertion into software such as <a href="http://wpemailcapture.com/recommends/aweber" title="Email Marketing">Aweber</a> or <a href="http://wpemailcapture.com/recommends/mailchimp/">Mailchimp</a>
 
@@ -12,7 +12,7 @@ Version: 3.1.2
 
 Author: Winwar Media
 
-Author URI: http://winwar.co.uk/?utm_source=author-link&utm_medium=plugin&utm_campaign=wpemailcapture
+Author URI: https://www.winwar.co.uk/?utm_source=author-link&utm_medium=plugin&utm_campaign=wpemailcapture
 
 */
 
@@ -20,13 +20,13 @@ global $wp_email_capture_db_version;
 global $wpdb;
 
 // Definitions
-$wp_email_capture_db_version = "1.0";
+$wp_email_capture_db_version = "1.2";
 
 define( 'WP_EMAIL_CAPTURE_PATH', dirname( __FILE__ ) );
 define( 'WP_EMAIL_CAPTURE_URL', plugins_url( '', __FILE__ ) );
 define( 'WP_EMAIL_CAPTURE_TEMP_MEMBERS_TABLE', $wpdb->prefix . 'wp_email_capture_temp_members');
 define( 'WP_EMAIL_CAPTURE_REGISTERED_MEMBERS_TABLE', $wpdb->prefix . 'wp_email_capture_registered_members');
-define( 'WP_EMAIL_CAPTURE_VERSION', '3.1.1' );
+define( 'WP_EMAIL_CAPTURE_VERSION', '3.1.2' );
 
 require_once WP_EMAIL_CAPTURE_PATH . '/inc/core.php';
 
@@ -69,6 +69,9 @@ function wp_email_capture_plugins_loaded() {
 	add_action( 'admin_enqueue_scripts', 'wp_email_capture_admin_scripts' );
 	add_shortcode( 'wp_email_capture_form', 'wp_email_capture_form_process_atts' );
 	add_filter( 'wp_email_capture_send_email', 'wp_email_capture_send_email_default', 10, 4 );
+
+	// Running this on the same hook so it can be removed if need be.
+    add_action( 'plugins_loaded', 'wp_email_capture_database_upgdrade', 50 );
 }
 
 // Activation functionality
