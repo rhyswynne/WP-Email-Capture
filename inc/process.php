@@ -282,6 +282,13 @@ function wp_capture_email_confirm() {
 				$fullreg = get_bloginfo( 'url' );
 			}
 
+			$emaildataarray = array(
+				'name' => $name,
+				'email' => $email 
+			);
+
+			do_action( 'wp_email_capture_complete_before_redirect', $emaildataarray );
+
 			wp_redirect( $fullreg );
 			echo "<meta http-equiv='refresh' content='0;". $fullreg ."'>";
 			die();

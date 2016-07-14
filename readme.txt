@@ -159,10 +159,13 @@ Please report any bugs, support and suggestions to the [WP Email Capture Support
 To donate to this plugin, please visit the [WP Email Capture Donations Page](http://wpemailcapture.com/premium/?utm_source=donate&utm_medium=wordpressorgreadme&utm_campaign=wpemailcapture)
 
 == Change Log ==
+= 3.1.3 =
+* Added wp_email_capture_complete_before_redirect action. Allowing data to be manipulated before the redirect.
+
 = 3.1.2 =
 * Reward linkers with a voucher code.
-* Included the "Last Known Update" box.
-* Tested up to 4.5
+* Included the "Last Temporary Signup" date, so they get know the last attempted signup.
+* Tested up to 4.5.
 
 = 3.1.1 =
 * Removed a redundant file that, if hacked in, could lead to an injection of content. This file was *not* called normally but in order to remove it upgrade to this version. ** Update strongly required **
