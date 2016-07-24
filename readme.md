@@ -186,6 +186,11 @@ To donate to this plugin, please visit the [WP Email Capture Donations Page](htt
 
 Change Log
 ==========
+3.1.3
+-----
+* Added wp_email_capture_complete_before_redirect action. Allowing data to be manipulated before the redirect.
+* Added Extensions area of dashboard.
+
 3.1.2
 -----
 * Reward linkers with a voucher code.

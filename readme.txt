@@ -2,8 +2,8 @@
 Tags: email, marketing, capture, form, affiliates, mailing lists, email marketing, widget ready
 Requires at least: 3.0
 Tested up to: 4.5
-Version: 3.1.2
-Stable tag: 3.1.2
+Version: 3.1.3
+Stable tag: 3.1.3
 Contributors: rhyswynne
 Donate link: https://www.wpemailcapture.com/premium/?utm_source=donatelink&utm_medium=wordpressorgreadme&utm_campaign=wpemailcapture
 
@@ -161,6 +161,7 @@ To donate to this plugin, please visit the [WP Email Capture Donations Page](htt
 == Change Log ==
 = 3.1.3 =
 * Added wp_email_capture_complete_before_redirect action. Allowing data to be manipulated before the redirect.
+* Added Extensions area of dashboard.
 
 = 3.1.2 =
 * Reward linkers with a voucher code.

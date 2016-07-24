@@ -21,22 +21,35 @@ function wp_email_capture_menus() {
  */
 function wp_email_capture_dashboard() {
 
-    ?>
-    <div class="wrap about-wrap">
+    $extensionstopush = array(
+        array(
 
-        <h1><?php _e( 'Welcome to WP Email Capture!', 'wp-email-capture' ); ?></h1>
+            'name'          => __('WP Email Capture - Drip Integration', 'WPEC' ),
+            'description'   => __( 'Integrate WP Email Capture with <a href="https://www.wpemailcapture.com/recommends/drip/">Drip</a>'),
+            'price'         => '15',
+            'purchaseurl'   => 'https://www.wpemailcapture.com/checkout/?edd_action=add_to_cart&download_id=2415',
+            'infourl'       => 'https://www.wpemailcapture.com/downloads/wp-email-capture-drip-integration/',
+            'imageurl'      => WP_EMAIL_CAPTURE_URL . '/inc/img/drip-image.png',
+            'slug'          => 'wpemailcapturedripintegration'
+            )
+        )
 
-        <div class="about-text">
-            <?php _e( 'Start collecting email subscribers today!', 'wp-email-capture' ); ?><br/>
-        </div>
+        ?>
+        <div class="wrap about-wrap">
 
-        <h2 class="nav-tab-wrapper" id="wpemailcapture-tabs">
-            <a class="nav-tab" href="#dashboard" id="dashboard-tab"><?php _e( 'Dashboard', 'wp-email-capture' ); ?></a>
-            <a class="nav-tab" href="#changelog" id="changelog-tab"><?php _e( 'Changelog', 'wp-email-capture' ); ?></a>
-            <a class="nav-tab" href="#credits" id="credits-tab"><?php _e( 'Credits', 'wp-email-capture' ); ?></a>
-        </h2>
+            <h1><?php _e( 'Welcome to WP Email Capture!', 'wp-email-capture' ); ?></h1>
 
-        <?php 
+            <div class="about-text">
+                <?php _e( 'Start collecting email subscribers today!', 'wp-email-capture' ); ?><br/>
+            </div>
+
+            <h2 class="nav-tab-wrapper" id="wpemailcapture-tabs">
+                <a class="nav-tab" href="#dashboard" id="dashboard-tab"><?php _e( 'Dashboard', 'wp-email-capture' ); ?></a>
+                <a class="nav-tab" href="#changelog" id="changelog-tab"><?php _e( 'Changelog', 'wp-email-capture' ); ?></a>
+                <a class="nav-tab" href="#credits" id="credits-tab"><?php _e( 'Credits', 'wp-email-capture' ); ?></a>
+            </h2>
+
+            <?php 
 
             if ( array_key_exists( 'wpecupgrade', $_GET ) ) {
                 $activedashboard    = "";
@@ -46,46 +59,76 @@ function wp_email_capture_dashboard() {
                 $activeupgrade      = "";
             }
 
-        ?>
-        <div id="dashboard" class="wpemailcapture-tab <?php echo $activedashboard; ?>">
-            <h2><?php _e( 'Welcome to WP Email Capture', 'wp-email-capture' ); ?></h2>
-
-            <h3><?php _e( 'New in 3.0 - Complete Rewrite', 'wp-email-capture' ); ?></h3>
-
-            <p><?php _e( 'Version 3.0 introduces a completely rewritten back end, making it faster for the average user, and allowing extensions to be added to the plugin. We also introduced two new translations and fixed a bug.', 'wp-email-capture'); ?></p>
-
-            <p><a class="non-nav-tab" href="#changelog" id="changelog-tab"><?php _e( 'Read the changelog', 'wp-email-capture'); ?></a></p>
-
-            <?php
-
-            do_action( 'wp_email_capture_dashboard_premium_upsell' );
-
             ?>
+            <div id="dashboard" class="wpemailcapture-tab <?php echo $activedashboard; ?>">
+                <h2><?php _e( 'Welcome to WP Email Capture', 'wp-email-capture' ); ?></h2>
 
-            <?php /* <h2><?php _e( 'Extensions', 'wp-email-capture' ); ?></h2> */ ?>
-        </div>
+                <h3><?php _e( 'New in 3.0 - Complete Rewrite', 'wp-email-capture' ); ?></h3>
 
-        <div id="changelog" class="wpemailcapture-tab <?php echo $activeupgrade; ?>">
-            <h2><?php _e( 'Changelog', 'wp-email-capture' ); ?></h2>
-            <h3><?php _e( 'Code Refactorisation', 'wp-email-capture' ); ?></h3>
-            <p><?php _e( 'Version 3.0 introduces a completely rewritten back end, making it faster for the average user, and allowing extensions to be added to the plugin.', 'wp-email-capture'); ?></p>
-            <h3><?php _e( '3.1 Changes', 'wp-email-capture' ); ?></h3>
-            <ul>
-                <li><?php echo sprintf( __( 'Removed the default widget title should widget text be blank (props <a href="%s" target="_blank">Hassan Raza</a>)','wp-email-capture' ), 'http://hassan-raza.com/' ); ?></li>
-                <li><?php _e( 'Changed word from "Update" to "Upgrade" for large lists as it was confusing people.','wp-email-capture' ); ?></li>
-                <li><?php _e( 'Changed to new Text Domain as per WordPress new internationalisation integration (wp-email-capture).', 'wp-email-capture' ); ?></li>
-            </ul>
-        </div>
+                <p><?php _e( 'Version 3.0 introduces a completely rewritten back end, making it faster for the average user, and allowing extensions to be added to the plugin. We also introduced two new translations and fixed a bug.', 'wp-email-capture'); ?></p>
 
-        <div id="credits" class="wpemailcapture-tab">
-            <h2><?php _e( 'Credits', 'wp-email-capture' ); ?></h2>
-            <p><?php _e( 'This plugin has been helped and improved by the following people', 'wp-email-capture' ); ?></p>
-            <ul>
-                <li><?php echo sprintf( __( '<strong>3.1:</strong> <a href="%s" target="_blank">Hassan Raza</a>','wp-email-capture' ), 'http://hassan-raza.com/' ); ?></li> 
-            </ul>
-            <h3><?php _e('Translations', 'wp-email-capture' ); ?></h3>
-            <ul>
-                <li><?php echo sprintf( __( '<strong>French Translation:</strong> <a href="%s" target="_blank">Olivier</a> & <a href="%s" target="_blank">Andrew Patton</a> <a href="%s" target="_blank">(@andpatton)</a>.','wp-email-capture' ), 'http://www.ticket-system.net/', 'http://www.acusti.ca/', 'http://twitter.com/andpatton' ); ?></li> 
+                <p><a class="non-nav-tab" href="#changelog" id="changelog-tab"><?php _e( 'Read the changelog', 'wp-email-capture'); ?></a></p>
+
+                <?php
+
+                do_action( 'wp_email_capture_dashboard_premium_upsell' );
+
+                ?>
+
+                <h2><?php _e( 'Extensions', 'wp-email-capture' ); ?></h2>
+                <table>
+                    <tr>
+                        <?php 
+
+                        $loop = 0;
+
+                        foreach ( $extensionstopush as $extension ) {
+
+                            if ( $loop == 3 ) {
+                                ?>
+                            </tr>
+                            <tr>
+                                <?php
+                            }
+                            ?>
+                            <td align="center">
+                                <h3><?php echo $extension['name'] ?></h3>
+                                <img src="<?php echo $extension['imageurl']; ?>">
+                                <p><?php echo $extension['description']; ?></p>
+                                <p>
+                                    <a class="button-primary" href="<?php echo $extension['purchaseurl']; ?>"><?php echo "$" . $extension['price'] . ".00"; ?> <?php _e( 'Buy Now', 'WPEC' ); ?></a> 
+                                    <a class="button-secondary" href="<?php echo $extension['infourl'];?>"><?php _e( 'More Info', 'WPEC' ); ?></a>
+                                </p>
+                            </td>
+                            <?php
+
+                        }
+                        ?>
+                    </tr>
+                </table>
+            </div>
+
+            <div id="changelog" class="wpemailcapture-tab <?php echo $activeupgrade; ?>">
+                <h2><?php _e( 'Changelog', 'wp-email-capture' ); ?></h2>
+                <h3><?php _e( 'Code Refactorisation', 'wp-email-capture' ); ?></h3>
+                <p><?php _e( 'Version 3.0 introduces a completely rewritten back end, making it faster for the average user, and allowing extensions to be added to the plugin.', 'wp-email-capture'); ?></p>
+                <h3><?php _e( '3.1 Changes', 'wp-email-capture' ); ?></h3>
+                <ul>
+                    <li><?php echo sprintf( __( 'Removed the default widget title should widget text be blank (props <a href="%s" target="_blank">Hassan Raza</a>)','wp-email-capture' ), 'http://hassan-raza.com/' ); ?></li>
+                    <li><?php _e( 'Changed word from "Update" to "Upgrade" for large lists as it was confusing people.','wp-email-capture' ); ?></li>
+                    <li><?php _e( 'Changed to new Text Domain as per WordPress new internationalisation integration (wp-email-capture).', 'wp-email-capture' ); ?></li>
+                </ul>
+            </div>
+
+            <div id="credits" class="wpemailcapture-tab">
+                <h2><?php _e( 'Credits', 'wp-email-capture' ); ?></h2>
+                <p><?php _e( 'This plugin has been helped and improved by the following people', 'wp-email-capture' ); ?></p>
+                <ul>
+                    <li><?php echo sprintf( __( '<strong>3.1:</strong> <a href="%s" target="_blank">Hassan Raza</a>','wp-email-capture' ), 'http://hassan-raza.com/' ); ?></li> 
+                </ul>
+                <h3><?php _e('Translations', 'wp-email-capture' ); ?></h3>
+                <ul>
+                    <li><?php echo sprintf( __( '<strong>French Translation:</strong> <a href="%s" target="_blank">Olivier</a> & <a href="%s" target="_blank">Andrew Patton</a> <a href="%s" target="_blank">(@andpatton)</a>.','wp-email-capture' ), 'http://www.ticket-system.net/', 'http://www.acusti.ca/', 'http://twitter.com/andpatton' ); ?></li> 
                     <li><?php echo sprintf( __( '<strong>German Translation:</strong> <a href="%s" target="_blank">Stephan</a>, <a href="%s" target="_blank">Marc Nilius</a> <a href="%s" target="_blank">(@libertello)</a> &amp; Ov3rFly', 'wp-email-capture' ), 'http://www.computersniffer.com/', 'http://www.libertello.de/', 'http://twitter.com/libertello' ); ?></li> 
                     <li><?php echo sprintf( __( '<strong>Brazilian Portugese Translation:</strong> <a href="%s" target="_blank">Nick Lima</a> <a href="%s" target="_blank">(@nick_linux)</a>', 'wp-email-capture' ), 'http://www.nicklima.com.br', 'http://twitter.com/nick_linux' ); ?></li> 
                     <li><?php echo sprintf( __( '<strong>Dutch Translation:</strong> <a href="%s" target="_blank">Sander</a>', 'wp-email-capture' ), 'http://www.zanderz.net/' ); ?></li>
