@@ -1,9 +1,9 @@
 === WP Email Capture ===
 Tags: email, marketing, capture, form, affiliates, mailing lists, email marketing, widget ready
 Requires at least: 3.0
-Tested up to: 4.5
-Version: 3.1.3
-Stable tag: 3.1.3
+Tested up to: 4.6
+Version: 3.2
+Stable tag: 3.2
 Contributors: rhyswynne
 Donate link: https://www.wpemailcapture.com/premium/?utm_source=donatelink&utm_medium=wordpressorgreadme&utm_campaign=wpemailcapture
 
@@ -159,6 +159,17 @@ Please report any bugs, support and suggestions to the [WP Email Capture Support
 To donate to this plugin, please visit the [WP Email Capture Donations Page](http://wpemailcapture.com/premium/?utm_source=donate&utm_medium=wordpressorgreadme&utm_campaign=wpemailcapture)
 
 == Change Log ==
+= 3.2 =
+* Correction in the German translation (props [Lars Kasper](http://larskasper.de/))
+* Added a wp_email_capture_extra_checks action, that will allow people to run checks on the name/email address.
+* Removed some legacy code that was commented out.
+* Fix an encoding issue for new installs, now the tables match the database's encoding.
+* Fixed a bug for new installs that had a "The plugin generated XXX characters of unexpected output during activation.".
+
+= 3.1.4 =
+* Fixed a bug that caused an "Unexpected Output" on some database setups.
+* Used UNIQUE KEY rather than PRIMARY KEY, so activation and deactivation doesn't cause database errors.
+
 = 3.1.3 =
 * Added wp_email_capture_complete_before_redirect action. Allowing data to be manipulated before the redirect.
 * Added Extensions area of dashboard.

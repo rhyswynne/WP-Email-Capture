@@ -4,11 +4,11 @@ Tags: email, marketing, capture, form, affiliates, mailing lists, email marketin
 
 Requires at least: 3.0
 
-Tested up to: 4.5
+Tested up to: 4.7
 
-Version: 3.1.2
+Version: 3.2
 
-Stable tag: 3.1.2
+Stable tag: 3.2
 
 Contributors: rhyswynne
 

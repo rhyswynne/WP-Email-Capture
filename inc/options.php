@@ -24,6 +24,16 @@ function wp_email_capture_dashboard() {
     $extensionstopush = array(
         array(
 
+            'name'          => __('WP Email Capture - Akismet Integration', 'WPEC' ),
+            'description'   => __( 'Integrate WP Email Capture with <a href="https://akismet.com/">Akismet</a>'),
+            'price'         => '20',
+            'purchaseurl'   => 'https://www.wpemailcapture.com/checkout/?edd_action=add_to_cart&download_id=2823',
+            'infourl'       => 'https://www.wpemailcapture.com/downloads/wp-email-capture-akismet-integration/',
+            'imageurl'      => WP_EMAIL_CAPTURE_URL . '/inc/img/akismet-image.gif',
+            'slug'          => 'wpemailcaptureakismetintegration'
+            ),
+        array(
+
             'name'          => __('WP Email Capture - Drip Integration', 'WPEC' ),
             'description'   => __( 'Integrate WP Email Capture with <a href="https://www.wpemailcapture.com/recommends/drip/">Drip</a>'),
             'price'         => '15',
@@ -32,7 +42,7 @@ function wp_email_capture_dashboard() {
             'imageurl'      => WP_EMAIL_CAPTURE_URL . '/inc/img/drip-image.png',
             'slug'          => 'wpemailcapturedripintegration'
             )
-        )
+        );
 
         ?>
         <div class="wrap about-wrap">

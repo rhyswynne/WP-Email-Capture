@@ -13,7 +13,7 @@ msgstr ""
 "X-Poedit-SourceCharset: UTF-8\n"
 "X-Poedit-Basepath: .\n"
 "X-Poedit-KeywordsList: __;_e\n"
-"X-Generator: Poedit 1.5.5\n"
+"X-Generator: Poedit 1.7.4\n"
 "X-Poedit-SearchPath-0: ..\n"
 
 #: inc/admin-sidebar.php:14
@@ -445,7 +445,7 @@ msgstr "Dies ist eine automatische Nachricht, weil jemand mit der IP-Adresse"
 
 #: inc/process.php:186
 msgid "(possibly you) on"
-msgstr "(vielleicht sie) am"
+msgstr "(vielleicht Sie) am"
 
 #: inc/process.php:186
 msgid "filled out the form on the following page"
@@ -479,7 +479,6 @@ msgstr "Anmeldungen"
 msgid "Delete "
 msgstr "Entferne "
 
-#. #-#-#-#-#  plugin.pot (WP Email Capture 2.10)  #-#-#-#-#
 #. Plugin Name of the plugin/theme
 #: inc/widget.php:6
 msgid "WP Email Capture"

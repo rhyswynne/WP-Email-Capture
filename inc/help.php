@@ -37,6 +37,7 @@ function wp_email_capture_free_help() {
  * @return void
  */
 function wp_email_capture_setup_help() {
+	
 	/**
 	 * Filter for the settings page URL for WP Email Capture
 	 *

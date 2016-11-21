@@ -95,6 +95,8 @@ function wp_email_capture_signup() {
 	$name = wp_email_stripslashes( $name );
 	$email = wp_email_stripslashes( $email );
 
+	do_action( 'wp_email_capture_extra_checks', $name, $email );
+
 	$referrer = esc_url( $_SERVER['HTTP_REFERER'] );
 	$ip = esc_attr( $_SERVER['REMOTE_ADDR'] );
 	$date = date( "Y-m-d H-i" );
