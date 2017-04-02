@@ -34,7 +34,7 @@ function wp_email_capture_install() {
 	email TEXT NOT NULL ,
 	confirm_code TEXT NOT NULL ,
 	date DATETIME NOT NULL , 
-	UNIQUE KEY  (id)) $charset_collate;";
+	UNIQUE KEY id (id)) $charset_collate;";
 
 	dbDelta( $create_temp_members_table_sql );
 

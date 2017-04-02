@@ -139,7 +139,7 @@ function wp_email_capture_dashboard() {
                 <h3><?php _e('Translations', 'wp-email-capture' ); ?></h3>
                 <ul>
                     <li><?php echo sprintf( __( '<strong>French Translation:</strong> <a href="%s" target="_blank">Olivier</a> & <a href="%s" target="_blank">Andrew Patton</a> <a href="%s" target="_blank">(@andpatton)</a>.','wp-email-capture' ), 'http://www.ticket-system.net/', 'http://www.acusti.ca/', 'http://twitter.com/andpatton' ); ?></li> 
-                    <li><?php echo sprintf( __( '<strong>German Translation:</strong> <a href="%s" target="_blank">Stephan</a>, <a href="%s" target="_blank">Marc Nilius</a> <a href="%s" target="_blank">(@libertello)</a> &amp; Ov3rFly', 'wp-email-capture' ), 'http://www.computersniffer.com/', 'http://www.libertello.de/', 'http://twitter.com/libertello' ); ?></li> 
+                    <li><?php echo sprintf( __( '<strong>German Translation:</strong> <a href="%s" target="_blank">Stephan</a>, <a href="%s" target="_blank">Marc Nilius</a> <a href="%s" target="_blank">(@libertello)</a>, Ov3rFly &amp; <a href="%s">Lars Kasper</a>', 'wp-email-capture' ), 'http://www.computersniffer.com/', 'http://www.libertello.de/', 'http://twitter.com/libertello', 'http://larskasper.de/' ); ?></li> 
                     <li><?php echo sprintf( __( '<strong>Brazilian Portugese Translation:</strong> <a href="%s" target="_blank">Nick Lima</a> <a href="%s" target="_blank">(@nick_linux)</a>', 'wp-email-capture' ), 'http://www.nicklima.com.br', 'http://twitter.com/nick_linux' ); ?></li> 
                     <li><?php echo sprintf( __( '<strong>Dutch Translation:</strong> <a href="%s" target="_blank">Sander</a>', 'wp-email-capture' ), 'http://www.zanderz.net/' ); ?></li>
                     <li><?php echo sprintf( __( '<strong>Hungarian Translation:</strong> <a href="%s" target="_blank">Surbma</a>', 'wp-email-capture' ), 'http://surbma.hu/' ); ?></li>
@@ -245,7 +245,7 @@ function wp_email_capture_free_options() {
 
                 <tr class="wp_email_capture_admin_discount <?php echo $prechecked; ?>">
                     <td colspan="2">
-                        <?php printf( __( 'Thanks for linking to us! As a thank you, use code <strong>LINK20</strong> to get 20&#37; off <a href="%s">WP Email Capture Premium</a>, or any extension from the <a href="%s">WP Email Capture Shop</a>.', 'wp-email-capture' ), 'https://www.wpemailcapture.com/premium/?utm_source=plugin-dashboard&utm_medium=plugin&utm_term=checkedlink&utm_campaign=wpemailcapture', 'https://www.wpemailcapture.com/downloads/?utm_source=plugin-dashboard&utm_medium=plugin&utm_term=checkedlink&utm_campaign=wpemailcapture' ); ?>
+                        <?php printf( __( 'Thanks for linking to us! As a thank you, use code <strong>LINK20</strong> to get 20&#37; off <a href="%s">WP Email Capture Premium</a>, or any extension from the <a href="%s">WP Email Capture Shop</a>.', 'wp-email-capture' ), 'https://www.wpemailcapture.com/premium/?utm_source=plugin-options&utm_medium=plugin&utm_term=checkedlink&utm_campaign=wpemailcapture', 'https://www.wpemailcapture.com/downloads/?utm_source=plugin-options&utm_medium=plugin&utm_term=checkedlink&utm_campaign=wpemailcapture' ); ?>
                     </td>
                 </tr>
 
@@ -267,13 +267,30 @@ function wp_email_capture_free_options() {
 
                 </tr>
 
+                <tr valign="top">
+
+                    <th scope="row" style="width:400px"><?php _e( 'Send HTML email?', 'wp-email-capture' ); ?></th>
+
+                    <td><input type="checkbox" name="wp_email_capture_send_email_html" value="1" <?php checked( get_option( 'wp_email_capture_send_email_html' ), 1 ); ?> /></td>
+
+                </tr>
+
+                <tr valign="top">
+
+                    <th scope="row" style="width:400px"><?php _e( 'Disable Headers', 'wp-email-capture' ); ?></th>
+
+                    <td><input type="checkbox" name="wp_email_capture_disabled_headers" value="1" <?php checked( get_option( 'wp_email_capture_disabled_headers' ), 1 ); ?> /><br/>
+                    <span class="description"><?php _e( 'If you are having problems with sending emails (such as with Amazon SES), disable this','wp-email-capture' ); ?></span></td>
+
+                </tr>
+
             </tbody>
 
         </table>
 
         <input type="hidden" name="action" value="update" />
 
-        <input type="hidden" name="page_options" value="wp_email_capture_redirection,wp_email_capture_from,wp_email_capture_subject,wp_email_capture_signup,wp_email_capture_body,wp_email_capture_from_name,wp_email_capture_link,wp_email_capture_name_required,wp_email_capture_name_delimeter" />
+        <input type="hidden" name="page_options" value="wp_email_capture_redirection,wp_email_capture_from,wp_email_capture_subject,wp_email_capture_signup,wp_email_capture_body,wp_email_capture_from_name,wp_email_capture_link,wp_email_capture_name_required,wp_email_capture_name_delimeter,wp_email_capture_send_email_html,wp_email_capture_disabled_headers" />
 
         <p class="submit">
 
@@ -370,6 +387,10 @@ function wp_email_capture_options_process() { // whitelist options
     register_setting( 'wp-email-capture-group', 'wp_email_capture_name_required' );
 
     register_setting( 'wp-email-capture-group', 'wp_email_capture_name_delimeter' );
+
+    register_setting( 'wp-email-capture-group', 'wp_email_capture_send_email_html' );
+
+    register_setting( 'wp-email-capture-group', 'wp_email_capture_disabled_headers' );
 
     if ( isset( $_REQUEST['wp_email_capture_export'] ) ) {
 

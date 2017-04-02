@@ -99,10 +99,10 @@ function wp_email_capture_admin_upsell() {
 			echo '<div class="updated welcome-panel" style="padding: 23px 10px 0;">';
 			printf( __( '<a href="%1$s" class="welcome-panel-close">Hide Notice</a>
 				<div class="welcome-panel-content">
-				<h3>WP Email Capture - Over 500 Emails</h3>
-				<p>WP Email Capture has over 500 entries. Whilst the plugin is free for use forever, it does struggle a bit with very large lists.</p>
-				<p>WP Email Caputre Premium is better suited to large lists, so please consider upgrading. As a thank you for using us for so long, use discount code <strong>%3$s</strong> for <strong>%4$s</strong> off.</p>
-				<p><a href="%2$s" class="button button-primary button-hero"><strong>Upgrade WP Email Capture</strong></a></p></div>' ), '?wp_email_capture_upsell_ignore=0', $upgradeurl, $discountcode, $discountamount );
+					<h3>WP Email Capture - Over 500 Emails</h3>
+					<p>WP Email Capture has over 500 entries. Whilst the plugin is free for use forever, it does struggle a bit with very large lists.</p>
+					<p>WP Email Caputre Premium is better suited to large lists, so please consider upgrading. As a thank you for using us for so long, use discount code <strong>%3$s</strong> for <strong>%4$s</strong> off.</p>
+					<p><a href="%2$s" class="button button-primary button-hero"><strong>Upgrade WP Email Capture</strong></a></p></div>' ), '?wp_email_capture_upsell_ignore=0', $upgradeurl, $discountcode, $discountamount );
 			echo "</div>";
 		}
 	}
@@ -161,8 +161,8 @@ function wp_email_capture_get_number_of_registered_users() {
 	$registered_members_table = WP_EMAIL_CAPTURE_REGISTERED_MEMBERS_TABLE;
 	global $wpdb;
 	$get_number_of_regs_sql = '
-		SELECT 		COUNT(*) 
-		FROM 	' . WP_EMAIL_CAPTURE_REGISTERED_MEMBERS_TABLE;
+	SELECT 		COUNT(*) 
+	FROM 	' . WP_EMAIL_CAPTURE_REGISTERED_MEMBERS_TABLE;
 
 	$get_number_of_regs = $wpdb->get_var( $get_number_of_regs_sql );
 
@@ -180,10 +180,10 @@ function wp_email_capture_get_last_singup_date() {
 
 	global $wpdb;
 	$get_last_date_sql = '
-		SELECT 		`date` 
-		FROM 	' . WP_EMAIL_CAPTURE_TEMP_MEMBERS_TABLE . '
-		ORDER BY 	`date` DESC
-		LIMIT 		1';
+	SELECT 		`date` 
+	FROM 	' . WP_EMAIL_CAPTURE_TEMP_MEMBERS_TABLE . '
+	ORDER BY 	`date` DESC
+	LIMIT 		1';
 
 	$get_last_date = $wpdb->get_var( $get_last_date_sql );
 
@@ -193,4 +193,51 @@ function wp_email_capture_get_last_singup_date() {
 		return false;
 	}
 
+}
+
+
+/**
+ * Set the email type to text/html
+ * @return string "text/html"
+ */
+function wp_email_capture_set_html_mail_content_type() {
+	return 'text/html';
+}
+
+
+/**
+ * Set the email type to text/plain
+ *
+ * Happens after sending an email.
+ * 
+ * @return string "text/plain"
+ */
+function wp_email_capture_set_plain_content_type() {
+	return 'text/plain';
+} add_filter( 'wp_mail_content_type', 'wp_email_capture_set_plain_content_type' );
+
+
+/**
+ * Set email to HTML, if you wish to.
+ * 
+ * @return void
+ */
+function wp_email_capture_set_email_to_html() {
+
+	if ( 1 == get_option( 'wp_email_capture_send_email_html' ) ) {
+		add_filter( 'wp_mail_content_type', 'wp_email_capture_set_html_mail_content_type' );
+	}
+	
+} 
+
+
+/**
+ * Return email to standard email.
+ * 
+ * @return void
+ */
+function wp_email_capture_set_email_to_plain() {
+	if ( 1 == get_option( 'wp_email_capture_send_email_html' ) ) {
+		add_filter( 'wp_mail_content_type', 'wp_email_capture_set_plain_content_type' );
+	}
 }

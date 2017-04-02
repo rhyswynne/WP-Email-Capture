@@ -8,7 +8,7 @@ Plugin URI: https://www.wpemailcapture.com/?utm_source=plugin-link&utm_medium=pl
 
 Description: Captures email addresses for insertion into software such as <a href="http://wpemailcapture.com/recommends/aweber" title="Email Marketing">Aweber</a> or <a href="http://wpemailcapture.com/recommends/mailchimp/">Mailchimp</a>
 
-Version: 3.2
+Version: 3.3
 
 Author: Winwar Media
 
@@ -26,7 +26,7 @@ define( 'WP_EMAIL_CAPTURE_PATH', dirname( __FILE__ ) );
 define( 'WP_EMAIL_CAPTURE_URL', plugins_url( '', __FILE__ ) );
 define( 'WP_EMAIL_CAPTURE_TEMP_MEMBERS_TABLE', $wpdb->prefix . 'wp_email_capture_temp_members');
 define( 'WP_EMAIL_CAPTURE_REGISTERED_MEMBERS_TABLE', $wpdb->prefix . 'wp_email_capture_registered_members');
-define( 'WP_EMAIL_CAPTURE_VERSION', '3.2' );
+define( 'WP_EMAIL_CAPTURE_VERSION', '3.3-beta' );
 
 require_once WP_EMAIL_CAPTURE_PATH . '/inc/core.php';
 
@@ -62,6 +62,8 @@ function wp_email_capture_plugins_loaded() {
 	add_action( 'admin_enqueue_scripts', 'wp_email_capture_admin_scripts' );
 	add_shortcode( 'wp_email_capture_form', 'wp_email_capture_form_process_atts' );
 	add_filter( 'wp_email_capture_send_email', 'wp_email_capture_send_email_default', 10, 4 );
+	add_action( 'wp_email_capture_set_wp_email_capture_email_settings', 'wp_email_capture_set_email_to_html', 10 );
+	add_action( 'wp_email_capture_set_normal_email_settings', 'wp_email_capture_set_email_to_plain', 10 );
 
 	// Running this on the same hook so it can be removed if need be.
     add_action( 'plugins_loaded', 'wp_email_capture_database_upgdrade', 50 );

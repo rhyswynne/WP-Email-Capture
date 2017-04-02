@@ -10,11 +10,13 @@ function wp_email_capture_export() {
 
 	global $wpdb;
 	$delimeter = get_option( 'wp_email_capture_name_delimeter' );
+	$charset = get_bloginfo( 'charset' );
 
 	if ( !$delimeter ) {
 		$delimeter = ",";
 	}
 
+	//$csv_output = "\xEF\xBB\xBF"; //UTF-8 BOM;
 	$csv_output = "";
 	$csv_output .= __( 'Name', 'wp-email-capture' ). $delimeter .__( 'Email', 'wp-email-capture' );
 	$csv_output .= "\n";
@@ -33,7 +35,9 @@ function wp_email_capture_export() {
 	$file_prefix = 'WP_Email_Capture';
 	$filename = apply_filters( 'wpec_change_csv_filename', $file_prefix."_".date( "Y-m-d_H-i", time() ));
 
-	header( "Content-type: application/vnd.ms-excel" );
+	header( "Content-type: application/vnd.ms-excel charset=" . $charset );
+	header( "Content-type: application/x-msexcel; charset=" . $charset );
+	//header( "Content-Type:   text/html; charset=utf-8");
 
 	header( "Content-disposition: csv" . date( "Y-m-d" ) . ".csv" );
 

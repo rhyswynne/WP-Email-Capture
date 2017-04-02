@@ -10,6 +10,8 @@
  */
 function wp_email_capture_process() {
 
+	do_action( 'wp_email_capture_set_wp_email_capture_email_settings' );
+
 	if ( isset( $_REQUEST['wp_capture_action'] ) ) {
 		
 		do_action( 'wp_email_capture_signup_actions' );
@@ -23,7 +25,7 @@ function wp_email_capture_process() {
 		//wp_capture_email_confirm();
 	}
 
-
+	do_action( 'wp_email_capture_set_normal_email_settings' );
 
 }
 
@@ -171,20 +173,24 @@ function wp_email_capture_signup() {
 			$fromname =  get_option( 'blogname' );
 		}
 
+		$contenttype = ( 1 == get_option( 'wp_email_capture_send_email_html' ) ) ? "text/html" : "text/plain";
+
 		$header = "MIME-Version: 1.0\n" . "From: " . $fromname . " <" . $from . ">\n";
-		$header .= "Content-Type: text/plain; charset=\"" .  get_option( 'blog_charset' ) . "\"\n";
+		$header .= "Content-Type: ". $contenttype . "; charset=\"" .  get_option( 'blog_charset' ) . "\"\n";
 		
 		// Your message
+		$splitstring 	= ( 1 == get_option( 'wp_email_capture_send_email_html' ) ) ? "<br/>" : "\n";
+		$htmlurl 		= ( 1 == get_option( 'wp_email_capture_send_email_html' ) ) ? '<p><a href="' . $siteurl .'?wp_email_confirm=1&wp_email_capture_passkey=' . $confirm_code . '">Click Here to Subscribe!</a><br/></p>' : $siteurl ."?wp_email_confirm=1&wp_email_capture_passkey=" . $confirm_code;
 
-		$message.= get_option( 'wp_email_capture_body' ) . "\n\n";
+		$message.= get_option( 'wp_email_capture_body' ) . $splitstring . $splitstring;
 
-		if ( $message == "\n\n" ) {
+		if ( $message == $splitstring . $splitstring ) {
 			$message .= __( "Thank you for signing up for our newsletter, please click the link below to confirm your subscription", "wp-email-capture" ) . "\n\n";
 		}
 
-		$message .= $siteurl ."?wp_email_confirm=1&wp_email_capture_passkey=$confirm_code";
-		$message .= "\n\n----\n";
-		$message .= __( "This is an automated message that is generated because somebody with the IP address of", 'wp-email-capture' )." " . $ip ." ".__( '(possibly you) on', 'wp-email-capture' )." ". $date ." ".__( 'filled out the form on the following page', 'wp-email-capture' )." " . $referrer . "\n";
+		$message .= $htmlurl;
+		$message .= $splitstring . "----" . $splitstring;
+		$message .= __( "This is an automated message that is generated because somebody with the IP address of", 'wp-email-capture' )." " . $ip ." ".__( '(possibly you) on', 'wp-email-capture' )." ". $date ." ".__( 'filled out the form on the following page', 'wp-email-capture' )." " . $referrer . $splitstring;
 		$message .= __( "If you are sure this isn't you, please ignore this message, you will not be sent another message.", 'wp-email-capture' );
 		$message = str_replace( "%NAME%", $name, $message );
 
@@ -287,7 +293,7 @@ function wp_capture_email_confirm() {
 			$emaildataarray = array(
 				'name' => $name,
 				'email' => $email 
-			);
+				);
 
 			do_action( 'wp_email_capture_complete_before_redirect', $emaildataarray );
 
@@ -295,20 +301,20 @@ function wp_capture_email_confirm() {
 			echo "<meta http-equiv='refresh' content='0;". $fullreg ."'>";
 			die();
 
-		/* } */
+			/* } */
 
-	} else {
+		} else {
 
-		if ( strpos( $url, "?" ) === false ) { $extrastring = "?"; } else { $extrastring = "&"; }
-		
-		$error = urlencode( __( 'Wrong confirmation code', 'wp-email-capture' ) );
-		$url = $url  . $extrastring . "wp_email_capture_error=" . $error;
+			if ( strpos( $url, "?" ) === false ) { $extrastring = "?"; } else { $extrastring = "&"; }
 
-		wp_redirect( $url );
-		die();
+			$error = urlencode( __( 'Wrong confirmation code', 'wp-email-capture' ) );
+			$url = $url  . $extrastring . "wp_email_capture_error=" . $error;
 
+			wp_redirect( $url );
+			die();
+
+		}
 	}
-}
 
 
 
@@ -322,9 +328,59 @@ function wp_capture_email_confirm() {
  */
 function wp_email_capture_send_email_default( $to, $subject, $message, $header ) {
 
-    $sendmail = wp_mail( $to, $subject, $message, $header);
+	$disableheaders = get_option( 'wp_email_capture_disabled_headers' );
 
-    if ( $sendmail ) { $addedfield = "Email Sent!"; } else { $addedfield = "Email Not Sent"; }
+	if ( $disableheaders ) {
 
-    return $sendmail;
+		$sendmail = wp_mail( $to, $subject, $message );
+
+	} else {
+
+		$sendmail = wp_mail( $to, $subject, $message, $header );
+
+	}
+
+	if ( !is_object( $phpmailer ) || !is_a( $phpmailer, 'PHPMailer' ) ) {
+		require_once ABSPATH . WPINC . '/class-phpmailer.php';
+		require_once ABSPATH . WPINC . '/class-smtp.php';
+		$phpmailer = new PHPMailer( true );
+	}
+
+	// Set SMTPDebug to true
+	/* $phpmailer->SMTPDebug = false;
+
+	echo "<br/><br/>To: " . $to;
+	echo "<br/>Subject " . $subject; 
+	echo "<br/>Message " . $message; 
+	echo "<br/>Header " . $header; 
+
+	//$sendmail = wp_mail( $to, $subject, $message );
+
+	if ( $sendmail ) { $addedfield = "Email Sent!"; } else { $addedfield = "Email Not Sent"; }
+
+	// Start output buffering to grab smtp debugging output
+	/* ob_start();
+	add_filter( 'wp_mail_content_type', 'set_html_mail_content_type' );
+			// Send the test mail
+	//$result = wp_mail( $to, $subject, $message, $header );
+	remove_filter( 'wp_mail_content_type', 'set_html_mail_content_type' );
+			// Grab the smtp debugging output
+	$smtp_debug = ob_get_clean();
+
+			// Output the response
+	?>
+	<div id="message" class="updated fade"><p><strong><?php _e( 'Test Message Sent', 'amgsessmtp' ); ?></strong></p>
+		<p><?php _e( 'The result was:', 'amgsessmtp' ); ?></p>
+		<pre><?php var_dump( $sendmail ); ?></pre>
+		<p><?php _e( 'The full debugging output is shown below:', 'amgsessmtp' ); ?></p>
+		<pre><?php var_dump( $phpmailer ); ?></pre>
+		<p><?php _e( 'The SMTP debugging output is shown below:', 'amgsessmtp' ); ?></p>
+		<pre><?php echo $smtp_debug ?></pre>
+	</div>
+	<?php
+
+	wp_die( "Sendmail is: "  . $sendmail . "<br/>
+		Disableheaders is: " . $disableheaders); */
+
+	return $sendmail;
 }
