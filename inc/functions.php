@@ -209,12 +209,14 @@ function wp_email_capture_set_html_mail_content_type() {
  * Set the email type to text/plain
  *
  * Happens after sending an email.
+ *
+ * - DEPRECATED -
  * 
  * @return string "text/plain"
  */
 function wp_email_capture_set_plain_content_type() {
 	return 'text/plain';
-} add_filter( 'wp_mail_content_type', 'wp_email_capture_set_plain_content_type' );
+}
 
 
 /**
@@ -237,7 +239,9 @@ function wp_email_capture_set_email_to_html() {
  * @return void
  */
 function wp_email_capture_set_email_to_plain() {
-	if ( 1 == get_option( 'wp_email_capture_send_email_html' ) ) {
-		add_filter( 'wp_mail_content_type', 'wp_email_capture_set_plain_content_type' );
+	if ( has_filter( 'wp_mail_content_type', 'wp_email_capture_set_html_mail_content_type' ) ) {
+		if ( 1 == get_option( 'wp_email_capture_send_email_html' ) ) {
+			remove_filter( 'wp_mail_content_type', 'wp_email_capture_set_html_mail_content_type' );
+		}
 	}
 }

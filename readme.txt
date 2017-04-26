@@ -1,18 +1,18 @@
-=== WP Email Capture ===
+=== WordPress Email Marketing Plugin - WP Email Capture ===
 Tags: email, marketing, capture, form, affiliates, mailing lists, email marketing, widget ready
 Requires at least: 3.0
 Tested up to: 4.7
-Version: 3.3
-Stable tag: 3.3
+Version: 3.3.1
+Stable tag: 3.3.1
 Contributors: rhyswynne
 Donate link: https://www.wpemailcapture.com/premium/?utm_source=donatelink&utm_medium=wordpressorgreadme&utm_campaign=wpemailcapture
 
 Double opt-in form for building your email list. Define landing pages to distribute your ebooks & software.
 
 == Description ==
-This creates a 2 field form (Name & Email) for capturing emails. Email is double opt in, and allows you to forward opt in to services such as ebooks or software. When you are ready to begin your email marketing campaign, simply export the list into your chosen email marketing software or service.
+This creates a 2 field form (Name & Email) for capturing emails. Email is double opt in, and allows you to forward opt in to services such as ebooks or software. When you are ready to begin your email marketing campaign, simply export the list into your chosen email marketing software or service. WP Email Capture now comes with a number of [integrations and extensions](https://www.wpemailcapture.com/downloads/?utm_source=description&utm_medium=wordpressorgreadme&utm_campaign=wpemailcapture), including [WP Email Capture Premium](https://www.wpemailcapture.com/premium?utm_source=description&utm_medium=wordpressorgreadme&utm_campaign=wpemailcapture) allows you to build multiple lists, track stats and have custom fields and templates
 
-Features:-
+WP Email Capture Free Features:-
 
 * Widget Ready.
 * Uses Wordpress' internal wp_mail function for sending mail.
@@ -71,6 +71,12 @@ If you want to insert the form within a page, insert into any post or page the s
 You can also add a widget to any widget enabled area by going to Appearance > Widgets in the WordPress Administration.
 
 If you need more help, please read this guide on [how to set up WP Email Capture](http://wpemailcapture.com/2012/10/how-to-set-up-wp-email-capture-free/?utm_source=installation&utm_medium=wordpressorgreadme&utm_campaign=wpemailcapture)
+
+== Bugs/Suggestions/Support == 
+Please report any bugs, support and suggestions to the [WP Email Capture Support Page](http://www.wpemailcapture.com/support/?utm_source=support&utm_medium=wordpressorgreadme&utm_campaign=wpemailcapture)
+
+== Donate ==
+To donate to this plugin, please visit the [WP Email Capture Donations Page](http://wpemailcapture.com/premium/?utm_source=donate&utm_medium=wordpressorgreadme&utm_campaign=wpemailcapture)
 
 == Stylings ==
 To style your form, you need to add to your CSS file the following ID declarations. `wp_email_capture` is for sidebar & template widgets, `wp_email_capture_2` is for on page forms.
@@ -152,17 +158,14 @@ This plugin does use widgets, so probably yes :)
 = How do I include the name in my emails I send to people? =
 Wherever you put in %NAME% (spelt exactly like that, uppercase as well), it will be replaced with the name given by the user.
 
-== Bugs/Suggestions/Support == 
-Please report any bugs, support and suggestions to the [WP Email Capture Support Page](http://www.wpemailcapture.com/support/?utm_source=support&utm_medium=wordpressorgreadme&utm_campaign=wpemailcapture)
-
-== Donate ==
-To donate to this plugin, please visit the [WP Email Capture Donations Page](http://wpemailcapture.com/premium/?utm_source=donate&utm_medium=wordpressorgreadme&utm_campaign=wpemailcapture)
-
 == Change Log ==
+= 3.3.1 =
+* Fixes a conflict with other plugins that send HTML emails.
+
 = 3.3 =
 * Introduced the ability to have "HTML" enabled lists.
 * Introduced the ability to send emails without headers. Useful for Amazon SES.
-* Added a charset on export of CSV.
+* Added a charset on export of CSV. (Props Ov3rfly)
 
 = 3.2 =
 * Correction in the German translation (props [Lars Kasper](http://larskasper.de/))

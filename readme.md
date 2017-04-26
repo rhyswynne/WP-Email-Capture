@@ -6,9 +6,9 @@ Requires at least: 3.0
 
 Tested up to: 4.7
 
-Version: 3.2
+Version: 3.3
 
-Stable tag: 3.2
+Stable tag: 3.3
 
 Contributors: rhyswynne
 
@@ -18,9 +18,9 @@ Double opt-in form for building your email list. Define landing pages to distrib
 
 Description
 ===========
-This creates a 2 field form (Name & Email) for capturing emails. Email is double opt in, and allows you to forward opt in to services such as ebooks or software. When you are ready to begin your email marketing campaign, simply export the list into your chosen email marketing software or service.
+This creates a 2 field form (Name & Email) for capturing emails. Email is double opt in, and allows you to forward opt in to services such as ebooks or software. When you are ready to begin your email marketing campaign, simply export the list into your chosen email marketing software or service. WP Email Capture now comes with a number of [integrations and extensions](https://www.wpemailcapture.com/downloads/?utm_source=description&utm_medium=wordpressorgreadme&utm_campaign=wpemailcapture), including [WP Email Capture Premium](https://www.wpemailcapture.com/premium?utm_source=description&utm_medium=wordpressorgreadme&utm_campaign=wpemailcapture) allows you to build multiple lists, track stats and have custom fields and templates
 
-Features:-
+WP Email Capture Free Features:-
 
 * Widget Ready.
 * Uses Wordpress' internal wp_mail function for sending mail.
