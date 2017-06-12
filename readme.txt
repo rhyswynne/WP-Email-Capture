@@ -1,9 +1,9 @@
 === WordPress Email Marketing Plugin - WP Email Capture ===
 Tags: email, marketing, capture, form, affiliates, mailing lists, email marketing, widget ready
 Requires at least: 3.0
-Tested up to: 4.7
-Version: 3.3.1
-Stable tag: 3.3.1
+Tested up to: 4.8
+Version: 3.3.2
+Stable tag: 3.3.2
 Contributors: rhyswynne
 Donate link: https://www.wpemailcapture.com/premium/?utm_source=donatelink&utm_medium=wordpressorgreadme&utm_campaign=wpemailcapture
 
@@ -159,6 +159,9 @@ This plugin does use widgets, so probably yes :)
 Wherever you put in %NAME% (spelt exactly like that, uppercase as well), it will be replaced with the name given by the user.
 
 == Change Log ==
+= 3.3.2 =
+* 
+
 = 3.3.1 =
 * Fixes a conflict with other plugins that send HTML emails.
 

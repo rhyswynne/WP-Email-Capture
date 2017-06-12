@@ -89,7 +89,8 @@ function wp_email_capture_admin_notice() {
 function wp_email_capture_admin_upsell() {
 	global $current_user;
 	$user_id = $current_user->ID;
-	$upgradeurl = "https://wpemailcapture.com/premium/?utm_source=upsell&utm_medium=plugin&utm_campaign=wpemailcapture";
+	$infourl = "https://www.wpemailcapture.com/premium/?utm_source=upsellinfo&utm_medium=plugin&utm_campaign=wpemailcapture";
+	$upgradeurl = "https://www.wpemailcapture.com/checkout/?edd_action=add_to_cart&download_id=802&discount=BIGLISTUPGRADE&utm_source=upsell&utm_medium=plugin&utm_campaign=wpemailcapture";
 	$discountcode = "BIGLISTUPGRADE";
 	$discountamount = "15%";
 	/* Check that the user hasn't already clicked to ignore the message */
@@ -102,7 +103,7 @@ function wp_email_capture_admin_upsell() {
 					<h3>WP Email Capture - Over 500 Emails</h3>
 					<p>WP Email Capture has over 500 entries. Whilst the plugin is free for use forever, it does struggle a bit with very large lists.</p>
 					<p>WP Email Caputre Premium is better suited to large lists, so please consider upgrading. As a thank you for using us for so long, use discount code <strong>%3$s</strong> for <strong>%4$s</strong> off.</p>
-					<p><a href="%2$s" class="button button-primary button-hero"><strong>Upgrade WP Email Capture</strong></a></p></div>' ), '?wp_email_capture_upsell_ignore=0', $upgradeurl, $discountcode, $discountamount );
+					<p><a href="%2$s" class="button button-primary button-hero"><strong>Upgrade WP Email Capture</strong></a><a href="%5$s" class="button button-secondary button-hero"><strong>More Info</strong></a></p></div>' ), '?wp_email_capture_upsell_ignore=0', $upgradeurl, $discountcode, $discountamount, $infourl );
 			echo "</div>";
 		}
 	}
@@ -210,7 +211,7 @@ function wp_email_capture_set_html_mail_content_type() {
  *
  * Happens after sending an email.
  *
- * - DEPRECATED -
+ * - DEPRECATED 3.3 -
  * 
  * @return string "text/plain"
  */
