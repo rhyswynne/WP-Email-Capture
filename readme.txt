@@ -160,7 +160,7 @@ Wherever you put in %NAME% (spelt exactly like that, uppercase as well), it will
 
 == Change Log ==
 = 3.3.2 =
-* 
+* Make the "Buy Link" in WP Email Capture include a coupon
 
 = 3.3.1 =
 * Fixes a conflict with other plugins that send HTML emails.
