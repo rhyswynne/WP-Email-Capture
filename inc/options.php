@@ -320,6 +320,15 @@ function wp_email_capture_free_options() {
 
                             </tr>
 
+                            <tr valign="top">
+
+                            <th scope="row" style="width:400px"><?php _e( 'Use Default Styling', 'wp-email-capture' ); ?></th>
+
+                            <td><input type="checkbox" name="wp_email_capture_default_styling" value="1" <?php checked( get_option( 'wp_email_capture_default_styling' ), 1 ); ?> /><br/>
+                                <span class="description"><?php _e( 'If you want to have some easy styling on your forms, check this box. Otherwise leave it unchecked if your theme already styles forms','wp-email-capture' ); ?></span></td>
+
+                            </tr>
+
                         </tbody>
 
                     </table>
@@ -345,7 +354,7 @@ function wp_email_capture_free_options() {
                 echo '<a name="list"></a><h3>'.__( 'Export', 'wp-email-capture' ).'</h3>
                 <form name="wp_email_capture_export" action="'. esc_url( $_SERVER['REQUEST_URI'] ) . '#list" method="post">
 
-                    <label>'.__( 'Use the button below to export your list as a CSV to use in software such as <a href="http://wpemailcapture.com/recommends/aweber" title="Email Marketing">Aweber</a> or <a href="http://wpemailcapture.com/recommends/mailchimp">Mailchimp</a>', 'wp-email-capture' ).'</label>
+                    <label>'.__( 'Use the button below to export your list as a CSV to use in software such as <a href="https://www.wpemailcapture.com/recommends/aweber" title="Email Marketing">Aweber</a> or <a href="https://www.wpemailcapture.com/recommends/mailchimp">Mailchimp</a>', 'wp-email-capture' ).'</label>
                     <input type="hidden" name="wp_email_capture_export" />
                     <div class="submit">
                         <input type="submit" value="'.__( 'Export List', 'wp-email-capture' ).'" class="button"  />
@@ -427,6 +436,8 @@ function wp_email_capture_options_process() { // whitelist options
     register_setting( 'wp-email-capture-group', 'wp_email_capture_send_email_html' );
 
     register_setting( 'wp-email-capture-group', 'wp_email_capture_disabled_headers' );
+
+    register_setting( 'wp-email-capture-group', 'wp_email_capture_default_styling' );
 
     if ( isset( $_REQUEST['wp_email_capture_export'] ) ) {
 

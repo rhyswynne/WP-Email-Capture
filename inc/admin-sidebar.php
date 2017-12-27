@@ -18,7 +18,7 @@ function wp_email_capture_admin_sidebar( $sidestring ) {
             case 'support':
                 echo '<h3 class="hndle"><span>'.__( 'Need Help?', 'wp-email-capture' ).'</span></h3>
                     <div class="inside">
-                    <p>'.__( 'If you are having problems with this plugin, please read the', 'wp-email-capture' ).' <a href="http://wpemailcapture.com/free-plugin/frequently-asked-questions/?utm_source=admin-sidebar&utm_medium=plugin&utm_campaign=wpemailcapture">'.__( 'Frequently Asked Questions', 'wp-email-capture' ).'</a>, '.__( 'or alternatively', 'wp-email-capture' ).' <a href="http://wpemailcapture.com/support/?utm_source=admin-sidebar&utm_medium=plugin&utm_campaign=wpemailcapture">'.__( 'submit a support request here', 'wp-email-capture' ).'</a>.</p>
+                    <p>'.__( 'If you are having problems with this plugin, please read the', 'wp-email-capture' ).' <a href="https://www.wpemailcapture.com/frequently-asked-questions/?utm_source=admin-sidebar&utm_medium=plugin&utm_campaign=wpemailcapture">'.__( 'Frequently Asked Questions', 'wp-email-capture' ).'</a>, '.__( 'or alternatively', 'wp-email-capture' ).' <a href="https://www.wpemailcapture.com/support/?utm_source=admin-sidebar&utm_medium=plugin&utm_campaign=wpemailcapture">'.__( 'submit a support request here', 'wp-email-capture' ).'</a>.</p>
                     </div>';
                 break;
 
@@ -27,9 +27,9 @@ function wp_email_capture_admin_sidebar( $sidestring ) {
                     <div class="inside">
                     <p>'.__( 'We recommend the following services for sending out emails:-', 'wp-email-capture' ).'</p>
                     <ul>
-                        <li><strong><a href="http://wpemailcapture.com/recommends/aweber">Aweber</a></strong></li>
-                        <li><strong><a href="http://wpemailcapture.com/recommends/mailchimp">MailChimp</a></strong></li>
-                        <li><strong><a href="http://wpemailcapture.com/recommends/madmimi">MadMimi</a></strong></li>
+                        <li><strong><a href="https://www.wpemailcapture.com/recommends/aweber">Aweber</a></strong></li>
+                        <li><strong><a href="https://www.wpemailcapture.com/recommends/mailchimp">MailChimp</a></strong></li>
+                        <li><strong><a href="https://www.wpemailcapture.com/recommends/madmimi">MadMimi</a></strong></li>
                     </ul>
                     </div>';
                 break;
@@ -126,7 +126,7 @@ function wp_email_capture_admin_sidebar( $sidestring ) {
 
             case 'becomeanaffiliate':
                 echo '<h3 class="hndle"><span>'.__( 'Become An Affiliate!', 'wp-email-capture' ).'</span></h3><div class="inside">
-                <p>'.__( 'Earn upto', 'wp-email-capture' ). ' <strong>$30</strong> '.__( 'per sale of WP Email Capture', 'wp-email-capture' ). '! <a href="http://wpemailcapture.com/affiliates/?utm_source=admin-sidebar&utm_medium=plugin&utm_campaign=wpemailcapture"><strong>'.__( 'Join our affilite programme today', 'wp-email-capture' ).'</strong></a>.</p></div>';
+                <p>'.__( 'Earn upto', 'wp-email-capture' ). ' <strong>$30</strong> '.__( 'per sale of WP Email Capture', 'wp-email-capture' ). '! <a href="https://www.wpemailcapture.com/affiliate-area/?utm_source=admin-sidebar&utm_medium=plugin&utm_campaign=wpemailcapture"><strong>'.__( 'Join our affilite programme today', 'wp-email-capture' ).'</strong></a>.</p></div>';
                 break;
 
             case 'supportpage':

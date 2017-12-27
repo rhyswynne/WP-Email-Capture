@@ -2,8 +2,8 @@
 Tags: email marketing, email, affiliates, mailing lists, mailing list, widget ready
 Requires at least: 3.0
 Tested up to: 4.9
-Version: 3.3.3
-Stable tag: 3.3.3
+Version: 3.3.4
+Stable tag: 3.3.4
 Contributors: rhyswynne
 Donate link: https://www.wpemailcapture.com/premium/?utm_source=donatelink&utm_medium=wordpressorgreadme&utm_campaign=wpemailcapture
 
@@ -159,6 +159,12 @@ This plugin does use widgets, so probably yes :)
 Wherever you put in %NAME% (spelt exactly like that, uppercase as well), it will be replaced with the name given by the user.
 
 == Change Log ==
+= 3.4 =
+* Added Default Styles should you wish to activate them
+
+= 3.3.4 =
+* Fix a few dead links in the plugin
+
 = 3.3.3 =
 * Fix bug in header on export (props Ov3rfly).
 * Tested in 4.9

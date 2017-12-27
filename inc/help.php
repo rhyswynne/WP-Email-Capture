@@ -47,7 +47,7 @@ function wp_email_capture_setup_help() {
 	 */
 	$settingspageurl = apply_filters( 'wp_email_capture_change_settings_url', admin_url( 'admin.php?page=wpemailcapturefreesettings' ) );
 
-	$furtherhelpurl = "http://wpemailcapture.com/2012/10/how-to-set-up-wp-email-capture-free/?utm_source=plugin&utm_medium=help&utm_campaign=free-setup";
+	$furtherhelpurl = "https://www.wpemailcapture.com/2012/10/how-to-set-up-wp-email-capture-free/?utm_source=plugin&utm_medium=help&utm_campaign=free-setup";
 
 ?>
 	<h3><?php echo __( 'Setup', 'wp-email-capture' ); ?></h3>
@@ -148,7 +148,7 @@ function wp_email_capture_display_help() {
 function wp_email_capture_list_help() {
 
 	$settingspageurl = apply_filters( 'wp_email_capture_change_settings_url', admin_url( 'admin.php?page=wpemailcapturefreesettings' ) );
-	$purchasepageurl = apply_filters( 'wp_email_capture_change_purchase_url', "http://wpemailcapture.com/premium/?utm_source=help-page&utm_medium=plugin&utm_campaign=wpemailcapture" );
+	$purchasepageurl = apply_filters( 'wp_email_capture_change_purchase_url', "https://www.wpemailcapture.com/premium/?utm_source=help-page&utm_medium=plugin&utm_campaign=wpemailcapture" );
 ?>
 
 	<h3><?php echo __( 'List Operations', 'wp-email-capture' ); ?></h3>

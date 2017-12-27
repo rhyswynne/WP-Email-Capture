@@ -42,7 +42,7 @@ function wp_email_capture_form( $error = "" ) {
 
 	<?php if (get_option("wp_email_capture_link") == 1) {
 
-		echo "<p style='font-size:10px;'>".__('Powered by','wp-email-capture')." <a href='http://wpemailcapture.com/' target='_blank'>WP Email Capture</a></p>\n";
+		echo "<p style='font-size:10px;'>".__('Powered by','wp-email-capture')." <a href='https://www.wpemailcapture.com/' target='_blank'>WP Email Capture</a></p>\n";
 
 	}
 
@@ -85,7 +85,7 @@ function wp_email_capture_form_page( $atts, $error = "") {
 
 	if (get_option("wp_email_capture_link") == 1) {
 
-		$display .= "<p style='font-size:10px;'>".__('Powered by','wp-email-capture')." <a href='http://wpemailcapture.com/' target='_blank'>WP Email Capture</a></p>\n";
+		$display .= "<p style='font-size:10px;'>".__('Powered by','wp-email-capture')." <a href='https://www.wpemailcapture.com/' target='_blank'>WP Email Capture</a></p>\n";
 	} 
 
 	$display = apply_filters( 'wp_email_capture_display_form', $display, $atts );

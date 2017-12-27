@@ -12,7 +12,7 @@ function wp_email_capture_dashboard_widget() {
 
 	echo '<br/><br/><a name="list"></a><strong>'.__('Export','wp-email-capture').'</strong>';
 	echo '<form name="wp_email_capture_export" action="'. esc_url($_SERVER['REQUEST_URI']) . '#list" method="post">';
-	echo '<label>'.__('Use the button below to export your list as a CSV to use in software such as','wp-email-capture').' <a href="http://www.gospelrhys.co.uk/go/aweber.php" title="Email Marketing">Aweber</a>.</label>';
+	echo '<label>'.__('Use the button below to export your list as a CSV to use in software such as','wp-email-capture').' <a href="https://www.wpemailcapture.com/recommends/aweber/" title="Email Marketing">Aweber</a>.</label>';
 	echo '<input type="hidden" name="wp_email_capture_export" />';
 	echo '<div class="submit"><input type="submit" value="'.__('Export List','wp-email-capture').'" class="button" /></div>';
 	echo "</form><br/><br/>";
