@@ -1,5 +1,5 @@
 === WordPress Email Marketing Plugin - WP Email Capture ===
-Tags: email marketing, email, affiliates, mailing lists, mailing list, widget ready
+Tags: email marketing, email, affiliates, mailing lists, mailing list, widget ready, gutenberg ready
 Requires at least: 3.0
 Tested up to: 4.9
 Version: 3.3.4
@@ -160,7 +160,8 @@ Wherever you put in %NAME% (spelt exactly like that, uppercase as well), it will
 
 == Change Log ==
 = 3.4 =
-* Added Default Styles should you wish to activate them
+* Added Default Styles should you wish to activate them.
+* Gutenberg Compatibility!
 
 = 3.3.4 =
 * Fix a few dead links in the plugin
