@@ -2,8 +2,8 @@
 Tags: email marketing, email, affiliates, mailing lists, mailing list, widget ready, gutenberg ready
 Requires at least: 3.0
 Tested up to: 4.9
-Version: 3.3.4
-Stable tag: 3.3.4
+Version: 3.4
+Stable tag: 3.4
 Contributors: rhyswynne
 Donate link: https://www.wpemailcapture.com/premium/?utm_source=donatelink&utm_medium=wordpressorgreadme&utm_campaign=wpemailcapture
 

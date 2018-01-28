@@ -52,7 +52,7 @@
 						},
 					} ),
 					el ('div', { className: 'wp-email-capture wp-email-capture-display' },
-						el( 'h3', { className: 'wp-email-capture-admin-form' }, i18n.__( 'The Form Will Be Here' ) )
+						el( 'h3', { className: 'wp-email-capture-admin-form' }, i18n.__( 'The WP Email Capture Form Will Be Here' ) )
 						)
 					)
 				);
