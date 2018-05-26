@@ -1,9 +1,9 @@
 === WordPress Email Marketing Plugin - WP Email Capture ===
-Tags: email marketing, email, affiliates, mailing lists, mailing list, widget ready, gutenberg ready
-Requires at least: 3.0
-Tested up to: 4.9
-Version: 3.4
-Stable tag: 3.4
+Tags: email marketing, email, mailing list, widget ready, gutenberg ready, gdpr
+Requires at least: 4.9.6
+Tested up to: 4.9.6
+Version: 3.5
+Stable tag: 3.5
 Contributors: rhyswynne
 Donate link: https://www.wpemailcapture.com/premium/?utm_source=donatelink&utm_medium=wordpressorgreadme&utm_campaign=wpemailcapture
 
@@ -74,9 +74,6 @@ If you need more help, please read this guide on [how to set up WP Email Capture
 
 == Bugs/Suggestions/Support == 
 Please report any bugs, support and suggestions to the [WP Email Capture Support Page](http://www.wpemailcapture.com/support/?utm_source=support&utm_medium=wordpressorgreadme&utm_campaign=wpemailcapture)
-
-== Donate ==
-To donate to this plugin, please visit the [WP Email Capture Donations Page](http://wpemailcapture.com/premium/?utm_source=donate&utm_medium=wordpressorgreadme&utm_campaign=wpemailcapture)
 
 == Stylings ==
 To style your form, you need to add to your CSS file the following ID declarations. `wp_email_capture` is for sidebar & template widgets, `wp_email_capture_2` is for on page forms.
@@ -159,6 +156,21 @@ This plugin does use widgets, so probably yes :)
 Wherever you put in %NAME% (spelt exactly like that, uppercase as well), it will be replaced with the name given by the user.
 
 == Change Log ==
+= 3.5 =
+* Integration with WordPress' GDPR checker.
+* You can have a checkbox on your forms, explicitly giving consent to users to sign up to your newsletter.
+* You can delete data after a period of time on the site.
+* You can search the database, allowing you to see and delete what data you have for people
+* Improved the changelog routine, allowing it to be updated more frequently.
+
+= 3.4.2 =
+* Introduced "wp_email_capture_is_premium" function, to make further development easier.
+* Fixed a bug from Gutenberg 3.4 that called a undefined variable (blocks.source.children & blocks.source.attr).
+* Switched from wp.blocks.InspectorControls.TextControl to wp.components.TextControl.
+
+= 3.4.1 =
+* Fixes a fatal error
+
 = 3.4 =
 * Added Default Styles should you wish to activate them.
 * Gutenberg Compatibility!

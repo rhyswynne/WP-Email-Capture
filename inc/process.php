@@ -342,11 +342,11 @@ function wp_email_capture_send_email_default( $to, $subject, $message, $header )
 
 	// CLEAN THIS UP
 	// @todo CLEAN UP
-	if ( !is_object( $phpmailer ) || !is_a( $phpmailer, 'PHPMailer' ) ) {
+	/* if ( !is_object( $phpmailer ) || !is_a( $phpmailer, 'PHPMailer' ) ) {
 		require_once ABSPATH . WPINC . '/class-phpmailer.php';
 		require_once ABSPATH . WPINC . '/class-smtp.php';
 		$phpmailer = new PHPMailer( true );
-	}
+	} */
 
 	/* DEPRECATED 3.3 */
 	// Set SMTPDebug to true

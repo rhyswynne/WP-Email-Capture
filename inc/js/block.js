@@ -1,7 +1,5 @@
 ( function( blocks, i18n, element, _ ) {
 	var el = element.createElement;
-	var children = blocks.source.children;
-	var attr = blocks.source.attr;
 
 	blocks.registerBlockType( 'wp-email-capture/wp-email-capture-form', {
 		title: i18n.__( 'WP Email Capture Form' ),
@@ -25,7 +23,7 @@
 
 			return (
 				el( 'div', { className: props.className },
-					el( blocks.Editable, {
+					el( wp.blocks.RichText, {
 						tagName: 'h2',
 						inline: true,
 						placeholder: i18n.__( 'WP Email Capture title…' ),
@@ -38,7 +36,7 @@
 							props.setFocus( _.extend( {}, focus, { editable: 'title' } ) );
 						},
 					} ),
-					el( blocks.Editable, {
+					el( wp.blocks.RichText, {
 						tagName: 'p',
 						inline: false,
 						placeholder: i18n.__( 'Write your signup paragraph here…' ),

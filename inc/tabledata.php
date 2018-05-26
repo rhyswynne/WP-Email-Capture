@@ -44,7 +44,7 @@ function wp_email_capture_writetable( $limit = 0, $header = '' ) {
 
 		if ( $limit == 0 ) {
 
-			$delid = wp_email_capture_formdelete( $member->id, $member->email );
+			$delid = wp_email_capture_formdelete( $member->id, $member->email, 'width:300px;' );
 
 		} else {
 
@@ -68,27 +68,46 @@ function wp_email_capture_writetable( $limit = 0, $header = '' ) {
 
 /**
  * The form to delete members from the database
- * @param  int 		$id    the email address ID in the database the database.
- * @param  string 	$email The email address
+ * @param  int 		$id           the email address ID in the database the database.
+ * @param  string 	$email        Optional, the email address for deletion. Will be used for display only
+ * @param  string   $style        Optional, Any styling you wish to add to the button
+ * @param  string   $table        Optional, the table to delete the data from.
+ * @param  array    $hiddenvalues Optional, extra values to be hidden within the form
  * @return void
  */
-function wp_email_capture_formdelete( $id, $email ) {
-	return "<form action='" . esc_url( $_SERVER['REQUEST_URI'] ) . "#list' method='post'>
-	<input type='hidden' name='wp_email_capture_deleteid' value='". $id."' />
-	<input type='submit' value='".__( 'Delete ', 'wp-email-capture' ). $email ."' style='width: 300px;' class='button' />
-	</form>";
+function wp_email_capture_formdelete( $id, $email = '', $style = '', $table = '', $hiddenvalues = array() ) {
+	$formdelete = "<form action='" . esc_url( $_SERVER['REQUEST_URI'] ) . "#list' method='post'>
+	<input type='hidden' name='wp_email_capture_deleteid' value='". $id . "' />";
+
+	if ( $table ) {
+		$formdelete .= "<input type='hidden' name='wp_email_capture_deletefromtable' value='" . $table . "' />";
+	}
+
+	if ( !empty( $hiddenvalues ) ) {
+
+		foreach ($hiddenvalues as $key => $value) {
+			$formdelete .= "<input type='hidden' name='" . $key . "' value='" . $value . "' />";
+		}
+
+	}
+
+	$formdelete .= "<input type='submit' value='" . __( 'Delete ', 'wp-email-capture' ) . $email . "' style='" . $style . "' class='button' />";
+	$formdelete .= '</form>';
+
+	return $formdelete;
 }
 
 
 /**
  * Delete a member from the database.
- * @param  int 		$id The database ID to delete
+ * @param  int 		$id     The database ID to delete
+ * @param  string   $table  Optional. The table we are deleting table from.
  * @return void
  */
-function wp_email_capture_deleteid( $id ) {
+function wp_email_capture_deleteid( $id, $table = WP_EMAIL_CAPTURE_REGISTERED_MEMBERS_TABLE ) {
 	global $wpdb;
 
-	$delete_member_sql = "DELETE FROM " . WP_EMAIL_CAPTURE_REGISTERED_MEMBERS_TABLE . " WHERE id = '%d'";
+	$delete_member_sql = "DELETE FROM $table WHERE id = '%d'";
 
 	$delete_member = $wpdb->query( $wpdb->prepare( $delete_member_sql, $id ) );
 

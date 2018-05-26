@@ -32,3 +32,6 @@ require_once(WP_EMAIL_CAPTURE_PATH . '/inc/help.php');
 
 // Gutenberg
 require_once(WP_EMAIL_CAPTURE_PATH . '/inc/gutenberg.php');
+
+// GDPR
+require_once(WP_EMAIL_CAPTURE_PATH . '/inc/gdpr.php');

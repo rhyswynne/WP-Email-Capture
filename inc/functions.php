@@ -246,3 +246,122 @@ function wp_email_capture_set_email_to_plain() {
 		}
 	}
 }
+
+
+/**
+ * Check if we have the premium version installed
+ * 
+ * @return boolean
+ */
+function wp_email_capture_is_premium() {
+	if ( function_exists( 'wp_email_capture_premium_plugins_loaded' ) ) {
+		return true;
+	} else {
+		return false;
+	}
+}
+
+
+/**
+ * Get temproart data from an email address 
+ *
+ * @param  string $email The email address we are using.
+ * @return mixed         The data we have to collect, false if no data.
+ */
+function wp_email_capture_get_data_from_email_temp( $email ) {
+
+	global $wpdb;
+
+	$select_gdpr_temp_sql = 'SELECT * FROM ' . WP_EMAIL_CAPTURE_TEMP_MEMBERS_TABLE . " WHERE email = '%s'";
+
+	$select_gdpr_array = $wpdb->get_results( $wpdb->prepare( $select_gdpr_temp_sql, $email ) );
+
+	return $select_gdpr_array;
+
+}
+
+/**
+ * Get temproart data from an email address 
+ *
+ * @param  string $email The email address we are using.
+ * @return mixed         The data we have to collect.
+ */
+function wp_email_capture_get_data_from_email_main( $email ) {
+
+	global $wpdb;
+
+	$select_gdpr_main_sql = 'SELECT * FROM ' . WP_EMAIL_CAPTURE_REGISTERED_MEMBERS_TABLE . " WHERE email = '%s'";
+
+	$select_gdpr_array = $wpdb->get_results( $wpdb->prepare( $select_gdpr_main_sql, $email ) );
+
+	return $select_gdpr_array;
+}
+
+
+/**
+ * Get the GDPR Data Table
+ *
+ * @depreciated 3.5
+ * @param string $table   The table we are looking at, used to delete the data
+ * @param array  $results The results already obtained
+ * @return string 
+ */
+/* function wp_email_capture_print_gdpr_data_table( $table, $results ) {
+
+	$tablestring = '<table class="widefat fixed" cellspacing="0">
+    <thead>
+    <tr>';
+
+	// First we need to get all keys in the array.
+	$columns     = get_object_vars( $results[0] );
+	$datatocheck = array();
+	$extravalues = array();
+
+	if ( array_key_exists( 'wp_email_capture_gdpr_email', $_POST ) ) {
+
+			$extravalues = array( 'wp_email_capture_gdpr_email' => esc_attr( $_POST['wp_email_capture_gdpr_email'] ) );
+
+	}
+
+	if ( $columns ) {
+		foreach ( $columns as $column => $value ) {
+
+			$tablestring  .= '<td>' . ucfirst( $column ) . '</td>';
+			$datatocheck[] = $column;
+
+		}
+
+		$tablestring .= '<td>' . __( 'Delete', 'wp-email-capture' ) . '</td>';
+
+	}
+
+	$tablestring .= '</tr>';
+	$tablestring .= '<tbody>';
+
+	if ( $results ) {
+
+		foreach ( $results as $result ) {
+
+			$tablestring .= '<tr>';
+
+			foreach ( $datatocheck as $keytoadd ) {
+
+				$tablestring .= '<td>' . $result->$keytoadd . '</td>';
+
+			}
+
+
+
+			$tablestring .= '<td>' . wp_email_capture_formdelete( $result->id, '', '', $table, $extravalues ) . '</td>';
+
+			$tablestring .= '</tr>';
+
+		}
+
+	}
+
+	$tablestring .= '</tbody>';
+	$tablestring .= '</table>';
+
+	return $tablestring;
+} */

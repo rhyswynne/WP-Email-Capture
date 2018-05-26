@@ -179,3 +179,36 @@ function wp_email_capture_list_help() {
 
 	<?php
 } add_action( 'wp_email_capture_help_boxes', 'wp_email_capture_list_help', 40 );
+
+
+/**
+ * Displays the help for the "List Operations" section of the help documentation.
+ *
+ * @return void
+ */
+function wp_email_capture_gdpr_help() {
+
+	$settingspageurl = apply_filters( 'wp_email_capture_change_settings_url', admin_url( 'admin.php?page=wpemailcapturefreesettings' ) );
+	//$purchasepageurl = apply_filters( 'wp_email_capture_change_purchase_url', "https://www.wpemailcapture.com/premium/?utm_source=help-page&utm_medium=plugin&utm_campaign=wpemailcapture" );
+?>
+
+	<h3><?php echo __( 'GDPR Guidelines', 'wp-email-capture' ); ?></h3>
+
+	<table class="form-table">
+		<tbody>
+			<tr valign="top">
+				<td>
+
+					<p><?php printf( __( 'You will need to be running version 4.9.6 of WordPress to use the GDPR settings. Your settings are located in the <a href="%s">WP Email Capture Settings page</a> (in the GDPR section).' , 'wp-email-capture' ), $settingspageurl ); ?></p>
+
+					<p><?php printf( __( 'You can specify a privacy policy that - if present, activates a checkbox allowing signups to accept your privacy policy. Users will need to check that to sign up. You can also choose to delete responses after a number of days/weeks/months, and there is a section of text you can paste into your privacy policy too.', 'wp-email-capture' ) ); ?></p>
+
+					<p><?php printf( __( 'Should you ever receive a request to export/delete, you can use the new Export/Delete personal data, held in the Tools section.', 'wp-email-capture' ) ); ?>
+
+				</td>
+			</tr>
+		</tbody>
+	</table>
+
+	<?php
+} add_action( 'wp_email_capture_help_boxes', 'wp_email_capture_gdpr_help', 50 );

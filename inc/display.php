@@ -32,6 +32,8 @@ function wp_email_capture_form( $error = "" ) {
 
 			<label class="wp-email-capture-email wp-email-capture-label wp-email-capture-widget-worldwide wp-email-capture-email-widget wp-email-capture-email-label wp-email-capture-email-label-widget"  for="wp-email-capture-email-widget"><?php _e('Email:','wp-email-capture'); ?></label> <input name="wp-email-capture-email" id="wp-email-capture-email-widget" type="text" class="wp-email-capture-email wp-email-capture-input wp-email-capture-widget-worldwide wp-email-capture-email-widget wp-email-capture-email-input wp-email-capture-email-input-widget" title="Email" /><br/>
 
+			<?php do_action( 'wp_email_capture_form_echo_form_before_submit_button' ); ?>
+
 			<input type="hidden" name="wp_capture_action" value="1" />
 
 			<input name="Submit" type="submit" value="<?php _e('Submit','wp-email-capture'); ?>" class="wp-email-capture-submit wp-email-capture-widget-worldwide" />
@@ -40,7 +42,7 @@ function wp_email_capture_form( $error = "" ) {
 
 	</div>
 
-	<?php if (get_option("wp_email_capture_link") == 1) {
+	<?php if ( get_option( "wp_email_capture_link" ) == 1) {
 
 		echo "<p style='font-size:10px;'>".__('Powered by','wp-email-capture')." <a href='https://www.wpemailcapture.com/' target='_blank'>WP Email Capture</a></p>\n";
 
@@ -67,7 +69,7 @@ function wp_email_capture_form_page( $atts, $error = "") {
 
 		$error = esc_attr($_GET['wp_email_capture_error']);
 
-		$display .= "<div class='wp-email-capture-error'>" . __('Error:','wp-email-capture'). " " . $error ."</div>\n";
+		$display .= "<div class='wp-email-capture-error'>" . __( 'Error:', 'wp-email-capture' ). ' ' . $error . '</div>';
 
 	} 
 
@@ -83,7 +85,7 @@ function wp_email_capture_form_page( $atts, $error = "") {
 
 	$display .= "<input name='Submit' type='submit' value='".__('Submit','wp-email-capture')."' class='wp-email-capture-submit' /></form></div>\n";
 
-	if (get_option("wp_email_capture_link") == 1) {
+	if ( get_option( "wp_email_capture_link" ) == 1) {
 
 		$display .= "<p style='font-size:10px;'>".__('Powered by','wp-email-capture')." <a href='https://www.wpemailcapture.com/' target='_blank'>WP Email Capture</a></p>\n";
 	} 
