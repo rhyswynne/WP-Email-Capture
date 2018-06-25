@@ -73,7 +73,7 @@ function wp_email_capture_plugins_loaded() {
 	global $wp_version;
 	if ( version_compare( $wp_version, '4.9.6', '>=' ) ) {
 		//if ( get_option( 'wp_email_capture_enable_gdpr' ) ) {
-		add_action( 'wp_email_capture_form_echo_form_before_submit_button', 'wp_email_capture_get_privacy_policy_string', 10 );
+		add_action( 'wp_email_capture_form_echo_form_before_submit_button', 'wp_email_capture_add_privacy_policy_before_submit_echo_form', 10 );
 		add_filter( 'wp_email_capture_display_form', 'wp_email_capture_add_privacy_policy_before_submit_display_form', 10, 2 );		
 		add_action( 'wp_email_capture_signup_actions', 'wp_email_capture_gdpr_process', 5 );
 		add_action( 'wp_email_capture_hourly', 'wp_email_capture_gdpr_deletion' );
