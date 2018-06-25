@@ -2,8 +2,8 @@
 Tags: email marketing, email, mailing list, widget ready, gutenberg ready, gdpr
 Requires at least: 4.9.6
 Tested up to: 4.9.6
-Version: 3.5
-Stable tag: 3.5
+Version: 3.5.1
+Stable tag: 3.5.1
 Contributors: rhyswynne
 Donate link: https://www.wpemailcapture.com/premium/?utm_source=donatelink&utm_medium=wordpressorgreadme&utm_campaign=wpemailcapture
 
@@ -18,6 +18,7 @@ WP Email Capture Free Features:-
 * Uses Wordpress' internal wp_mail function for sending mail.
 * Easily integrated with posts & pages.
 * Dashboard Widget.
+* GDPR Friendly
 * Export data into CSV files, compatible with most major Email Marketing Programmes (including Aweber, Mailchimp, Groupmail, Constant Contact)
 * Double opt in, so compatible with CAN-SPAM act.
 * And completely free!
@@ -156,6 +157,9 @@ This plugin does use widgets, so probably yes :)
 Wherever you put in %NAME% (spelt exactly like that, uppercase as well), it will be replaced with the name given by the user.
 
 == Change Log ==
+= 3.5.1 =
+* Fix a bug that the Privacy Policy checkbox didn't work on widgets.
+
 = 3.5 =
 * Integration with WordPress' GDPR checker.
 * You can have a checkbox on your forms, explicitly giving consent to users to sign up to your newsletter.

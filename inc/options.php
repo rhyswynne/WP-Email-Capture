@@ -667,6 +667,13 @@ function wp_email_capture_get_changelog_array() {
 	$changelog = array();
 
 	$changelog[] = array(
+		'version' => __( '3.5.1', 'wp-email-capture' ),
+		'list'    => array(
+			__( 'Fixed a bug that made the widget for WP Email Capture work.', 'wp-email-capture' ),
+		),
+	);
+
+	$changelog[] = array(
 		'version' => __( '3.5', 'wp-email-capture' ),
 		'intro'   => __( 'This version was released to try and make WP Email Capture more compatible with the GDPR legislation.', 'wp-email-capture' ),
 		'list'    => array(
