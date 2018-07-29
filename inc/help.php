@@ -50,24 +50,26 @@ function wp_email_capture_setup_help() {
 	$furtherhelpurl = "https://www.wpemailcapture.com/2012/10/how-to-set-up-wp-email-capture-free/?utm_source=plugin&utm_medium=help&utm_campaign=free-setup";
 
 ?>
-	<h3><?php echo __( 'Setup', 'wp-email-capture' ); ?></h3>
-	<table class="form-table">
+	<div class="wp_email_capture_help_box">
+		<h3 class="header"><?php echo __( 'Setup', 'wp-email-capture' ); ?></h3>
+		<table class="form-table">
 
-		<tbody>
+			<tbody>
 
-			<tr valign="top">
-				<td>
-					<p><?php _e( 'To get WP Email Capture to work effectively, please follow the following instructions:-', 'wp-email-capture' ); ?></p>
-					<ol>
-						<li><?php printf( __( 'Create a page on your site for "sign up" (this page will be forwarded to when the form is just filled in, informs the users that they need to click on a link in the email. ', 'wp-email-capture' ) ); ?></li>
-						<li><?php printf( __( 'Create a page on your site for "confirmation" (thanking them for their enquiry, links to download etc). ', 'wp-email-capture' ) ); ?></li>
-						<li><?php printf( __( 'After creating these, fill in the settings in the <a href="%s">WP Email Capture > Settings</a> page, making sure the URL of the "sign up" page is in the "Page to redirect to on sign up" text box and the "confirmation" page URL is in the "Page to redirect to on confirmation of email address" text box.', 'wp-email-capture' ), $settingspageurl ); ?></li>
-					</ol>
-					<p><?php  printf( __( 'Further help is available on the <a href="%s" target="_blank">WP Email Capture Support Site</a>.', 'wp-email-capture' ), $furtherhelpurl ); ?></p>
-				</td>
-			</tr>
-		</tbody>
-	</table>
+				<tr valign="top">
+					<td>
+						<p><?php _e( 'To get WP Email Capture to work effectively, please follow the following instructions:-', 'wp-email-capture' ); ?></p>
+						<ol>
+							<li><?php printf( __( 'Create a page on your site for "sign up" (this page will be forwarded to when the form is just filled in, informs the users that they need to click on a link in the email. ', 'wp-email-capture' ) ); ?></li>
+							<li><?php printf( __( 'Create a page on your site for "confirmation" (thanking them for their enquiry, links to download etc). ', 'wp-email-capture' ) ); ?></li>
+							<li><?php printf( __( 'After creating these, fill in the settings in the <a href="%s">WP Email Capture > Settings</a> page, making sure the URL of the "sign up" page is in the "Page to redirect to on sign up" text box and the "confirmation" page URL is in the "Page to redirect to on confirmation of email address" text box.', 'wp-email-capture' ), $settingspageurl ); ?></li>
+						</ol>
+						<p><?php  printf( __( 'Further help is available on the <a href="%s" target="_blank">WP Email Capture Support Site</a>.', 'wp-email-capture' ), $furtherhelpurl ); ?></p>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
 	<?php
 } add_action( 'wp_email_capture_help_boxes', 'wp_email_capture_setup_help', 10 );
 
@@ -83,8 +85,8 @@ function wp_email_capture_options_help() {
 	$settingspageurl = apply_filters( 'wp_email_capture_change_settings_url', admin_url( 'admin.php?page=wpemailcapturefreesettings' ) );
 
 ?>
-
-	<h3><?php echo __( 'Further Options', 'wp-email-capture' ); ?></h3>
+	<div class="wp_email_capture_help_box">
+		<h3 class="header"><?php echo __( 'Further Options', 'wp-email-capture' ); ?></h3>
 	
 	<table class="form-table">
 		<tbody>
@@ -96,11 +98,12 @@ function wp_email_capture_options_help() {
 					<p><?php printf( __( '<strong>Link to us (optional, but appreciated):</strong> This option, when ticked, adds a small, unobtrusive text link beneath the widget. Totally optional, but very appreciated as it helps support the plugin.', 'wp-email-capture' ) ); ?></p>
 					<p><?php printf( __( '<strong>Make The "Name" field a required field?</strong> If ticked, the user will have to fill in both their name & email address. This means you get better data, but can affect conversion rates.', 'wp-email-capture' ) ); ?></p>
 					<p><?php printf( __( '<strong>Delimeter (leave blank for a comma)</strong> This will allow you to set the delimiter used in the CSV export. Should commas be used in names, for example, you may want to change this to something like a semi-colon.', 'wp-email-capture' ) ); ?></p>
-				
+					<p><?php printf( __( '<strong>Use Default Styling</strong> The plugin comes with a simple default styling that makes the plugin look neater. Use if you are not comfortable with CSS, or your theme does not style forms.', 'wp-email-capture' ) ); ?></p>
 				</td>
 			</tr>
 		</tbody>
 	</table>
+</div>
 
 	<?php
 } add_action( 'wp_email_capture_help_boxes', 'wp_email_capture_options_help', 20 );
@@ -116,8 +119,8 @@ function wp_email_capture_display_help() {
 	$widgetpageurl = admin_url( 'widgets.php' );
 
 ?>
-
-	<h3><?php echo __( 'Display', 'wp-email-capture' ); ?></h3>
+<div class="wp_email_capture_help_box">
+		<h3 class="header"><?php echo __( 'Display', 'wp-email-capture' ); ?></h3>
 	
 	<table class="form-table">
 		<tbody>
@@ -134,7 +137,7 @@ function wp_email_capture_display_help() {
 			</tr>
 		</tbody>
 	</table>
-
+</div>
 	<?php
 } add_action( 'wp_email_capture_help_boxes', 'wp_email_capture_display_help', 30 );
 
@@ -150,8 +153,8 @@ function wp_email_capture_list_help() {
 	$settingspageurl = apply_filters( 'wp_email_capture_change_settings_url', admin_url( 'admin.php?page=wpemailcapturefreesettings' ) );
 	$purchasepageurl = apply_filters( 'wp_email_capture_change_purchase_url', "https://www.wpemailcapture.com/premium/?utm_source=help-page&utm_medium=plugin&utm_campaign=wpemailcapture" );
 ?>
-
-	<h3><?php echo __( 'List Operations', 'wp-email-capture' ); ?></h3>
+<div class="wp_email_capture_help_box">
+		<h3 class="header"><?php echo __( 'List Operations', 'wp-email-capture' ); ?></h3>
 	
 	<table class="form-table">
 		<tbody>
@@ -176,7 +179,7 @@ function wp_email_capture_list_help() {
 			</tr>
 		</tbody>
 	</table>
-
+</div>
 	<?php
 } add_action( 'wp_email_capture_help_boxes', 'wp_email_capture_list_help', 40 );
 
@@ -191,8 +194,8 @@ function wp_email_capture_gdpr_help() {
 	$settingspageurl = apply_filters( 'wp_email_capture_change_settings_url', admin_url( 'admin.php?page=wpemailcapturefreesettings' ) );
 	//$purchasepageurl = apply_filters( 'wp_email_capture_change_purchase_url', "https://www.wpemailcapture.com/premium/?utm_source=help-page&utm_medium=plugin&utm_campaign=wpemailcapture" );
 ?>
-
-	<h3><?php echo __( 'GDPR Guidelines', 'wp-email-capture' ); ?></h3>
+<div class="wp_email_capture_help_box">
+		<h3 class="header"><?php echo __( 'GDPR Guidelines', 'wp-email-capture' ); ?></h3>
 
 	<table class="form-table">
 		<tbody>
@@ -209,6 +212,6 @@ function wp_email_capture_gdpr_help() {
 			</tr>
 		</tbody>
 	</table>
-
+</div>
 	<?php
 } add_action( 'wp_email_capture_help_boxes', 'wp_email_capture_gdpr_help', 50 );

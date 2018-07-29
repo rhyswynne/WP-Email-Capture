@@ -299,6 +299,81 @@ function wp_email_capture_get_data_from_email_main( $email ) {
 
 
 /**
+ * Check If MySQL version is 5.6, if not we fire a warning
+ *
+ * @return void
+ */
+function wp_email_capture_mysql_upsell() {
+
+	$hostingurl = 'https://www.wpemailcapture.com/wp-email-capture-premium-compatible-products/?utm_source=mysqlhelp&utm_medium=plugin&utm_campaign=wpemailcapture#hosting';
+
+	if ( ! get_option( 'dismissed-wp_email_capture_mysql_deprecated', false ) ) {
+
+		if ( ! wp_email_capture_check_db_version() ) {
+
+			printf( __( '<div class="notice notice-error notice-wp-email-mysql is-dismissible"  data-notice="wp_email_capture_mysql_deprecated">
+					<h3>WP Email Capture - MySQL version 5.6 and above needed</h3>
+					<p>Thank you for installing WP Email Capture. I really appreciate it. However you have an out of date version of MySQL on your site. <strong>WP Email Capture will not work</strong>.</p>
+					<p>A minimum of MySQL 5.6 is needed for this plugin to work. Speak to your host to upgrade. Alternatively, you can contact any of these hosts we have found that work with WP Email Capture.</p>
+					<p><a href="%2$s" class="button button-primary button-hero"><strong>View Hosting Recommendations</strong></a></p></div>' ), '?wp_email_capture_mysql_ignore=0', $hostingurl );
+
+		}
+	}
+}
+
+
+/**
+ * Get the DB Version for the server. To see if it's valid.
+ *
+ * @return void
+ */
+function wp_email_capture_check_db_version() {
+
+	global $wpdb;
+
+	$mysql_server_type    = '';
+	$mysql_server_version = '';
+
+	if ( method_exists( $wpdb, 'db_version' ) ) {
+		if ( $wpdb->use_mysqli ) {
+			// phpcs:ignore WordPress.DB.RestrictedFunctions.mysql_mysqli_get_server_info
+			$mysql_server_type = mysqli_get_server_info( $wpdb->dbh );
+		} else {
+			// phpcs:ignore WordPress.DB.RestrictedFunctions.mysql_mysql_get_server_info
+			$mysql_server_type = mysql_get_server_info( $wpdb->dbh );
+		}
+
+		$mysql_server_version = $wpdb->get_var( 'SELECT VERSION()' );
+	}
+
+	if ( stristr( $mysql_server_type, 'mariadb' ) ) {
+		$mariadb                        = true;
+		$health_check_mysql_rec_version = '10.0';
+		return true;
+	}
+
+	$mysql_min_version_check = version_compare( WP_EMAIL_MIN_MYSQL_VERSION, $mysql_server_version, '<=' );
+
+	//set_transient( 'wp_email_capture_valid_version', $mysql_min_version_check, 14*24*HOUR_IN_SECONDS );
+
+	return $mysql_min_version_check;
+
+}
+
+
+
+
+/**
+ * AJAX handler to store the state of dismissible notices.
+ */
+function ajax_notice_handler() {
+    // Pick up the notice "type" - passed via jQuery (the "data-notice" attribute on the notice)
+    $type = esc_attr( $_POST['type'] );
+    // Store it in the options table
+    update_option( 'dismissed-' . $type, TRUE );
+} add_action( 'wp_ajax_dismissed_notice_handler', 'ajax_notice_handler' );
+
+/**
  * Get the GDPR Data Table
  *
  * @depreciated 3.5
@@ -365,3 +440,5 @@ function wp_email_capture_get_data_from_email_main( $email ) {
 
 	return $tablestring;
 } */
+
+

@@ -47,4 +47,23 @@ jQuery(document).ready(function () {
 		jQuery('#copyrightnotice').prop('disabled', true);
 	});
 
+	console.log( 'Start here...' );
+
+	// Only listen to YOUR notices being dismissed
+	jQuery(document).on('click', '.notice-wp-email-mysql .notice-dismiss', function () {
+		console.log('In here?');
+		// Read the "data-notice" information to track which notice
+		// is being dismissed and send it via AJAX
+		var type = jQuery(this).closest('.notice-wp-email-mysql').data('notice');
+		// Make an AJAX call
+		// Since WP 2.8 ajaxurl is always defined in the admin header and points to admin-ajax.php
+		jQuery.ajax(ajaxurl,
+			{
+				type: 'POST',
+				data: {
+					action: 'dismissed_notice_handler',
+					type: type,
+				}
+			});
+	});
 });

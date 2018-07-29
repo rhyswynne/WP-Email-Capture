@@ -4,7 +4,7 @@
 Plugin Name: WP Email Capture
 Plugin URI: https://www.wpemailcapture.com/?utm_source=plugin-link&utm_medium=plugin&utm_campaign=wpemailcapture
 Description: Captures email addresses for insertion into software such as <a href="https://www.wpemailcapture.com/recommends/aweber" title="Email Marketing">Aweber</a> or <a href="https://www.wpemailcapture.com/recommends/mailchimp/">Mailchimp</a>
-Version: 3.5
+Version: 3.5.4
 Author: Winwar Media
 Author URI: https://www.winwar.co.uk/?utm_source=author-link&utm_medium=plugin&utm_campaign=wpemailcapture
 */
@@ -19,7 +19,8 @@ define( 'WP_EMAIL_CAPTURE_PATH', dirname( __FILE__ ) );
 define( 'WP_EMAIL_CAPTURE_URL', plugins_url( '', __FILE__ ) );
 define( 'WP_EMAIL_CAPTURE_TEMP_MEMBERS_TABLE', $wpdb->prefix . 'wp_email_capture_temp_members' );
 define( 'WP_EMAIL_CAPTURE_REGISTERED_MEMBERS_TABLE', $wpdb->prefix . 'wp_email_capture_registered_members' );
-define( 'WP_EMAIL_CAPTURE_VERSION', '3.5' );
+define( 'WP_EMAIL_CAPTURE_VERSION', '3.5.4' );
+define( 'WP_EMAIL_MIN_MYSQL_VERSION', '5.6' );
 
 require_once WP_EMAIL_CAPTURE_PATH . '/inc/core.php';
 
@@ -44,6 +45,7 @@ function wp_email_capture_plugins_loaded() {
 	add_action( 'admin_menu', 'wp_email_capture_menus', 10 );
 	//add_action( 'admin_notices', 'wp_email_capture_admin_notice' );
 	add_action( 'admin_notices', 'wp_email_capture_admin_upsell' );
+	add_action( 'admin_notices', 'wp_email_capture_mysql_upsell' );
 	add_action( 'admin_init', 'wp_email_capture_nag_ignore' );
 	add_action( 'admin_init', 'wp_email_capture_install' );
 	add_action( 'widgets_init', 'wp_email_capture_widget_init', 10 );

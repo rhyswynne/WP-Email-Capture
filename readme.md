@@ -6,9 +6,9 @@ Requires at least: 3.0
 
 Tested up to: 4.7
 
-Version: 3.3
+Version: 3.5.3
 
-Stable tag: 3.3
+Stable tag: 3.5.3
 
 Contributors: rhyswynne
 

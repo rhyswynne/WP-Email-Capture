@@ -2,8 +2,8 @@
 Tags: email marketing, email, mailing list, widget ready, gutenberg ready, gdpr
 Requires at least: 4.9.6
 Tested up to: 4.9.6
-Version: 3.5.1
-Stable tag: 3.5.1
+Version: 3.5.3
+Stable tag: 3.5.3
 Contributors: rhyswynne
 Donate link: https://www.wpemailcapture.com/premium/?utm_source=donatelink&utm_medium=wordpressorgreadme&utm_campaign=wpemailcapture
 
@@ -157,6 +157,15 @@ This plugin does use widgets, so probably yes :)
 Wherever you put in %NAME% (spelt exactly like that, uppercase as well), it will be replaced with the name given by the user.
 
 == Change Log ==
+= 3.5.4 =
+* Added a note should a version of MySQL earlier than 5.6 is shared.
+
+= 3.5.3 =
+* Fixed a bug that saving with GDPR switched off resulted in a display error (even though it was saved correctly)
+
+= 3.5.2 =
+* A few cosmetic changes to the help pages. Could use more work but is a bit neater for now.
+
 = 3.5.1 =
 * Fix a bug that the Privacy Policy checkbox didn't work on widgets.
 

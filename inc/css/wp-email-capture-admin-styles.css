@@ -52,3 +52,22 @@
 .wp_email_capture_admin_discount.wp_email_capture_admin_discount_active {
 	display: block;
 }
+
+.wp_email_capture_help_box {
+    border: 1px solid #e5e5e5;
+	background: #fff;
+	margin-bottom: 20px;
+}
+
+.wp_email_capture_help_box h3.header {
+	border-bottom: 1px solid #eee;
+	font-size: 14px;
+    padding: 8px 12px;
+    margin: 0;
+    line-height: 1.4;
+}
+
+.wp_email_capture_help_box ul, .wp_email_capture_help_box ul li {
+	list-style-type: disc;
+	margin-left: 10px;
+}

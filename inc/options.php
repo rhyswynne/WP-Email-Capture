@@ -638,7 +638,7 @@ function wp_email_capture_check_number_is_a_number( $input ) {
 	$message = null;
 	$type = null;
 
-	if ( !is_numeric( $input ) ) {
+	if ( !is_numeric( $input ) && "" !== $input ) {
 
 		$message = __( 'Please make sure that the "How long do you want to keep data on your servers?" option is a number.', 'wp-email-capture' );
 		$type    = 'error';
@@ -665,6 +665,20 @@ function wp_email_capture_check_number_is_a_number( $input ) {
 function wp_email_capture_get_changelog_array() {
 
 	$changelog = array();
+
+	$changelog[] = array(
+		'version' => __( '3.5.3', 'wp-email-capture' ),
+		'list'    => array(
+			__( 'Fixed a bug that saving with GDPR switched off resulted in a display error (even though it was saved correctly).', 'wp-email-capture' ),
+		),
+	);
+
+	$changelog[] = array(
+		'version' => __( '3.5.2', 'wp-email-capture' ),
+		'list'    => array(
+			__( 'A few cosmetic changes to the help pages. Could use more work but is a bit neater for now.', 'wp-email-capture' ),
+		),
+	);
 
 	$changelog[] = array(
 		'version' => __( '3.5.1', 'wp-email-capture' ),
