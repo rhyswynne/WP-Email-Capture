@@ -47,7 +47,7 @@ function wp_email_capture_setup_help() {
 	 */
 	$settingspageurl = apply_filters( 'wp_email_capture_change_settings_url', admin_url( 'admin.php?page=wpemailcapturefreesettings' ) );
 
-	$furtherhelpurl = "https://www.wpemailcapture.com/2012/10/how-to-set-up-wp-email-capture-free/?utm_source=plugin&utm_medium=help&utm_campaign=free-setup";
+	$furtherhelpurl = "https://www.wpemailcapture.com/2012/10/how-to-set-up-wp-email-capture-free/?utm_source=plugin&utm_medium=help&utm_campaign=wpemailcapture";
 
 ?>
 	<div class="wp_email_capture_help_box">
@@ -151,18 +151,17 @@ function wp_email_capture_display_help() {
 function wp_email_capture_list_help() {
 
 	$settingspageurl = apply_filters( 'wp_email_capture_change_settings_url', admin_url( 'admin.php?page=wpemailcapturefreesettings' ) );
-	$purchasepageurl = apply_filters( 'wp_email_capture_change_purchase_url', "https://www.wpemailcapture.com/premium/?utm_source=help-page&utm_medium=plugin&utm_campaign=wpemailcapture" );
-?>
+	$purchasepageurl = apply_filters( 'wp_email_capture_change_purchase_url', 'https://www.wpemailcapture.com/premium/?utm_source=help-page&utm_medium=plugin&utm_campaign=wpemailcapture' );
+
+	?>
 <div class="wp_email_capture_help_box">
 		<h3 class="header"><?php echo __( 'List Operations', 'wp-email-capture' ); ?></h3>
-	
 	<table class="form-table">
 		<tbody>
 			<tr valign="top">
 				<td>
-				
+
 					<p><?php printf( __( 'After a while, your list should have a few subscribers. You can see the list on the <a href="%s">WP Email Capture Settings Page</a>, as well as do a few tasks as well.', 'wp-email-capture' ), $settingspageurl ); ?></p>
-				
 					<p><?php printf( __( '<strong>Delete [email-address]:</strong> Next to every email address is a delete button. Use this to delete any email from your list.', 'wp-email-capture' ) ); ?></p>
 					<p><?php printf( __( '<strong>Export List:</strong> Use this to export your list to a CSV, ready for importing elsewhere.', 'wp-email-capture' ) ); ?></p>
 					<p><?php printf( __( '<strong>Delete Unconfirmed Email Addresses:</strong> Unconfirmed email addresses are hidden in the database. Use this to delete them to reduce the space taken up by them.', 'wp-email-capture' ) ); ?></p>
@@ -214,4 +213,37 @@ function wp_email_capture_gdpr_help() {
 	</table>
 </div>
 	<?php
-} add_action( 'wp_email_capture_help_boxes', 'wp_email_capture_gdpr_help', 50 );
+} 
+
+
+
+/**
+ * Displays the help for the "Gutenberg" section of the help documentation.
+ *
+ * @return void
+ */
+function wp_email_capture_gutenberg_help() {
+?>
+<div class="wp_email_capture_help_box">
+		<h3 class="header"><?php echo __( 'New WordPress Editor (Codenamed Gutenberg)', 'wp-email-capture' ); ?></h3>
+
+	<table class="form-table">
+		<tbody>
+			<tr valign="top">
+				<td>
+
+					<p><?php printf( __( 'If you are using the new WordPress editor (codenamed Gutenberg), you can add a WP Email Capture Gutenberg content block.' , 'wp-email-capture' ) ); ?></p>
+
+					<p><?php printf( __( 'Search for "WP Email Capture Form" to add it to your site. It is also located under "Widgets"', 'wp-email-capture' ) ); ?></p>
+
+					<p><?php printf( __( 'This widget works similar to the WP Email Capture widget, in that you can define an intro text and a title to help introduce your box.', 'wp-email-capture' ) ); ?>
+
+					<p><?php printf( __( 'There is a placeholder for where the form goes as well, this will show the form on the front end, but not on the back end.', 'wp-email-capture' ) ); ?>
+
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+	<?php
+}

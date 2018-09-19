@@ -2,8 +2,8 @@
 Tags: email marketing, email, mailing list, widget ready, gutenberg ready, gdpr
 Requires at least: 4.9.6
 Tested up to: 4.9.6
-Version: 3.5.3
-Stable tag: 3.5.3
+Version: 3.6.1
+Stable tag: 3.6.1
 Contributors: rhyswynne
 Donate link: https://www.wpemailcapture.com/premium/?utm_source=donatelink&utm_medium=wordpressorgreadme&utm_campaign=wpemailcapture
 
@@ -157,6 +157,13 @@ This plugin does use widgets, so probably yes :)
 Wherever you put in %NAME% (spelt exactly like that, uppercase as well), it will be replaced with the name given by the user.
 
 == Change Log ==
+= 3.6.1 =
+* Added Gutenberg information to the help section.
+* Removed a spelling mistake in one of the URL's on the setup form.
+
+= 3.6 =
+* Fix Gutenberg compatability bug. If you use Gutenberg, you may have to recreate your blocks, hence the version major bump. Otherwise you should be fine.
+
 = 3.5.4 =
 * Added a note should a version of MySQL earlier than 5.6 is shared.
 

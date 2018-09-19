@@ -1,5 +1,7 @@
 ( function( blocks, i18n, element, _ ) {
 	var el = element.createElement;
+	var Fragment = wp.element.Fragment;
+	var RichText = wp.editor.RichText;
 
 	blocks.registerBlockType( 'wp-email-capture/wp-email-capture-form', {
 		title: i18n.__( 'WP Email Capture Form' ),
@@ -22,35 +24,39 @@
 			var attributes = props.attributes;
 
 			return (
-				el( 'div', { className: props.className },
-					el( wp.blocks.RichText, {
-						tagName: 'h2',
-						inline: true,
-						placeholder: i18n.__( 'WP Email Capture title…' ),
-						value: attributes.title,
-						onChange: function( value ) {
-							props.setAttributes( { title: value } );
-						},
-						focus: focusedEditable === 'title' ? focus : null,
-						onFocus: function( focus ) {
-							props.setFocus( _.extend( {}, focus, { editable: 'title' } ) );
-						},
-					} ),
-					el( wp.blocks.RichText, {
-						tagName: 'p',
-						inline: false,
-						placeholder: i18n.__( 'Write your signup paragraph here…' ),
-						value: attributes.subscriptiondetails,
-						onChange: function( value ) {
-							props.setAttributes( { subscriptiondetails: value } );
-						},
-						focus: focusedEditable === 'subscriptiondetails' ? focus : null,
-						onFocus: function( focus ) {
-							props.setFocus( _.extend( {}, focus, { editable: 'subscriptiondetails' } ) );
-						},
-					} ),
-					el ('div', { className: 'wp-email-capture wp-email-capture-display' },
-						el( 'h3', { className: 'wp-email-capture-admin-form' }, i18n.__( 'The WP Email Capture Form Will Be Here' ) )
+				el( 
+					Fragment,
+					null,
+					el( 'div', { className: props.className },
+						el( RichText, {
+							tagName: 'h2',
+							inline: true,
+							placeholder: i18n.__( 'WP Email Capture title…' ),
+							value: attributes.title,
+							onChange: function( value ) {
+								props.setAttributes( { title: value } );
+							},
+							focus: focusedEditable === 'title' ? focus : null,
+							onFocus: function( focus ) {
+								props.setFocus( _.extend( {}, focus, { editable: 'title' } ) );
+							},
+						} ),
+						el( RichText, {
+							tagName: 'p',
+							inline: false,
+							placeholder: i18n.__( 'Write your signup paragraph here…' ),
+							value: attributes.subscriptiondetails,
+							onChange: function( value ) {
+								props.setAttributes( { subscriptiondetails: value } );
+							},
+							focus: focusedEditable === 'subscriptiondetails' ? focus : null,
+							onFocus: function( focus ) {
+								props.setFocus( _.extend( {}, focus, { editable: 'subscriptiondetails' } ) );
+							},
+						} ),
+						el ('div', { className: 'wp-email-capture wp-email-capture-display' },
+							el( 'h3', { className: 'wp-email-capture-admin-form' }, i18n.__( 'The WP Email Capture Form Will Be Here' ) )
+							)
 						)
 					)
 				);
