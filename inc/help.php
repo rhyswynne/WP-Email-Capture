@@ -92,9 +92,7 @@ function wp_email_capture_options_help() {
 		<tbody>
 			<tr valign="top">
 				<td>
-				
-					<p><?php printf( __( 'On the <a href="%s">WP Email Capture Settings Page</a>, as well as being able to structure your email, you can also add the following options.', 'wp-email-capture' ), $settingspageurl ); ?></p>
-				
+					<p><?php printf( __( 'On the <a href="%s">WP Email Capture Settings Page</a>, as well as being able to structure your email, you can also add the following options.', 'wp-email-capture' ), $settingspageurl ); ?></p>				
 					<p><?php printf( __( '<strong>Link to us (optional, but appreciated):</strong> This option, when ticked, adds a small, unobtrusive text link beneath the widget. Totally optional, but very appreciated as it helps support the plugin.', 'wp-email-capture' ) ); ?></p>
 					<p><?php printf( __( '<strong>Make The "Name" field a required field?</strong> If ticked, the user will have to fill in both their name & email address. This means you get better data, but can affect conversion rates.', 'wp-email-capture' ) ); ?></p>
 					<p><?php printf( __( '<strong>Delimeter (leave blank for a comma)</strong> This will allow you to set the delimiter used in the CSV export. Should commas be used in names, for example, you may want to change this to something like a semi-colon.', 'wp-email-capture' ) ); ?></p>

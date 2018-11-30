@@ -665,6 +665,29 @@ function wp_email_capture_check_number_is_a_number( $input ) {
 function wp_email_capture_get_changelog_array() {
 
 	$changelog = array();
+	
+	$changelog[] = array(
+		'version' => __( '3.6.1', 'wp-email-capture' ),
+		'list'    => array( 
+			__( 'Added Gutenberg information to the help section.', 'wp-email-capture' ),
+			__( 'Removed a spelling mistake in one of the URL\'s on the setup form.', 'wp-email-capture' ),
+		),
+	);
+	
+	$changelog[] = array(
+		'version' => __( '3.6', 'wp-email-capture' ),
+		'list'    => array(
+			__( 'Fix Gutenberg compatability bug. If you use Gutenberg, you may have to recreate your blocks, hence the version major bump. Otherwise you should be fine.', 'wp-email-capture' ),
+		),
+	);
+
+
+	$changelog[] = array(
+		'version' => __( '3.5.4', 'wp-email-capture' ),
+		'list'    => array(
+			__( 'Added a note should a version of MySQL earlier than 5.6 is shared.', 'wp-email-capture' ),
+		),
+	);
 
 	$changelog[] = array(
 		'version' => __( '3.5.3', 'wp-email-capture' ),
