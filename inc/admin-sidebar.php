@@ -28,8 +28,8 @@ function wp_email_capture_admin_sidebar( $sidestring ) {
 					<p>'.__( 'We recommend the following services for sending out emails:-', 'wp-email-capture' ).'</p>
 					<ul>
 						<li><strong><a href="https://www.wpemailcapture.com/recommends/aweber">Aweber</a></strong></li>
+						<li><strong><a href="https://www.wpemailcapture.com/recommends/constant-contact">Constant Contact</a></strong></li>
 						<li><strong><a href="https://www.wpemailcapture.com/recommends/mailchimp">MailChimp</a></strong></li>
-						<li><strong><a href="https://www.wpemailcapture.com/recommends/madmimi">MadMimi</a></strong></li>
 					</ul>
 					</div>';
 				break;

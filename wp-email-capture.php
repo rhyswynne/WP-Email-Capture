@@ -3,8 +3,8 @@
 /*
 Plugin Name: WP Email Capture
 Plugin URI: https://www.wpemailcapture.com/?utm_source=plugin-link&utm_medium=plugin&utm_campaign=wpemailcapture
-Description: Captures email addresses for insertion into software such as <a href="https://www.wpemailcapture.com/recommends/aweber" title="Email Marketing">Aweber</a> or <a href="https://www.wpemailcapture.com/recommends/mailchimp/">Mailchimp</a>
-Version: 3.6.2
+Description: Captures email addresses for insertion into software such as <a href="https://www.wpemailcapture.com/recommends/aweber" title="Email Marketing">Aweber</a>, <a href="https://www.wpemailcapture.com/recommends/constant-contact/">Constant Contact</a> or <a href="https://www.wpemailcapture.com/recommends/mailchimp/">Mailchimp</a>
+Version: 3.7.1
 Author: Winwar Media
 Author URI: https://www.winwar.co.uk/?utm_source=author-link&utm_medium=plugin&utm_campaign=wpemailcapture
 */
@@ -19,7 +19,7 @@ define( 'WP_EMAIL_CAPTURE_PATH', dirname( __FILE__ ) );
 define( 'WP_EMAIL_CAPTURE_URL', plugins_url( '', __FILE__ ) );
 define( 'WP_EMAIL_CAPTURE_TEMP_MEMBERS_TABLE', $wpdb->prefix . 'wp_email_capture_temp_members' );
 define( 'WP_EMAIL_CAPTURE_REGISTERED_MEMBERS_TABLE', $wpdb->prefix . 'wp_email_capture_registered_members' );
-define( 'WP_EMAIL_CAPTURE_VERSION', '3.6.2' );
+define( 'WP_EMAIL_CAPTURE_VERSION', '3.7.1' );
 define( 'WP_EMAIL_MIN_MYSQL_VERSION', '5.6' );
 
 require_once WP_EMAIL_CAPTURE_PATH . '/inc/core.php';

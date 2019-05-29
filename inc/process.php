@@ -109,6 +109,8 @@ function wp_email_capture_signup() {
 		$error = urlencode( __( 'User already present', 'wp-email-capture' ) );
 		$url = $starturl . $extrastring . "wp_email_capture_error=" . $error;
 
+		$url = apply_filters( 'wp_email_capture_change_user_present_error_url', $url );
+
 		wp_redirect( $url );
 
 		die();

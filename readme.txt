@@ -1,9 +1,9 @@
 === WordPress Email Marketing Plugin - WP Email Capture ===
 Tags: email marketing, email, mailing list, widget ready, gutenberg ready, gdpr
 Requires at least: 5.0
-Tested up to: 5.0
-Version: 3.6.2
-Stable tag: 3.6.2
+Tested up to: 5.2
+Version: 3.7.1
+Stable tag: 3.7.1
 Contributors: rhyswynne
 Donate link: https://www.wpemailcapture.com/premium/?utm_source=donatelink&utm_medium=wordpressorgreadme&utm_campaign=wpemailcapture
 
@@ -30,7 +30,7 @@ For more details please visit the official site of [WP Email Capture](https://ww
 * Stat tracking - track the visitors to your site and where your sign ups come from.
 * Autoresponders - Create an autoresponder email, an email sent to the user when they sign up to your site.
 * Multiple lists - Create multiple lists for your site.
-* Build External Lists - If you have a Mailchimp or Aweber account, you can use WP Email Capture to build to these services directly.
+* Build External Lists - If you have a Constant Contact, Mailchimp or Aweber account, you can use WP Email Capture to build to these services directly.
 * Custom Fields - You can capture more than just visitors name & email, add your own custom fields to capture (such as phone number or Address).
 
 You also get premium support and further documentation. For more information, and to purchase, [visit the plans and pricing page](https://www.wpemailcapture.com/premium/?utm_source=wpemailcapturepremium&utm_medium=wordpressorgreadme&utm_campaign=wpemailcapture).
@@ -157,6 +157,26 @@ This plugin does use widgets, so probably yes :)
 Wherever you put in %NAME% (spelt exactly like that, uppercase as well), it will be replaced with the name given by the user.
 
 == Change Log ==
+= 3.7.1 =
+* Corrected the "Requires at Least" as it was showing as being incompatible in the plugin store (when it is).
+
+= 3.7 =
+* Added filter - `wp_email_capture_change_user_present_error_url`, needed for an additional plugin - [WP Email Capture: Returning User Redirect](https://www.wpemailcapture.com/downloads/wp-email-capture-returning-user-redirect/?utm_source=changelog&utm_medium=wordpressorgreadme&utm_campaign=wpemailcapture).
+* Tested with WordPress 5.2
+* Fixed a few CSS changes on the option pages.
+
+= 3.6.6 =
+* Tested up to 5.1
+
+= 3.6.5 =
+* Tested with Constant Contact so reflected help screens to mention that.
+
+= 3.6.4 =
+* Clarified further a couple of options that people were having problems with.
+
+= 3.6.3 =
+* Some files didn't manage to upload. I've now pushed them live.
+
 = 3.6.2 =
 * Fixed a bug in Gutenberg.
 * Checking for "register_block_type" rather than "the_gutenberg_project" in prep for 5.0

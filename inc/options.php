@@ -23,7 +23,15 @@ function wp_email_capture_dashboard() {
 
 	$extensionstopush = array(
 		array(
-
+			'name'          => __('WP Email Capture - Redirect If Present', 'WPEC' ),
+			'description'   => __( 'Redirect signups to the final page, rather than show an error, should they not be present'),
+			'price'         => '20',
+			'purchaseurl'   => 'https://www.wpemailcapture.com/checkout/?edd_action=add_to_cart&download_id=4153&utm_source=plugin-dashboard-extensions&utm_medium=plugin&utm_campaign=wpemailcaptur',
+			'infourl'       => 'https://www.wpemailcapture.com/downloads/wp-email-capture-returning-user-redirect/?utm_source=plugin-dashboard-extensions&utm_medium=plugin&utm_campaign=wpemailcapture',
+			'imageurl'      => WP_EMAIL_CAPTURE_URL . '/inc/img/redirect-if-present.png',
+			'slug'          => 'wpemailcaptureredirectifpresent'
+		),
+		array(
 			'name'          => __('WP Email Capture - Akismet Integration', 'WPEC' ),
 			'description'   => __( 'Integrate WP Email Capture with <a href="https://akismet.com/">Akismet</a>'),
 			'price'         => '20',
@@ -33,7 +41,6 @@ function wp_email_capture_dashboard() {
 			'slug'          => 'wpemailcaptureakismetintegration'
 			),
 		array(
-
 			'name'          => __('WP Email Capture - Drip Integration', 'WPEC' ),
 			'description'   => __( 'Integrate WP Email Capture with <a href="https://www.wpemailcapture.com/recommends/drip/?utm_source=plugin-dashboard-extensions&utm_medium=plugin&utm_campaign=wpemailcaptur">Drip</a>'),
 			'price'         => '15',
@@ -52,6 +59,11 @@ function wp_email_capture_dashboard() {
 			),
 
 		array(
+			'name'  => 'Constant Contact',
+			'url'   => 'https://www.wpemailcapture.com/recommends/constant-contact/'
+			),
+
+		array(
 			'name'  => 'Mailchimp',
 			'url'   => 'https://www.wpemailcapture.com/recommends/mailchimp/'
 			),
@@ -64,7 +76,7 @@ function wp_email_capture_dashboard() {
 		);
 
 		?>
-		<div class="wrap about-wrap">
+		<div class="wrap about-wrap wpec-about-wrap">
 
 			<h1><?php _e( 'Welcome to WP Email Capture!', 'wp-email-capture' ); ?></h1>
 
@@ -106,7 +118,7 @@ function wp_email_capture_dashboard() {
 				?>
 
 				<h2><?php _e( 'Extensions', 'wp-email-capture' ); ?></h2>
-				<table>
+				<table class="extensions">
 					<tr>
 						<?php 
 
@@ -267,7 +279,7 @@ function wp_email_capture_free_options() {
 
 						<tr valign="top">
 
-							<th scope="row" style="width:400px"><?php _e( 'Page to redirect to on sign up (full web address ie: http://www.domain.com/this-page/)', 'wp-email-capture' ); ?></th>
+							<th scope="row" style="width:400px"><?php _e( 'Subscription Page URL (full web address ie: http://www.domain.com/this-page/)', 'wp-email-capture' ); ?></th>
 
 							<td><input type="text" name="wp_email_capture_signup" class="regular-text code" value="<?php echo get_option( 'wp_email_capture_signup' ); ?>" /></td>
 
@@ -275,7 +287,7 @@ function wp_email_capture_free_options() {
 
 						<tr valign="top">
 
-							<th scope="row" style="width:400px"><label for="wp_email_capture_redirection"><?php _e( 'Page to redirect to on confirmation of email address  (full web address ie: http://www.domain.com/this-other-page/)', 'wp-email-capture' ); ?></label></th>
+							<th scope="row" style="width:400px"><label for="wp_email_capture_redirection"><?php _e( 'Confirmation Page URL  (full web address ie: http://www.domain.com/this-other-page/)', 'wp-email-capture' ); ?></label></th>
 
 							<td><input type="text" name="wp_email_capture_redirection" class="regular-text code" value="<?php echo get_option( 'wp_email_capture_redirection' ); ?>" /></td>
 
@@ -375,6 +387,8 @@ function wp_email_capture_free_options() {
 								<span class="description"><?php _e( 'If you want to have some easy styling on your forms, check this box. Otherwise leave it unchecked if your theme already styles forms','wp-email-capture' ); ?></span></td>
 
 							</tr>
+
+							<?php do_action( 'wp_email_capture_added_free_options' ); ?>
 
 						</tbody>
 
@@ -496,7 +510,7 @@ function wp_email_capture_free_options() {
 				echo '<a name="list"></a><h3>'.__( 'Export', 'wp-email-capture' ).'</h3>
 				<form name="wp_email_capture_export" action="'. esc_url( $_SERVER['REQUEST_URI'] ) . '#list" method="post">
 
-					<label>'.__( 'Use the button below to export your list as a CSV to use in software such as <a href="https://www.wpemailcapture.com/recommends/aweber" title="Email Marketing">Aweber</a> or <a href="https://www.wpemailcapture.com/recommends/mailchimp">Mailchimp</a>', 'wp-email-capture' ).'</label>
+					<label>'.__( 'Use the button below to export your list as a CSV to use in software such as <a href="https://www.wpemailcapture.com/recommends/aweber" title="Email Marketing">Aweber</a> or <a href="https://www.wpemailcapture.com/recommends/constant-contact/">Constant Contact</a>', 'wp-email-capture' ).'</label>
 					<input type="hidden" name="wp_email_capture_export" />
 					<div class="submit">
 						<input type="submit" value="'.__( 'Export List', 'wp-email-capture' ).'" class="button"  />
@@ -666,6 +680,51 @@ function wp_email_capture_get_changelog_array() {
 
 	$changelog = array();
 	
+	$changelog[] = array(
+		'version' => __( '3.7', 'wp-email-capture' ),
+		'list'    => array( 
+			__( 'Added filter - `wp_email_capture_change_user_present_error_url`, needed for an additional plugin - WP Email Capture: Redirect If Present.', 'wp-email-capture' ),
+			__( 'Tested with WordPress 5.2', 'wp-email-capture' ),
+			__( 'Fixed a few CSS changes on the option pages.', 'wp-email-capture' ),
+		),
+	);
+
+	$changelog[] = array(
+		'version' => __( '3.6.6', 'wp-email-capture' ),
+		'list'    => array( 
+			__( 'Tested up to 5.1', 'wp-email-capture' ),
+		),
+	);
+
+	$changelog[] = array(
+		'version' => __( '3.6.5', 'wp-email-capture' ),
+		'list'    => array( 
+			__( 'Tested with Constant Contact so reflected help screens to mention that.', 'wp-email-capture' ),
+		),
+	);
+
+	$changelog[] = array(
+		'version' => __( '3.6.4', 'wp-email-capture' ),
+		'list'    => array( 
+			__( 'Clarified further a couple of options that people were having problems with.', 'wp-email-capture' ),
+		),
+	);
+
+	$changelog[] = array(
+		'version' => __( '3.6.3', 'wp-email-capture' ),
+		'list'    => array( 
+			__( 'Some files didn\'t manage to upload. I\'ve now pushed them live.', 'wp-email-capture' ),
+		),
+	);
+
+	$changelog[] = array(
+		'version' => __( '3.6.2', 'wp-email-capture' ),
+		'list'    => array( 
+			__( 'Fixed a bug in Gutenberg.', 'wp-email-capture' ),
+			__( 'Checking for "register_block_type" rather than "the_gutenberg_project" in prep for 5.0', 'wp-email-capture' ),
+		),
+	);
+
 	$changelog[] = array(
 		'version' => __( '3.6.1', 'wp-email-capture' ),
 		'list'    => array( 

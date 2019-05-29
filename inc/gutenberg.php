@@ -20,6 +20,6 @@ function wp_email_capture_enqueue_block_editor_css() {
 		'wp-email-capture-gutenberg-css-styles',
 		WP_EMAIL_CAPTURE_URL . '/inc/css/wp-email-capture-gutenberg-styles.css',
 		array( 'wp-blocks' ),
-		filemtime( plugin_dir_path( __FILE__ ) . 'css/wp-email-capture-gutenberg-styles.css' )
+		filemtime( plugin_dir_path( __FILE__ ) . '/css/wp-email-capture-gutenberg-styles.css' )
 	);
 }

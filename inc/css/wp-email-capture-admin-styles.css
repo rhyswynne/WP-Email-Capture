@@ -71,3 +71,21 @@
 	list-style-type: disc;
 	margin-left: 10px;
 }
+
+.wrap.wpec-about-wrap img {
+	width: initial;
+	max-width: 250px;
+}
+
+.wrap.wpec-about-wrap table.extensions td {
+	width: 33%;
+	vertical-align: top;
+}
+
+.wrap.wpec-about-wrap table.extensions td h3 {
+	height: 75px;
+}
+
+.wrap.wpec-about-wrap table.extensions td p {
+	height: 50px;
+}
