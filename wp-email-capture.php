@@ -4,7 +4,7 @@
 Plugin Name: WP Email Capture
 Plugin URI: https://www.wpemailcapture.com/?utm_source=plugin-link&utm_medium=plugin&utm_campaign=wpemailcapture
 Description: Captures email addresses for insertion into software such as <a href="https://www.wpemailcapture.com/recommends/aweber" title="Email Marketing">Aweber</a>, <a href="https://www.wpemailcapture.com/recommends/constant-contact/">Constant Contact</a> or <a href="https://www.wpemailcapture.com/recommends/mailchimp/">Mailchimp</a>
-Version: 3.7.1
+Version: 3.8.2
 Author: Winwar Media
 Author URI: https://www.winwar.co.uk/?utm_source=author-link&utm_medium=plugin&utm_campaign=wpemailcapture
 */
@@ -19,7 +19,7 @@ define( 'WP_EMAIL_CAPTURE_PATH', dirname( __FILE__ ) );
 define( 'WP_EMAIL_CAPTURE_URL', plugins_url( '', __FILE__ ) );
 define( 'WP_EMAIL_CAPTURE_TEMP_MEMBERS_TABLE', $wpdb->prefix . 'wp_email_capture_temp_members' );
 define( 'WP_EMAIL_CAPTURE_REGISTERED_MEMBERS_TABLE', $wpdb->prefix . 'wp_email_capture_registered_members' );
-define( 'WP_EMAIL_CAPTURE_VERSION', '3.7.1' );
+define( 'WP_EMAIL_CAPTURE_VERSION', '3.8.2' );
 define( 'WP_EMAIL_MIN_MYSQL_VERSION', '5.6' );
 
 require_once WP_EMAIL_CAPTURE_PATH . '/inc/core.php';
@@ -40,6 +40,7 @@ function wp_email_capture_plugins_loaded() {
 	}
 
 	// Admin Functions
+	add_action( 'init', 'wp_email_capture_add_freebuttons', 10 );
 	add_action( 'admin_init', 'wp_email_capture_options_process' );
 	add_action( 'wp_dashboard_setup', 'wp_email_capture_add_dashboard_widgets' );
 	add_action( 'admin_menu', 'wp_email_capture_menus', 10 );
@@ -77,7 +78,7 @@ function wp_email_capture_plugins_loaded() {
 	if ( version_compare( $wp_version, '4.9.6', '>=' ) ) {
 		//if ( get_option( 'wp_email_capture_enable_gdpr' ) ) {
 		add_action( 'wp_email_capture_form_echo_form_before_submit_button', 'wp_email_capture_add_privacy_policy_before_submit_echo_form', 10 );
-		add_filter( 'wp_email_capture_display_form', 'wp_email_capture_add_privacy_policy_before_submit_display_form', 10, 2 );		
+		add_filter( 'wp_email_capture_display_form', 'wp_email_capture_add_privacy_policy_before_submit_display_form', 10, 2 );
 		add_action( 'wp_email_capture_signup_actions', 'wp_email_capture_gdpr_process', 5 );
 		add_action( 'wp_email_capture_hourly', 'wp_email_capture_gdpr_deletion' );
 		//add_action( 'admin_menu', 'wp_email_capture_add_gdpr_page', 10 );

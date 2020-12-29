@@ -5,7 +5,7 @@
  * Wrapper function after the user submits an email address.
  *
  * Runs two actions, that can be overwritten if need be.
- * 
+ *
  * @return void
  */
 function wp_email_capture_process() {
@@ -13,13 +13,13 @@ function wp_email_capture_process() {
 	do_action( 'wp_email_capture_set_wp_email_capture_email_settings' );
 
 	if ( isset( $_REQUEST['wp_capture_action'] ) ) {
-		
+
 		do_action( 'wp_email_capture_signup_actions' );
-		
+
 	}
 
 	if ( isset( $_GET['wp_email_confirm'] ) || isset( $_REQUEST['wp_email_confirm'] ) ) {
-		
+
 		do_action( 'wp_email_capture_confirm_actions' );
 
 		//wp_capture_email_confirm();
@@ -48,9 +48,9 @@ function wp_email_capture_double_check_everything($name, $email) {
 
 
 /**
- * Get the email submission form entry, validates it, adds it to the tempoaray database, 
+ * Get the email submission form entry, validates it, adds it to the tempoaray database,
  * and redirects user to the "Please check your email" page.
- * 
+ *
  * @return void
  */
 function wp_email_capture_signup() {
@@ -67,7 +67,7 @@ function wp_email_capture_signup() {
 	if ( strpos( $starturl, "?" ) === false ) { $extrastring = "?"; } else { $extrastring = "&"; }
 
 	if ( get_option( "wp_email_capture_name_required" ) == 1 && $name == "" ) {
-		
+
 		$error = urlencode( __( 'Please Provide A Name', 'wp-email-capture' ) );
 		$url =  $starturl . $extrastring . "wp_email_capture_error=" . $error;
 		wp_redirect( $url );
@@ -170,7 +170,7 @@ function wp_email_capture_signup() {
 
 		$fromname = "";
 		$fromname = get_option( 'wp_email_capture_from_name' );
-		
+
 		if ( $from == "" ) {
 			$fromname =  get_option( 'blogname' );
 		}
@@ -179,7 +179,7 @@ function wp_email_capture_signup() {
 
 		$header = "MIME-Version: 1.0\n" . "From: " . $fromname . " <" . $from . ">\n";
 		$header .= "Content-Type: ". $contenttype . "; charset=\"" .  get_option( 'blog_charset' ) . "\"\n";
-		
+
 		// Your message
 		$splitstring 	= ( 1 == get_option( 'wp_email_capture_send_email_html' ) ) ? "<br/>" : "\n";
 		$htmlurl 		= ( 1 == get_option( 'wp_email_capture_send_email_html' ) ) ? '<p><a href="' . $siteurl .'?wp_email_confirm=1&wp_email_capture_passkey=' . $confirm_code . '">Click Here to Subscribe!</a><br/></p>' : $siteurl ."?wp_email_confirm=1&wp_email_capture_passkey=" . $confirm_code;
@@ -280,7 +280,7 @@ function wp_capture_email_confirm() {
 			$add_to_registered_members_table = $wpdb->insert( WP_EMAIL_CAPTURE_REGISTERED_MEMBERS_TABLE, array( 'name' => $name, 'email' => $email ), array( '%s', '%s' ) );
 
 			// if successfully moved data from table"temp_members_db" to table "registered_members" displays message "Your account has been activated" and don't forget to delete confirmation code from table "temp_members_db"
-			
+
 			$delete_from_temp_members_sql = "DELETE FROM ". WP_EMAIL_CAPTURE_TEMP_MEMBERS_TABLE . " WHERE confirm_code = '%s'";
 
 			$delete_from_temp_members = $wpdb->query( $wpdb->prepare( $delete_from_temp_members_sql, $passkey ) );
@@ -294,7 +294,7 @@ function wp_capture_email_confirm() {
 
 			$emaildataarray = array(
 				'name' => $name,
-				'email' => $email 
+				'email' => $email
 				);
 
 			do_action( 'wp_email_capture_complete_before_redirect', $emaildataarray );
@@ -341,51 +341,6 @@ function wp_email_capture_send_email_default( $to, $subject, $message, $header )
 		$sendmail = wp_mail( $to, $subject, $message, $header );
 
 	}
-
-	// CLEAN THIS UP
-	// @todo CLEAN UP
-	/* if ( !is_object( $phpmailer ) || !is_a( $phpmailer, 'PHPMailer' ) ) {
-		require_once ABSPATH . WPINC . '/class-phpmailer.php';
-		require_once ABSPATH . WPINC . '/class-smtp.php';
-		$phpmailer = new PHPMailer( true );
-	} */
-
-	/* DEPRECATED 3.3 */
-	// Set SMTPDebug to true
-	/* $phpmailer->SMTPDebug = false;
-
-	echo "<br/><br/>To: " . $to;
-	echo "<br/>Subject " . $subject; 
-	echo "<br/>Message " . $message; 
-	echo "<br/>Header " . $header; 
-
-	//$sendmail = wp_mail( $to, $subject, $message );
-
-	if ( $sendmail ) { $addedfield = "Email Sent!"; } else { $addedfield = "Email Not Sent"; }
-
-	// Start output buffering to grab smtp debugging output
-	/* ob_start();
-	add_filter( 'wp_mail_content_type', 'set_html_mail_content_type' );
-			// Send the test mail
-	//$result = wp_mail( $to, $subject, $message, $header );
-	remove_filter( 'wp_mail_content_type', 'set_html_mail_content_type' );
-			// Grab the smtp debugging output
-	$smtp_debug = ob_get_clean();
-
-			// Output the response
-	?>
-	<div id="message" class="updated fade"><p><strong><?php _e( 'Test Message Sent', 'amgsessmtp' ); ?></strong></p>
-		<p><?php _e( 'The result was:', 'amgsessmtp' ); ?></p>
-		<pre><?php var_dump( $sendmail ); ?></pre>
-		<p><?php _e( 'The full debugging output is shown below:', 'amgsessmtp' ); ?></p>
-		<pre><?php var_dump( $phpmailer ); ?></pre>
-		<p><?php _e( 'The SMTP debugging output is shown below:', 'amgsessmtp' ); ?></p>
-		<pre><?php echo $smtp_debug ?></pre>
-	</div>
-	<?php
-
-	wp_die( "Sendmail is: "  . $sendmail . "<br/>
-		Disableheaders is: " . $disableheaders); */
 
 	return $sendmail;
 }

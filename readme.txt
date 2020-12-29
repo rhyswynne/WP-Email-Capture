@@ -1,9 +1,9 @@
 === WordPress Email Marketing Plugin - WP Email Capture ===
 Tags: email marketing, email, mailing list, widget ready, gutenberg ready, gdpr
 Requires at least: 5.0
-Tested up to: 5.2
-Version: 3.7.1
-Stable tag: 3.7.1
+Tested up to: 5.5
+Version: 3.8.2
+Stable tag: 3.8.2
 Contributors: rhyswynne
 Donate link: https://www.wpemailcapture.com/premium/?utm_source=donatelink&utm_medium=wordpressorgreadme&utm_campaign=wpemailcapture
 
@@ -39,7 +39,7 @@ Keep in Contact:-
 
 * [WP Email Capture on Facebook](http://www.facebook.com/wpemailcapture)
 * [@WPEmailCapture](http://www.twitter.com/wpemailcapture) on Twitter
-* For support requests please visit the [FAQ's](https://www.wpemailcapture.com/free-plugin/frequently-asked-questions/?utm_source=contact&utm_medium=wordpressorgreadme&utm_campaign=wpemailcapture), or leave a message in the [Wordpress Support Forum](http://wordpress.org/support/plugin/wp-email-capture). 
+* For support requests please visit the [FAQ's](https://www.wpemailcapture.com/free-plugin/frequently-asked-questions/?utm_source=contact&utm_medium=wordpressorgreadme&utm_campaign=wpemailcapture), or leave a message in the [Wordpress Support Forum](http://wordpress.org/support/plugin/wp-email-capture).
 * For general feature requests or bug notices [please contact me directly](http://wpemailcapture.com/contact/?utm_source=contact&utm_medium=wordpressorgreadme&utm_campaign=wpemailcapture), however any support requests sent via the contact form, Facebook Page or Twitter Feed will be ignored - please use the WordPress Support Forum - please note I'm unable to support CSS or styling queries, please read the "Stylings" area on [other notes](http://wordpress.org/plugins/wp-email-capture/other_notes/?utm_source=contact&utm_medium=wordpressorgreadme&utm_campaign=wpemailcapture).
 
 Translation Credits:-
@@ -65,7 +65,7 @@ Translations have been done by the following parties. Thank you!
 
 The form can be inserted into the site at any location. However, to put the form anywhere, insert the following code into your template
 
-`<?php if (function_exists('wp_email_capture_form')) { wp_email_capture_form(); } ?>` 
+`<?php if (function_exists('wp_email_capture_form')) { wp_email_capture_form(); } ?>`
 
 If you want to insert the form within a page, insert into any post or page the string `[wp_email_capture_form]`. It will be replaced with a simple form.
 
@@ -73,7 +73,7 @@ You can also add a widget to any widget enabled area by going to Appearance > Wi
 
 If you need more help, please read this guide on [how to set up WP Email Capture](http://wpemailcapture.com/2012/10/how-to-set-up-wp-email-capture-free/?utm_source=installation&utm_medium=wordpressorgreadme&utm_campaign=wpemailcapture)
 
-== Bugs/Suggestions/Support == 
+== Bugs/Suggestions/Support ==
 Please report any bugs, support and suggestions to the [WP Email Capture Support Page](http://www.wpemailcapture.com/support/?utm_source=support&utm_medium=wordpressorgreadme&utm_campaign=wpemailcapture)
 
 == Stylings ==
@@ -157,6 +157,21 @@ This plugin does use widgets, so probably yes :)
 Wherever you put in %NAME% (spelt exactly like that, uppercase as well), it will be replaced with the name given by the user.
 
 == Change Log ==
+= 3.8.2 =
+* Tested to 5.5.
+
+= 3.8.1 =
+* Version with all the missing files from 3.8!
+
+= 3.8 =
+* Added a new button to the classic editor allowing you to place the form anywhere.
+
+= 3.7.3 =
+* Fixed a small bug in the site.
+
+= 3.7.2 =
+* Tested to 5.3.
+
 = 3.7.1 =
 * Corrected the "Requires at Least" as it was showing as being incompatible in the plugin store (when it is).
 
@@ -303,7 +318,7 @@ Wherever you put in %NAME% (spelt exactly like that, uppercase as well), it will
 * Serbian Translation Done (thanks [Borisa](http://www.webhostinghub.com/)!)
 
 = 2.9 (17/12/13) =
-* Fixed a small bug that produced warnings should security fields not be passed. 
+* Fixed a small bug that produced warnings should security fields not be passed.
 * Style buttons in a style for WordPress 3.8.
 * Remove a rogue mysql_real_escape_string() call making it compatible with WordPress 3.9.
 * Introduced stylings.
@@ -389,7 +404,7 @@ Wherever you put in %NAME% (spelt exactly like that, uppercase as well), it will
 * Added a "Delete entire list" button in Wordpress.
 
 = 1.9 (20/01/10) =
-* Fixed a small bug that resulted in the display for [The plugin does not have a valid header.] 
+* Fixed a small bug that resulted in the display for [The plugin does not have a valid header.]
 * Fixed a small phpmail bug
 
 = 1.8.1 (13/01/10) =
