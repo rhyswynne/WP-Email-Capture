@@ -1,9 +1,9 @@
 === WordPress Email Marketing Plugin - WP Email Capture ===
 Tags: email marketing, email, mailing list, widget ready, gutenberg ready, gdpr
 Requires at least: 5.0
-Tested up to: 5.5
-Version: 3.8.2
-Stable tag: 3.8.2
+Tested up to: 5.6
+Version: 3.9
+Stable tag: 3.9
 Contributors: rhyswynne
 Donate link: https://www.wpemailcapture.com/premium/?utm_source=donatelink&utm_medium=wordpressorgreadme&utm_campaign=wpemailcapture
 
@@ -21,6 +21,7 @@ WP Email Capture Free Features:-
 * GDPR Friendly
 * Export data into CSV files, compatible with most major Email Marketing Programmes (including Aweber, Mailchimp, Groupmail, Constant Contact)
 * Double opt in, so compatible with CAN-SPAM act.
+* reCAPTCHA integration
 * And completely free!
 
 For more details please visit the official site of [WP Email Capture](https://www.wpemailcapture.com/?utm_source=description&utm_medium=wordpressorgreadme&utm_campaign=wpemailcapture)
@@ -157,6 +158,9 @@ This plugin does use widgets, so probably yes :)
 Wherever you put in %NAME% (spelt exactly like that, uppercase as well), it will be replaced with the name given by the user.
 
 == Change Log ==
+= 3.9 =
+* Added the ability to spam check using reCAPTCHA
+
 = 3.8.2 =
 * Tested to 5.5.
 

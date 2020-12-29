@@ -4,7 +4,7 @@
 Plugin Name: WP Email Capture
 Plugin URI: https://www.wpemailcapture.com/?utm_source=plugin-link&utm_medium=plugin&utm_campaign=wpemailcapture
 Description: Captures email addresses for insertion into software such as <a href="https://www.wpemailcapture.com/recommends/aweber" title="Email Marketing">Aweber</a>, <a href="https://www.wpemailcapture.com/recommends/constant-contact/">Constant Contact</a> or <a href="https://www.wpemailcapture.com/recommends/mailchimp/">Mailchimp</a>
-Version: 3.8.2
+Version: 3.9
 Author: Winwar Media
 Author URI: https://www.winwar.co.uk/?utm_source=author-link&utm_medium=plugin&utm_campaign=wpemailcapture
 */
@@ -19,7 +19,7 @@ define( 'WP_EMAIL_CAPTURE_PATH', dirname( __FILE__ ) );
 define( 'WP_EMAIL_CAPTURE_URL', plugins_url( '', __FILE__ ) );
 define( 'WP_EMAIL_CAPTURE_TEMP_MEMBERS_TABLE', $wpdb->prefix . 'wp_email_capture_temp_members' );
 define( 'WP_EMAIL_CAPTURE_REGISTERED_MEMBERS_TABLE', $wpdb->prefix . 'wp_email_capture_registered_members' );
-define( 'WP_EMAIL_CAPTURE_VERSION', '3.8.2' );
+define( 'WP_EMAIL_CAPTURE_VERSION', '3.9' );
 define( 'WP_EMAIL_MIN_MYSQL_VERSION', '5.6' );
 
 require_once WP_EMAIL_CAPTURE_PATH . '/inc/core.php';
@@ -87,6 +87,11 @@ function wp_email_capture_plugins_loaded() {
 		add_filter( 'wp_privacy_personal_data_erasers', 'wp_email_capture_register_plugin_eraser', 10 );
 		//}
 		add_action( 'wp_email_capture_help_boxes', 'wp_email_capture_gdpr_help', 50 );
+	}
+
+	// Recaptcha Process
+	if ( get_option( 'wp_email_capture_recaptcha_server_api_key') && get_option( 'wp_email_capture_recaptcha_client_api_key') ) {
+		add_action( 'wp_email_capture_signup_actions', 'wp_email_capture_recaptcha_process', 1 );
 	}
 }
 

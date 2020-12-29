@@ -344,3 +344,49 @@ function wp_email_capture_send_email_default( $to, $subject, $message, $header )
 
 	return $sendmail;
 }
+
+
+
+/**
+ * Function to process the recaptcha stuff
+ *
+ * @return void
+ */
+function wp_email_capture_recaptcha_process() {
+	$token  = esc_attr( $_POST['token'] );
+	$action = esc_attr( $_POST['action'] );
+	$score  = apply_filters( 'wpec_recaptcha_score', '0.5' );
+	$secret = get_option( 'wp_email_capture_recaptcha_server_api_key' );
+	// call curl to POST request
+	$args    = array(
+		'headers' => array(
+			"Content-Type" => "application/x-www-form-urlencoded",
+		)
+	);
+	$response = wp_remote_post("https://www.google.com/recaptcha/api/siteverify?response=" . $token . '&secret=' . $secret, $args );
+
+	if ( is_wp_error( $response ) ) {
+		wp_die( print_r( $response ) );
+	}
+
+	$body = wp_remote_retrieve_body( $response );
+
+	if ( empty( $body ) ) {
+		wp_die( print_r( $body ) );
+	}
+
+	$result = json_decode( $body );
+
+	if ( $action != $result->action || $result->score < $score ) {
+
+		$starturl = esc_url( $_SERVER['HTTP_REFERER'] );
+		if ( strpos( $starturl, "?" ) === false ) { $extrastring = "?"; } else { $extrastring = "&"; }
+
+		$error = urlencode( __( 'We are unable to subscribe you. Please try again later', 'wp-email-capture' ) );
+		$url = $starturl . $extrastring . "wp_email_capture_error=" . $error;
+
+		wp_redirect( $url );
+		exit;
+
+	}
+}

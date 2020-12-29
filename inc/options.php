@@ -90,11 +90,11 @@ function wp_email_capture_dashboard() {
 				<a class="nav-tab" href="#credits" id="credits-tab"><?php _e( 'Credits', 'wp-email-capture' ); ?></a>
 			</h2>
 
-			<?php 
+			<?php
 
 			if ( array_key_exists( 'wpecupgrade', $_GET ) ) {
 				$activedashboard    = "";
-				$activeupgrade      = " active"; 
+				$activeupgrade      = " active";
 			} else {
 				$activedashboard    = " active";
 				$activeupgrade      = "";
@@ -104,10 +104,10 @@ function wp_email_capture_dashboard() {
 			<div id="dashboard" class="wpemailcapture-tab <?php echo $activedashboard; ?>">
 				<h2><?php _e( 'Welcome to WP Email Capture', 'wp-email-capture' ); ?></h2>
 
-				<h3><?php _e( 'New in 3.5 - GDPR Changes', 'wp-email-capture' ); ?></h3>
+				<h3><?php _e( 'New in 3.9 - reCAPTCHA Integration', 'wp-email-capture' ); ?></h3>
 
-				<p><?php _e( 'Version 3.5 integrates with the new WordPress Data importer and exporter, allowing you to manage the data you collect, some text to add to the privacy policy, as well as allowing the automatic deletion of data after a short period of time.', 'wp-email-capture' ); ?></p>
-				<p><?php _e( 'This update will not make you GDPR compatible, but will help towards it. You can delete and view data should you get a request, delete data after a certain period of time, as well as allow you to get consent via a Privacy Policy URL. The plugin users your new WordPress privacy policy, and we disclose what data we collect.', 'wp-email-capture' ); ?></p>
+				<p><?php _e( 'Version 3.9 will allow you to protect your blog from spam, using reCAPTCHA integration.', 'wp-email-capture' ); ?></p>
+				<p><?php _e( 'Grab a key from Google and use reCAPTCHA v3 to grade your signups, block those that are troublesome, and allowing those that are genuine.', 'wp-email-capture' ); ?></p>
 
 				<p><a class="non-nav-tab" href="#changelog" id="changelog-tab"><?php _e( 'Read the changelog', 'wp-email-capture'); ?></a></p>
 
@@ -120,7 +120,7 @@ function wp_email_capture_dashboard() {
 				<h2><?php _e( 'Extensions', 'wp-email-capture' ); ?></h2>
 				<table class="extensions">
 					<tr>
-						<?php 
+						<?php
 
 						$loop = 0;
 
@@ -138,7 +138,7 @@ function wp_email_capture_dashboard() {
 								<img src="<?php echo $extension['imageurl']; ?>">
 								<p><?php echo $extension['description']; ?></p>
 								<p>
-									<a class="button-primary" href="<?php echo $extension['purchaseurl']; ?>"><?php echo "$" . $extension['price'] . ".00"; ?> <?php _e( 'Buy Now', 'WPEC' ); ?></a> 
+									<a class="button-primary" href="<?php echo $extension['purchaseurl']; ?>"><?php echo "$" . $extension['price'] . ".00"; ?> <?php _e( 'Buy Now', 'WPEC' ); ?></a>
 									<a class="button-secondary" href="<?php echo $extension['infourl'];?>"><?php _e( 'More Info', 'WPEC' ); ?></a>
 								</p>
 							</td>
@@ -152,7 +152,7 @@ function wp_email_capture_dashboard() {
 				<h2><?php _e( 'Compatible Services', 'wp-email-capture' ); ?></h2>
 				<p><?php _e( 'WP Email Capture email lists are compatible with the following marketing services.', 'wp-email-capture' ); ?></p>
 				<ul>
-					<?php 
+					<?php
 
 					$loop = 0;
 
@@ -227,13 +227,13 @@ function wp_email_capture_dashboard() {
 				<h2><?php _e( 'Credits', 'wp-email-capture' ); ?></h2>
 				<p><?php _e( 'This plugin has been helped and improved by the following people', 'wp-email-capture' ); ?></p>
 				<ul>
-					<li><?php echo sprintf( __( '<strong>3.1:</strong> <a href="%s" target="_blank">Hassan Raza</a>','wp-email-capture' ), 'http://hassan-raza.com/' ); ?></li> 
+					<li><?php echo sprintf( __( '<strong>3.1:</strong> <a href="%s" target="_blank">Hassan Raza</a>','wp-email-capture' ), 'http://hassan-raza.com/' ); ?></li>
 				</ul>
 				<h3><?php _e('Translations', 'wp-email-capture' ); ?></h3>
 				<ul>
-					<li><?php echo sprintf( __( '<strong>French Translation:</strong> <a href="%s" target="_blank">Olivier</a> & <a href="%s" target="_blank">Andrew Patton</a> <a href="%s" target="_blank">(@andpatton)</a>.','wp-email-capture' ), 'http://www.ticket-system.net/', 'http://www.acusti.ca/', 'http://twitter.com/andpatton' ); ?></li> 
-					<li><?php echo sprintf( __( '<strong>German Translation:</strong> <a href="%s" target="_blank">Stephan</a>, <a href="%s" target="_blank">Marc Nilius</a> <a href="%s" target="_blank">(@libertello)</a>, Ov3rFly &amp; <a href="%s">Lars Kasper</a>', 'wp-email-capture' ), 'http://www.computersniffer.com/', 'http://www.libertello.de/', 'http://twitter.com/libertello', 'http://larskasper.de/' ); ?></li> 
-					<li><?php echo sprintf( __( '<strong>Brazilian Portugese Translation:</strong> <a href="%s" target="_blank">Nick Lima</a> <a href="%s" target="_blank">(@nick_linux)</a>', 'wp-email-capture' ), 'http://www.nicklima.com.br', 'http://twitter.com/nick_linux' ); ?></li> 
+					<li><?php echo sprintf( __( '<strong>French Translation:</strong> <a href="%s" target="_blank">Olivier</a> & <a href="%s" target="_blank">Andrew Patton</a> <a href="%s" target="_blank">(@andpatton)</a>.','wp-email-capture' ), 'http://www.ticket-system.net/', 'http://www.acusti.ca/', 'http://twitter.com/andpatton' ); ?></li>
+					<li><?php echo sprintf( __( '<strong>German Translation:</strong> <a href="%s" target="_blank">Stephan</a>, <a href="%s" target="_blank">Marc Nilius</a> <a href="%s" target="_blank">(@libertello)</a>, Ov3rFly &amp; <a href="%s">Lars Kasper</a>', 'wp-email-capture' ), 'http://www.computersniffer.com/', 'http://www.libertello.de/', 'http://twitter.com/libertello', 'http://larskasper.de/' ); ?></li>
+					<li><?php echo sprintf( __( '<strong>Brazilian Portugese Translation:</strong> <a href="%s" target="_blank">Nick Lima</a> <a href="%s" target="_blank">(@nick_linux)</a>', 'wp-email-capture' ), 'http://www.nicklima.com.br', 'http://twitter.com/nick_linux' ); ?></li>
 					<li><?php echo sprintf( __( '<strong>Dutch Translation:</strong> <a href="%s" target="_blank">Sander</a>', 'wp-email-capture' ), 'http://www.zanderz.net/' ); ?></li>
 					<li><?php echo sprintf( __( '<strong>Hungarian Translation:</strong> <a href="%s" target="_blank">Surbma</a>', 'wp-email-capture' ), 'http://surbma.hu/' ); ?></li>
 					<li><?php echo sprintf( __( '<strong>Spanish Translation:</strong> <a href="%s" target="_blank">David Bravo</a>' , 'wp-email-capture' ), 'http://dimensionmultimedia.com' ); ?></li>
@@ -394,6 +394,49 @@ function wp_email_capture_free_options() {
 
 					</table>
 
+					<h2><?php _e( 'reCAPTCHA Settings', 'wp-email-capture' ); ?></h2>
+
+					<?php _e('We can use <a href="https://www.google.com/recaptcha/about/">reCAPTCHA</a> (v3) for free (<a href="https://www.wpemailcapture.com/downloads/wp-email-capture-akismet-integration/" target="_blank">Akismet is avialable here</a>). Add your keys below.','WPEC'); ?>
+                        <table class="form-table">
+                                                <tbody>
+
+                                                <tr valign="top">
+
+                                                    <th scope="row" style="width:400px"><?php _e( 'reCAPTCHA Site Key', 'wp-email-capture' ); ?></th>
+
+                                                    <td><input type="text" name="wp_email_capture_recaptcha_client_api_key" class="regular-text code" value="<?php echo get_option( 'wp_email_capture_recaptcha_client_api_key' ); ?>" /></td>
+
+                                                </tr>
+
+                                                <tr valign="top">
+
+                                                    <th scope="row" style="width:400px"><?php _e( 'reCAPTCHA Secret Key', 'wp-email-capture' ); ?></th>
+
+                                                    <td><input type="text" name="wp_email_capture_recaptcha_server_api_key" class="regular-text code" value="<?php echo get_option( 'wp_email_capture_recaptcha_server_api_key' ); ?>" /></td>
+
+                                                </tr>
+												<?php /*
+												<tr valign="top">
+
+                                                    <th scope="row" style="width:400px"><?php _e( 'reCAPTCHA Type', 'wp-email-capture' ); ?></th>
+
+                                                    <td>
+													<input type="radio" id="checkbox" name="wp_email_capture_recaptcha_api_type" value="checkbox" <?php checked( get_option( 'wp_email_capture_recaptcha_api_type' ), 'checkbox' ); ?>>
+													<label for="checkbox">Checkbox</label>
+													<input type="radio" id="invisible" name="wp_email_capture_recaptcha_api_type" value="invisible" <?php checked( get_option( 'wp_email_capture_recaptcha_api_type' ), 'invisible' ); ?>>
+													<label for="invisible">Invisible</label>
+													<input type="radio" id="disable" name="wp_email_capture_recaptcha_api_type" value="disable" <?php checked( get_option( 'wp_email_capture_recaptcha_api_type' ), 'disable' ); ?>>
+													<label for="disable">Disable</label>
+													</td>
+
+                                                </tr> */?>
+
+
+
+
+                                                    </tbody>
+                                                </table>
+
 					<h2><?php _e( 'GDPR Settings', 'wp-email-capture' ); ?></h2>
 
 					<table class="form-table">
@@ -410,14 +453,14 @@ function wp_email_capture_free_options() {
 
 					</table>
 
-					<?php 
+					<?php
 
 					if ( get_option( 'wp_email_capture_enable_gdpr' ) ) {
 						$hiddengdpr = '';
 					} else {
 						$hiddengdpr = 'style="display:none;"';
 					}
-					
+
 					?>
 					<div class="gdpr-table" <?php echo $hiddengdpr; ?>>
 						<table class="form-table">
@@ -448,7 +491,7 @@ function wp_email_capture_free_options() {
 
 									<td>
 
-									<?php 
+									<?php
 
 									$addedstring = "";
 
@@ -469,7 +512,7 @@ function wp_email_capture_free_options() {
 										<?php _e( 'Your Email Address. This is used to contact you and include you in our newsletter.', 'wp-email-capture'); ?>
 
 										<?php _e( 'The date of signup. This is so we can reference when to delete your data at a later date.', 'wp-email-capture'); ?>
-										<?php 
+										<?php
 
 										if ( $addedstring && $number && $unit ) {
 											echo $addedstring;
@@ -560,13 +603,13 @@ function wp_email_capture_free_options() {
 				?>
 
 
-				<?php 
+				<?php
 			}
 
 
 /**
  * Save the options from the WP Email Capture Options Page.
- * 
+ *
  * @return void
  */
 function wp_email_capture_options_process() { // whitelist options
@@ -584,6 +627,9 @@ function wp_email_capture_options_process() { // whitelist options
 	register_setting( 'wp-email-capture-group', 'wp_email_capture_disabled_headers' );
 	register_setting( 'wp-email-capture-group', 'wp_email_capture_default_styling' );
 	register_setting( 'wp-email-capture-group', 'wp_email_capture_enable_gdpr' );
+	register_setting( 'wp-email-capture-group', 'wp_email_capture_recaptcha_client_api_key' );
+	register_setting( 'wp-email-capture-group', 'wp_email_capture_recaptcha_server_api_key' );
+	register_setting( 'wp-email-capture-group', 'wp_email_capture_recaptcha_api_type' );
 	register_setting( 'wp-email-capture-group', 'wp_email_capture_unit_for_privacy' );
 	register_setting( 'wp-email-capture-group', 'wp_email_capture_number_for_privacy', 'wp_email_capture_check_number_is_a_number' );
 
@@ -621,7 +667,7 @@ function wp_email_capture_options_process() { // whitelist options
 
 /**
  * Box to upsell WP Email Capture Premium
- * 
+ *
  * @return void
  */
 function wp_email_capture_premium_upsell() {
@@ -679,10 +725,60 @@ function wp_email_capture_check_number_is_a_number( $input ) {
 function wp_email_capture_get_changelog_array() {
 
 	$changelog = array();
-	
+
+	$changelog[] = array(
+		'version' => __( '3.9', 'wp-email-capture' ),
+		'list'    => array(
+			__( 'Added Google reCAPTCHA v3 integration', 'wp-email-capture' ),
+			__( 'Tested to 5.6', 'wp-email-capture' ),
+		),
+	);
+
+	$changelog[] = array(
+		'version' => __( '3.8.2', 'wp-email-capture' ),
+		'list'    => array(
+			__( 'Tested to 5.5.', 'wp-email-capture' ),
+		),
+	);
+
+	$changelog[] = array(
+		'version' => __( '3.8.1', 'wp-email-capture' ),
+		'list'    => array(
+			__( 'Version with all the missing files from 3.8!', 'wp-email-capture' ),
+		),
+	);
+
+	$changelog[] = array(
+		'version' => __( '3.8', 'wp-email-capture' ),
+		'list'    => array(
+			__( 'Added a new button to the classic editor allowing you to place the form anywhere.', 'wp-email-capture' ),
+		),
+	);
+
+	$changelog[] = array(
+		'version' => __( '3.7.3', 'wp-email-capture' ),
+		'list'    => array(
+			__( 'Fixed a small bug in the site.', 'wp-email-capture' ),
+		),
+	);
+
+	$changelog[] = array(
+		'version' => __( '3.7.2', 'wp-email-capture' ),
+		'list'    => array(
+			__( 'Tested to 5.3.', 'wp-email-capture' ),
+		),
+	);
+
+	$changelog[] = array(
+		'version' => __( '3.7.1', 'wp-email-capture' ),
+		'list'    => array(
+			__( 'Corrected the “Requires at Least” as it was showing as being incompatible in the plugin store (when it is).', 'wp-email-capture' ),
+		),
+	);
+
 	$changelog[] = array(
 		'version' => __( '3.7', 'wp-email-capture' ),
-		'list'    => array( 
+		'list'    => array(
 			__( 'Added filter - `wp_email_capture_change_user_present_error_url`, needed for an additional plugin - WP Email Capture: Redirect If Present.', 'wp-email-capture' ),
 			__( 'Tested with WordPress 5.2', 'wp-email-capture' ),
 			__( 'Fixed a few CSS changes on the option pages.', 'wp-email-capture' ),
@@ -691,35 +787,35 @@ function wp_email_capture_get_changelog_array() {
 
 	$changelog[] = array(
 		'version' => __( '3.6.6', 'wp-email-capture' ),
-		'list'    => array( 
+		'list'    => array(
 			__( 'Tested up to 5.1', 'wp-email-capture' ),
 		),
 	);
 
 	$changelog[] = array(
 		'version' => __( '3.6.5', 'wp-email-capture' ),
-		'list'    => array( 
+		'list'    => array(
 			__( 'Tested with Constant Contact so reflected help screens to mention that.', 'wp-email-capture' ),
 		),
 	);
 
 	$changelog[] = array(
 		'version' => __( '3.6.4', 'wp-email-capture' ),
-		'list'    => array( 
+		'list'    => array(
 			__( 'Clarified further a couple of options that people were having problems with.', 'wp-email-capture' ),
 		),
 	);
 
 	$changelog[] = array(
 		'version' => __( '3.6.3', 'wp-email-capture' ),
-		'list'    => array( 
+		'list'    => array(
 			__( 'Some files didn\'t manage to upload. I\'ve now pushed them live.', 'wp-email-capture' ),
 		),
 	);
 
 	$changelog[] = array(
 		'version' => __( '3.6.2', 'wp-email-capture' ),
-		'list'    => array( 
+		'list'    => array(
 			__( 'Fixed a bug in Gutenberg.', 'wp-email-capture' ),
 			__( 'Checking for "register_block_type" rather than "the_gutenberg_project" in prep for 5.0', 'wp-email-capture' ),
 		),
@@ -727,12 +823,12 @@ function wp_email_capture_get_changelog_array() {
 
 	$changelog[] = array(
 		'version' => __( '3.6.1', 'wp-email-capture' ),
-		'list'    => array( 
+		'list'    => array(
 			__( 'Added Gutenberg information to the help section.', 'wp-email-capture' ),
 			__( 'Removed a spelling mistake in one of the URL\'s on the setup form.', 'wp-email-capture' ),
 		),
 	);
-	
+
 	$changelog[] = array(
 		'version' => __( '3.6', 'wp-email-capture' ),
 		'list'    => array(
