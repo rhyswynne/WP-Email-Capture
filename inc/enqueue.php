@@ -23,7 +23,7 @@ function wp_email_capture_scripts() {
 
        if ( get_option( 'wp_email_capture_recaptcha_server_api_key') && get_option( 'wp_email_capture_recaptcha_client_api_key') ) {
               wp_enqueue_script( 'wpec-recaptcha-v3', 'https://www.google.com/recaptcha/api.js?render=' . get_option( 'wp_email_capture_recaptcha_client_api_key' ), array() );
-              wp_register_script( 'wpec-recaptcha-handling', WP_EMAIL_CAPTURE_URL . '/inc/js/recaptcha-handling.js', array('wpec-recaptcha-v3'), WP_EMAIL_CAPTURE_VERSION );
+              wp_register_script( 'wpec-recaptcha-handling', WP_EMAIL_CAPTURE_URL . '/inc/js/recaptcha-handling.js', array('wpec-recaptcha-v3', 'jquery'), WP_EMAIL_CAPTURE_VERSION );
               wp_localize_script( 'wpec-recaptcha-handling', 'wpec_recaptcha_object',
                      array(
                      'client_side_key' => get_option( 'wp_email_capture_recaptcha_client_api_key' ),

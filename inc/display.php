@@ -107,6 +107,7 @@ function wp_email_capture_form_page( $atts, $error = "") {
 	} */
 
 	if ( get_option( 'wp_email_capture_recaptcha_client_api_key' ) && get_option( 'wp_email_capture_recaptcha_server_api_key' ) ) {
+		$site_key = get_option( 'wp_email_capture_recaptcha_client_api_key' );
 		$display .= "<button class='g-recaptcha invisible-recaptcha' data-id='" . $uniqid . "' data-sitekey='" . $site_key . "'>".__('Submit','wp-email-capture')."</button>";
 	} else {
 		$display .= "<input name='Submit' type='submit' value='".__('Submit','wp-email-capture')."' class='wp-email-capture-submit' />";

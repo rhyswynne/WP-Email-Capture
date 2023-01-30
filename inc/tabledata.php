@@ -92,6 +92,7 @@ function wp_email_capture_formdelete( $id, $email = '', $style = '', $table = ''
 	}
 
 	$formdelete .= "<input type='submit' value='" . __( 'Delete ', 'wp-email-capture' ) . $email . "' style='" . $style . "' class='button' />";
+	$formdelete .= wp_nonce_field( 'delete_id_' . $id , 'wp_email_capture_delete_individual_nonce', true, false );
 	$formdelete .= '</form>';
 
 	return $formdelete;

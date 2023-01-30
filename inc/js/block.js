@@ -1,7 +1,7 @@
 ( function( blocks, i18n, element, _ ) {
 	var el = element.createElement;
 	var Fragment = wp.element.Fragment;
-	var RichText = wp.editor.RichText;
+	var RichText = wp.blockEditor.RichText;
 
 	blocks.registerBlockType( 'wp-email-capture/wp-email-capture-form', {
 		title: i18n.__( 'WP Email Capture Form' ),
