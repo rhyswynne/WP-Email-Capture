@@ -2,8 +2,8 @@
 Tags: email marketing, email, mailing list, widget ready, gutenberg ready, gdpr
 Requires at least: 5.0
 Tested up to: 6.1
-Version: 3.9.3
-Stable tag: 3.9.3
+Version: 3.11
+Stable tag: 3.11
 Contributors: rhyswynne
 Donate link: https://www.wpemailcapture.com/premium/?utm_source=donatelink&utm_medium=wordpressorgreadme&utm_campaign=wpemailcapture
 
@@ -158,6 +158,9 @@ This plugin does use widgets, so probably yes :)
 Wherever you put in %NAME% (spelt exactly like that, uppercase as well), it will be replaced with the name given by the user.
 
 == Change Log ==
+= 3.11 =
+* Major update - fixed a Unauthenticated Broken Access Control security bug which could allow non authenticated users to download the lists.
+
 = 3.10 =
 * Major update - fixed a XSS security bug.
 

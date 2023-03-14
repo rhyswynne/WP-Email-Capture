@@ -1,5 +1,7 @@
 <?php
 
+defined( 'ABSPATH' ) or die(); 
+
 /**
  * Function that exports the captured lists in a CSV format.
  * 

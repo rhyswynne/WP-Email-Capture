@@ -652,7 +652,17 @@ function wp_email_capture_options_process()
 
 	if (isset($_REQUEST['wp_email_capture_export'])) {
 
-		wp_email_capture_export();
+		if (is_user_logged_in() ) {
+			if ( current_user_can('administrator') ) {
+				wp_email_capture_export();
+			} else {
+				wp_die( "Admin's Only Please" );
+			}
+		} else {
+			wp_die( "You need to be logged in for this" );
+		}
+
+		
 	}
 
 	if (isset($_REQUEST['wp_email_capture_deleteid'])) {
