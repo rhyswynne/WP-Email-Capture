@@ -1,9 +1,9 @@
 === WordPress Email Marketing Plugin - WP Email Capture ===
 Tags: email marketing, email, mailing list, widget ready, gutenberg ready, gdpr
 Requires at least: 5.0
-Tested up to: 6.2
-Version: 3.11.1
-Stable tag: 3.11.1
+Tested up to: 6.3
+Version: 3.11.2
+Stable tag: 3.11.2
 Contributors: rhyswynne
 Donate link: https://www.wpemailcapture.com/premium/?utm_source=donatelink&utm_medium=wordpressorgreadme&utm_campaign=wpemailcapture
 
@@ -158,6 +158,10 @@ This plugin does use widgets, so probably yes :)
 Wherever you put in %NAME% (spelt exactly like that, uppercase as well), it will be replaced with the name given by the user.
 
 == Change Log ==
+= 3.11.2 =
+* Loaded the admin JavaScript/CSS on WP Email Capture pages and admin dashboard only, to help resolve conflicts.
+* Tested with 6.3
+
 = 3.11.1 =
 * Tested with 6.2
 
