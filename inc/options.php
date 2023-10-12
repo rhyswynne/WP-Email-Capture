@@ -769,6 +769,43 @@ function wp_email_capture_get_changelog_array()
 	$changelog = array();
 
 	$changelog[] = array(
+		'version' => __('3.12', 'wp-email-capture'),
+		'list'    => array(
+			__('Fixed a big bug in causing a critical error on newer versions of PHP. This is a braking bug so major version update.', 'wp-email-capture'),
+			__('Tested with 6.4.', 'wp-email-capture'),
+		),
+	);
+
+	$changelog[] = array(
+		'version' => __('3.11.2', 'wp-email-capture'),
+		'list'    => array(
+			__('Loaded the admin JavaScript/CSS on WP Email Capture pages and admin dashboard only, to help resolve conflicts.', 'wp-email-capture'),
+			__('Tested with 6.3.', 'wp-email-capture'),
+		),
+	);
+
+	$changelog[] = array(
+		'version' => __('3.11.1', 'wp-email-capture'),
+		'list'    => array(
+			__('Tested with 6.2', 'wp-email-capture'),
+		),
+	);
+
+	$changelog[] = array(
+		'version' => __('3.11', 'wp-email-capture'),
+		'list'    => array(
+			__('Major update - fixed a Unauthenticated Broken Access Control security bug which could allow non authenticated users to download the lists.', 'wp-email-capture'),
+		),
+	);
+
+	$changelog[] = array(
+		'version' => __('3.10', 'wp-email-capture'),
+		'list'    => array(
+			__('Major update - fixed a XSS security bug.', 'wp-email-capture'),
+		),
+	);
+
+	$changelog[] = array(
 		'version' => __('3.9.3', 'wp-email-capture'),
 		'list'    => array(
 			__('Fixed a notice bug in the recaptcha which meant it would not work for certain forms with WP_DEBUG switched on', 'wp-email-capture'),

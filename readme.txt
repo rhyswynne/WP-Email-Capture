@@ -160,7 +160,7 @@ Wherever you put in %NAME% (spelt exactly like that, uppercase as well), it will
 == Change Log ==
 = 3.12 =
 * Fixed a big bug in causing a critical error on newer versions of PHP. This is a braking bug so major version update.
-* Tested with WordPress 6.4
+* Tested with 6.4
 
 = 3.11.2 =
 * Loaded the admin JavaScript/CSS on WP Email Capture pages and admin dashboard only, to help resolve conflicts.
